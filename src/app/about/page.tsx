@@ -38,7 +38,7 @@ export default function AboutPage() {
 
         <h2 className="text-xl font-bold text-gray-900 mt-6">Bilingual Malayalam & English Vision</h2>
         <p>
-          With deep roots in South India and Kerala, IndiaUseful is architected to bring local convenience—such as gold pavan calculations, NRI remittance savings insights, and regional employment metrics—with an English-first and Malayalam-ready framework.
+          With deep roots in South India and Kerala, IndiaUseful is architected to bring local convenience—such as gold pavan and sovereign calculations, hallmark guidelines, and Malayalam subtitles—with an English-first and Malayalam-ready framework.
         </p>
 
         <h2 className="text-xl font-bold text-gray-900 mt-6">Contact & Suggestions</h2>

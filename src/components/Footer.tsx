@@ -120,7 +120,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-10 border-t border-gray-200/80 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-          <p>© {new Date().getFullYear()} IndiaUseful.com. All rights reserved. Built for India with precision.</p>
+          <p>© {new Date().getFullYear()} IndiaUseful. All rights reserved. Built for India with precision.</p>
           <p>
             Calculations are for informational purposes only. Consult certified financial or legal advisors for regulated transactions.
           </p>

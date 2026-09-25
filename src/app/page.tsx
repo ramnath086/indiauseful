@@ -80,7 +80,7 @@ export default function HomePage() {
               <Shield className="h-3.5 w-3.5 text-blue-500" /> Private & Client-side
             </span>
             <span className="flex items-center gap-1.5 rounded-md bg-white px-3 py-1.5 shadow-xs border border-gray-200">
-              <Calculator className="h-3.5 w-3.5 text-emerald-500" /> RBI & Indian Tax Compliant
+              <Calculator className="h-3.5 w-3.5 text-emerald-500" /> Built using Indian financial rules and clearly stated assumptions.
             </span>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function HomePage() {
                 Most Popular Calculators
               </h2>
               <p className="text-sm text-gray-500 mt-1">
-                Frequently used tools by thousands of users across India.
+                Frequently used tools for loans, investments, taxes, and daily calculations.
               </p>
             </div>
           </div>

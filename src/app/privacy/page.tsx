@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-2">1. Client-Side Financial Calculations</h2>
           <p>
-            At <strong>IndiaUseful</strong> (indiauseful.com), your financial privacy is paramount. All calculator inputs—including your loan amount, interest rate, salary, gold grams, and date of birth—are processed strictly in your web browser (client-side) using JavaScript. <strong>We do not transmit, log, or store your calculator inputs on any server or database.</strong>
+            At <strong>IndiaUseful</strong>, your financial privacy is paramount. All calculator inputs—including your loan amount, interest rate, salary, gold grams, and date of birth—are processed strictly in your web browser (client-side) using JavaScript. <strong>We do not transmit, log, or store your calculator inputs on any server or database.</strong>
           </p>
         </section>
 
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-2">3. Server Logs and Analytics</h2>
           <p>
-            Like standard web hosts and Cloudflare CDN edges, standard technical web logs (such as IP address, browser type, referring pages, and access timestamps) may be recorded temporarily for security monitoring, DDoS mitigation, and site performance optimization.
+            Standard technical web logs (such as browser type, referring pages, and timestamps) may be processed temporarily for security monitoring, DDoS mitigation, and site performance optimization.
           </p>
         </section>
 
@@ -54,7 +54,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-2">5. Updates and Contact</h2>
           <p>
-            If you have any questions regarding this Privacy Policy, you can email us at <a href="mailto:support@indiauseful.com" className="text-emerald-600 underline">support@indiauseful.com</a>.
+            If you have any questions or feedback regarding this Privacy Policy, please reach out via our <a href="/contact" className="text-emerald-600 underline">Contact Page</a>.
           </p>
         </section>
       </div>

@@ -58,7 +58,7 @@ export const CATEGORIES: CategoryMeta[] = [
     id: 'kerala',
     name: 'Kerala Special Corner',
     malayalamName: 'കേരള സ്പെഷ്യൽ',
-    description: 'Tailored calculators for Kerala: Pavan to gram gold converter, NRI remittances, and local salary & land metrics.',
+    description: 'Tailored calculators for Kerala: 1 Pavan (8 grams) sovereign gold rate, wedding jewellery estimates, making charges, and 3% GST.',
     icon: 'Palmtree'
   }
 ];

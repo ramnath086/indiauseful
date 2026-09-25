@@ -21,7 +21,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-2">1. Agreement to Terms</h2>
           <p>
-            By accessing or using IndiaUseful (indiauseful.com), you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please discontinue using the service.
+            By accessing or using the IndiaUseful web application, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, please discontinue using the service.
           </p>
         </section>
 

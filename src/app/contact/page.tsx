@@ -23,11 +23,11 @@ export default function ContactPage() {
           <div className="flex items-start space-x-3 rounded-xl border border-gray-100 bg-emerald-50/50 p-4">
             <Mail className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
             <div>
-              <h3 className="font-semibold text-gray-900 text-sm">Direct Email</h3>
-              <p className="text-xs text-gray-600 mt-0.5">For general queries, partnerships & corrections:</p>
-              <a href="mailto:support@indiauseful.com" className="text-sm font-semibold text-emerald-700 hover:underline mt-1 inline-block">
-                support@indiauseful.com
-              </a>
+              <h3 className="font-semibold text-gray-900 text-sm">Direct Online Inquiries</h3>
+              <p className="text-xs text-gray-600 mt-0.5">For general queries, bug reports, and formula corrections:</p>
+              <p className="text-sm font-semibold text-emerald-800 mt-1">
+                Please submit the contact form or open an issue on our GitHub repository.
+              </p>
             </div>
           </div>
 
