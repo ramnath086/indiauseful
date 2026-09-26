@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/']
     },
-    sitemap: 'https://indiauseful.com/sitemap.xml'
+    sitemap: 'https://indiauseful.ramnath86.workers.dev/sitemap.xml'
   };
 }
