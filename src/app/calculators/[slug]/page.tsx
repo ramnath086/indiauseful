@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tool.seoDescription,
     keywords: tool.keywords,
     alternates: {
-      canonical: `https://indiauseful.com/calculators/${tool.slug}`
+      canonical: `${SITE_URL}/calculators/${tool.slug}`
     }
   };
 }
@@ -66,7 +67,7 @@ export default async function CalculatorDetailPage({ params }: Props) {
     operatingSystem: 'All',
     applicationCategory: 'FinanceApplication',
     description: tool.seoDescription,
-    url: `https://indiauseful.com/calculators/${tool.slug}`,
+    url: `${SITE_URL}/calculators/${tool.slug}`,
     offers: {
       '@type': 'Offer',
       price: '0',

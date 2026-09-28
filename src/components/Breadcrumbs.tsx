@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
@@ -17,7 +18,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.label,
-      item: item.href ? `https://indiauseful.com${item.href}` : undefined
+      item: item.href ? `${SITE_URL}${item.href}` : undefined
     }))
   };
 

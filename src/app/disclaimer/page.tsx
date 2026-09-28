@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Financial & General Disclaimer',
   description: 'Disclaimer regarding financial calculations, estimates, and informational guidance on IndiaUseful.',
   alternates: {
-    canonical: 'https://indiauseful.com/disclaimer'
+    canonical: `${SITE_URL}/disclaimer`
   }
 };
 

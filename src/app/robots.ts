@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/']
     },
-    sitemap: 'https://indiauseful.com/sitemap.xml'
+    sitemap: `${SITE_URL}/sitemap.xml`
   };
 }

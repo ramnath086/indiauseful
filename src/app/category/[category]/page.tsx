@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${cat.name} Calculators & Tools - Free Indian Utility`,
     description: cat.description,
     alternates: {
-      canonical: `https://indiauseful.com/category/${cat.id}`
+      canonical: `${SITE_URL}/category/${cat.id}`
     }
   };
 }
@@ -52,7 +53,7 @@ export default async function CategoryPage({ params }: Props) {
       '@type': 'ListItem',
       position: index + 1,
       name: tool.name,
-      url: `https://indiauseful.com/calculators/${tool.slug}`
+      url: `${SITE_URL}/calculators/${tool.slug}`
     }))
   };
 

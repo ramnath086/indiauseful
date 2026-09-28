@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with the IndiaUseful team for feedback, calculator requests, or bug reports.',
   alternates: {
-    canonical: 'https://indiauseful.com/contact'
+    canonical: `${SITE_URL}/contact`
   }
 };
 

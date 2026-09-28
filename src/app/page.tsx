@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   description:
     'Free, accurate Indian calculators for Loan EMI, SIP, FD, PPF, NPS, Gratuity, In-Hand Salary, Gold Rates, 3% GST, and Kerala Pavan. No sign up required.',
   alternates: {
-    canonical: 'https://indiauseful.com/'
+    canonical: SITE_URL
   }
 };
 
@@ -43,11 +44,11 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'IndiaUseful',
-    url: 'https://indiauseful.com',
+    url: SITE_URL,
     description: 'Free, fast, mobile-friendly Indian utility tools and calculators.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://indiauseful.com/calculators/{search_term_string}',
+      target: `${SITE_URL}/calculators/{search_term_string}`,
       'query-input': 'required name=search_term_string'
     }
   };
