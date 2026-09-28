@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Terms of Service',
   description: 'Terms of Service for using IndiaUseful calculators and content.',
   alternates: {
-    canonical: 'https://indiauseful.com/terms'
+    canonical: `${SITE_URL}/terms`
   }
 };
 

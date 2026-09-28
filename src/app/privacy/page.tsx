@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'IndiaUseful Privacy Policy - Strict client-side computing and Google AdSense compliance.',
   alternates: {
-    canonical: 'https://indiauseful.com/privacy'
+    canonical: `${SITE_URL}/privacy`
   }
 };
 

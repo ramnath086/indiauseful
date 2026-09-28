@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -11,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://indiauseful.com'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'IndiaUseful - Free Online Calculators & Financial Tools for India',
     template: '%s | IndiaUseful'
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://indiauseful.com',
+    url: SITE_URL,
     siteName: 'IndiaUseful',
     title: 'IndiaUseful - Free Financial & Utility Tools for India',
     description: 'Accurate, instant calculators for Loans, Investments, Salary, Gold, and Everyday Math.'

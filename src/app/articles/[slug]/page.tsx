@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/siteConfig';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: article.title,
     description: article.summary,
     alternates: {
-      canonical: `https://indiauseful.com/articles/${article.slug}`
+      canonical: `${SITE_URL}/articles/${article.slug}`
     }
   };
 }
@@ -52,17 +53,17 @@ export default async function ArticlePage({ params }: Props) {
     author: {
       '@type': 'Organization',
       name: 'IndiaUseful Team',
-      url: 'https://indiauseful.com'
+      url: SITE_URL
     },
     publisher: {
       '@type': 'Organization',
       name: 'IndiaUseful',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://indiauseful.com/favicon.ico'
+        url: `${SITE_URL}/favicon.ico`
       }
     },
-    mainEntityOfPage: `https://indiauseful.com/articles/${article.slug}`
+    mainEntityOfPage: `${SITE_URL}/articles/${article.slug}`
   };
 
   return (
