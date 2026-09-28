@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { CALCULATORS, CATEGORIES, ARTICLES } from '@/data/calculators';
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://indiauseful.ramnath86.workers.dev';
+  const baseUrl = 'https://indiauseful.com';
   const now = new Date();
 
   const staticPages = [
