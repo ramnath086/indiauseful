@@ -42,12 +42,7 @@ export default function HomePage() {
     '@type': 'WebSite',
     name: 'IndiaUseful',
     url: SITE_URL,
-    description: 'Free, fast, mobile-friendly Indian utility tools and calculators.',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${SITE_URL}/calculators/{search_term_string}`,
-      'query-input': 'required name=search_term_string'
-    }
+    description: 'Free, fast, mobile-friendly Indian utility tools and calculators.'
   };
 
   return (
