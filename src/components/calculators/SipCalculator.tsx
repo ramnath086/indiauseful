@@ -149,7 +149,7 @@ export default function SipCalculator() {
             <span className="font-semibold text-gray-900">{formatIndianCurrency(investedAmount)}</span>
           </div>
           <div className="flex justify-between items-center text-sm">
-            <span className="text-gray-600">Estimated Capital Gains:</span>
+            <span className="text-gray-600">Estimated Growth:</span>
             <span className="font-semibold text-emerald-600">+{formatIndianCurrency(wealthGained)}</span>
           </div>
         </div>
@@ -168,6 +168,9 @@ export default function SipCalculator() {
             <div style={{ width: `${wealthPercent}%` }} className="bg-emerald-600 h-full"></div>
           </div>
         </div>
+        <p className="rounded-lg bg-white/80 p-3 text-xs leading-relaxed text-gray-600">
+          Projection assumes monthly investments at the start of each month and a constant return compounded monthly. Mutual fund returns are market-linked and are not guaranteed; fees, tax, inflation, and changing returns are not modeled.
+        </p>
       </div>
     </div>
   );

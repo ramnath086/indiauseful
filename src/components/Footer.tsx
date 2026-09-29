@@ -18,10 +18,10 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-gray-500 max-w-sm">
-              IndiaUseful provides fast, 100% free, browser-calculated utilities tailored for Indian citizens, salaried employees, taxpayers, NRI families, and Kerala communities. No signup or personal data collection required.
+              IndiaUseful offers free calculators and practical guides for common questions in India. Calculator inputs are processed in your browser; the site may still receive ordinary hosting request data. No account is required.
             </p>
             <p className="text-xs text-gray-400">
-              ഭാരതീയർക്കായി ലളിതമായ കണക്കുകൂട്ടൽ സഹായികൾ. സ്വകാര്യത പൂർണ്ണമായും ഉറപ്പുനൽകുന്നു.
+              ഭാരതീയർക്കായുള്ള ലളിതമായ കണക്കുകൂട്ടൽ സഹായികൾ. കൂടുതൽ വിവരങ്ങൾക്ക് സ്വകാര്യതാ നയം കാണുക.
             </p>
           </div>
 

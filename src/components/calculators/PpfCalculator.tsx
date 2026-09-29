@@ -35,7 +35,7 @@ export default function PpfCalculator() {
             <label className="text-sm font-semibold text-gray-800">Yearly Deposit (Max ₹1.5 Lakh)</label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Annual PPF contribution in rupees"
                 type="number"
                 min="500"
                 max="150000"
@@ -46,7 +46,7 @@ export default function PpfCalculator() {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Annual contribution slider"
             type="range"
             min="500"
             max="150000"
@@ -59,11 +59,11 @@ export default function PpfCalculator() {
 
         <div>
           <label className="text-sm font-semibold text-gray-800 mb-2 block">
-            Current Sovereign Interest Rate (Govt of India)
+            Illustrative Annual Interest Rate
           </label>
           <div className="flex items-center justify-between rounded-xl bg-gray-50 p-3 border border-gray-100">
-            <span className="text-sm text-gray-600 font-medium">Ministry of Finance Mandated Rate:</span>
-            <span className="font-bold text-emerald-700">{interestRate}% p.a. (Tax-Free EEE)</span>
+            <span className="text-sm text-gray-600 font-medium">Fixed assumption in this estimate:</span>
+            <span className="font-bold text-emerald-700">{interestRate}% p.a. (fixed model input)</span>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function PpfCalculator() {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">PPF Tenure</label>
             <div className="flex items-center">
-              <select
+              <select aria-label="PPF tenure in years"
                 value={tenureYears}
                 onChange={e => setTenureYears(Number(e.target.value))}
                 className="rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-semibold text-gray-900 focus:border-emerald-500 focus:outline-none"
@@ -89,13 +89,13 @@ export default function PpfCalculator() {
       <div className="lg:col-span-5 rounded-2xl border border-emerald-100 bg-gradient-to-b from-emerald-50/70 to-white p-6 shadow-xs space-y-6">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
-            100% Tax-Free Maturity Corpus
+            Estimated Maturity Value
           </p>
           <div className="mt-1 text-3xl sm:text-4xl font-black text-gray-900">
             {formatIndianCurrency(balance)}
           </div>
           <p className="text-xs text-emerald-700 font-medium mt-1">
-            ✓ EEE Status: Principal, Interest & Maturity are 100% Tax-Free
+            PPF tax benefits depend on current rules and individual eligibility
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function PpfCalculator() {
         </div>
 
         <div className="rounded-xl bg-gray-50 p-3.5 border border-gray-100 text-xs text-gray-500 leading-relaxed">
-          📌 <strong>Pro Tip:</strong> Deposit your PPF contribution between the 1st and 5th of each month. Interest is calculated on the lowest balance between the 5th and the last day of the month!
+          Estimate assumes a fixed 7.1% annual rate and one contribution at the start of each modeled year, with annual compounding. Actual PPF rates are set periodically and interest depends on deposit timing and account rules; verify the current rate and terms. This simplified result is not an account statement or tax determination.
         </div>
       </div>
     </div>

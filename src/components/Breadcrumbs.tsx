@@ -14,12 +14,20 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.label,
-      item: item.href ? `${SITE_URL}${item.href}` : undefined
-    }))
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE_URL
+      },
+      ...items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 2,
+        name: item.label,
+        ...(item.href ? { item: new URL(item.href, SITE_URL).toString() } : {})
+      }))
+    ]
   };
 
   return (
@@ -37,13 +45,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           </li>
           {items.map((item, idx) => (
             <li key={idx} className="flex items-center space-x-1.5">
-              <ChevronRight className="h-3.5 w-3.5 text-gray-300" />
+              <ChevronRight aria-hidden="true" focusable="false" className="h-3.5 w-3.5 text-gray-300" />
               {item.href ? (
                 <Link href={item.href} className="hover:text-emerald-600 transition-colors">
                   {item.label}
                 </Link>
               ) : (
-                <span className="font-medium text-gray-800">{item.label}</span>
+                <span aria-current="page" className="font-medium text-gray-800">{item.label}</span>
               )}
             </li>
           ))}

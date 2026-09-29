@@ -55,7 +55,7 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
               {isKeralaPavan ? 'Weight (Grams / Pavans)' : 'Gold Weight (Grams)'}
             </label>
             <div className="flex items-center">
-              <input
+              <input aria-label="Gold weight in grams"
                 type="number"
                 min="0.1"
                 max="5000"
@@ -75,7 +75,7 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
             </label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1">₹</span>
-              <input
+              <input aria-label="22 karat gold rate per gram in rupees"
                 type="number"
                 min="3000"
                 max="15000"
@@ -101,6 +101,7 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
                 key={item.id}
                 type="button"
                 onClick={() => setPurity(item.id as '24k' | '22k' | '18k')}
+                aria-pressed={purity === item.id}
                 className={`rounded-xl border p-2.5 text-center transition-all ${
                   purity === item.id
                     ? 'border-amber-500 bg-amber-50/70 text-amber-900 font-semibold'
@@ -121,6 +122,7 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
               <button
                 type="button"
                 onClick={() => setMakingChargeType('percent')}
+                aria-pressed={makingChargeType === 'percent'}
                 className={`px-2 py-0.5 rounded ${makingChargeType === 'percent' ? 'bg-amber-600 text-white' : 'bg-gray-100 text-gray-700'}`}
               >
                 % Percent
@@ -128,13 +130,14 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
               <button
                 type="button"
                 onClick={() => setMakingChargeType('perGram')}
+                aria-pressed={makingChargeType === 'perGram'}
                 className={`px-2 py-0.5 rounded ${makingChargeType === 'perGram' ? 'bg-amber-600 text-white' : 'bg-gray-100 text-gray-700'}`}
               >
                 ₹ Per Gram
               </button>
             </div>
           </div>
-          <input
+          <input aria-label="Making charge value"
             type="number"
             min="0"
             max={makingChargeType === 'percent' ? 40 : 3000}
@@ -143,7 +146,7 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
             onChange={e => setMakingChargeValue(Number(e.target.value))}
             className="w-full rounded-lg border border-gray-200 p-2 text-sm font-semibold focus:border-amber-500 focus:outline-none"
           />
-          <p className="text-[11px] text-gray-400 mt-1">Typical South Indian jewellery making charges range from 8% to 18%.</p>
+          <p className="text-[11px] text-gray-500 mt-1">Making charges and wastage vary by jeweller, design, and location; enter the quoted value.</p>
         </div>
       </div>
 
@@ -168,13 +171,16 @@ export default function GoldCalculator({ isKeralaPavan = false }: Props) {
             <span className="font-semibold text-gray-900">{formatIndianCurrency(makingChargeAmount)}</span>
           </div>
           <div className="flex justify-between">
-            <span className="text-gray-600">BIS Hallmarking Fee (HUID):</span>
+            <span className="text-gray-600">Illustrative hallmarking fee:</span>
             <span className="font-semibold text-gray-900">₹{hallmarkFee}</span>
           </div>
           <div className="flex justify-between border-t border-dashed border-gray-200 pt-2 font-bold text-amber-800">
             <span>3% GST (CGST 1.5% + SGST 1.5%):</span>
             <span>+{formatIndianCurrency(gstAmount)}</span>
           </div>
+          <p className="rounded-lg bg-white p-3 text-xs leading-relaxed text-gray-600">
+            Estimate uses the entered 22K rate to derive other purities, a fixed ₹45 hallmarking-fee assumption, and 3% GST on the modeled subtotal. Actual rates, charges, tax calculation, and invoice items can differ by jeweller and current rules; check the written quote.
+          </p>
         </div>
       </div>
     </div>

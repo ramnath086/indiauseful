@@ -1,4 +1,5 @@
 import { SITE_URL } from '@/lib/siteConfig';
+import { createPageMetadata } from '@/lib/metadata';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -25,13 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cat = CATEGORIES.find(c => c.id === category);
   if (!cat) return {};
 
-  return {
-    title: `${cat.name} Calculators & Tools - Free Indian Utility`,
+  return createPageMetadata({
+    title: cat.name,
     description: cat.description,
-    alternates: {
-      canonical: `${SITE_URL}/category/${cat.id}`
-    }
-  };
+    path: `/category/${cat.id}`
+  });
 }
 
 export default async function CategoryPage({ params }: Props) {

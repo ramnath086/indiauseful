@@ -37,7 +37,7 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
             <label className="text-sm font-semibold text-gray-800">Annual Gross CTC (Cost to Company)</label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Annual CTC in rupees"
                 type="number"
                 min="100000"
                 max="100000000"
@@ -48,7 +48,7 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Annual CTC slider"
             type="range"
             min="200000"
             max="4000000"
@@ -69,7 +69,7 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
             <label className="text-sm font-semibold text-gray-800">Annual Variable / Performance Bonus</label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Annual variable bonus in rupees"
                 type="number"
                 min="0"
                 max="2000000"
@@ -80,7 +80,7 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Annual bonus slider"
             type="range"
             min="0"
             max="500000"
@@ -95,7 +95,7 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">Monthly Professional Tax (PT)</label>
             <div className="flex items-center">
-              <select
+              <select aria-label="Monthly professional tax"
                 value={monthlyProfTax}
                 onChange={e => setMonthlyProfTax(Number(e.target.value))}
                 className="rounded-lg border border-gray-200 px-3 py-1.5 text-sm font-semibold text-gray-900 focus:border-emerald-500 focus:outline-none"
@@ -137,6 +137,9 @@ export default function SalaryCalculator({ mode = 'simple' }: Props) {
             <span>Employer PF & Gratuity (Included in CTC):</span>
             <span>{formatIndianCurrency(employerPfMonthly + gratuityMonthlyReserve)} /mo</span>
           </div>
+          <p className="rounded-lg bg-gray-50 p-3 text-xs leading-relaxed text-gray-600">
+            Estimate assumes basic pay is 40% of CTC, applies the displayed PF cap and selected professional tax, and excludes income-tax TDS and employer-specific benefits or deductions. Actual payslips depend on your salary structure and current rules.
+          </p>
         </div>
       </div>
     </div>

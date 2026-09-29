@@ -1,15 +1,11 @@
-import { SITE_URL } from '@/lib/siteConfig';
-import React from 'react';
-import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Financial & General Disclaimer',
-  description: 'Disclaimer regarding financial calculations, estimates, and informational guidance on IndiaUseful.',
-  alternates: {
-    canonical: `${SITE_URL}/disclaimer`
-  }
-};
+  description: 'Important information about estimates, assumptions, and the limitations of IndiaUseful calculators and content.',
+  path: '/disclaimer'
+});
 
 export default function DisclaimerPage() {
   return (

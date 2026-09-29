@@ -35,6 +35,7 @@ export default function GstCalculator() {
             <button
               type="button"
               onClick={() => setCalculationType('exclusive')}
+              aria-pressed={calculationType === 'exclusive'}
               className={`rounded-xl border p-3 text-center transition-all ${
                 calculationType === 'exclusive'
                   ? 'border-emerald-500 bg-emerald-50/70 text-emerald-900 font-semibold'
@@ -47,6 +48,7 @@ export default function GstCalculator() {
             <button
               type="button"
               onClick={() => setCalculationType('inclusive')}
+              aria-pressed={calculationType === 'inclusive'}
               className={`rounded-xl border p-3 text-center transition-all ${
                 calculationType === 'inclusive'
                   ? 'border-emerald-500 bg-emerald-50/70 text-emerald-900 font-semibold'
@@ -98,6 +100,7 @@ export default function GstCalculator() {
                 key={rate}
                 type="button"
                 onClick={() => setGstRate(rate)}
+                aria-pressed={gstRate === rate}
                 className={`rounded-xl border py-2.5 text-center font-bold text-sm transition-all ${
                   gstRate === rate
                     ? 'border-emerald-500 bg-emerald-600 text-white shadow-xs'

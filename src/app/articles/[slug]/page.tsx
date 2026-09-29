@@ -1,4 +1,5 @@
 import { SITE_URL } from '@/lib/siteConfig';
+import { createPageMetadata } from '@/lib/metadata';
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -6,6 +7,7 @@ import { Metadata } from 'next';
 import { ARTICLES, CALCULATORS } from '@/data/calculators';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
+import { renderMarkdown } from '@/lib/renderMarkdown';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 interface Props {
@@ -25,13 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = ARTICLES.find(a => a.slug === slug);
   if (!article) return {};
 
-  return {
+  return createPageMetadata({
     title: article.title,
     description: article.summary,
-    alternates: {
-      canonical: `${SITE_URL}/articles/${article.slug}`
-    }
-  };
+    path: `/articles/${article.slug}`
+  });
 }
 
 export default async function ArticlePage({ params }: Props) {
@@ -100,38 +100,7 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* Article Body */}
       <div className="prose prose-emerald max-w-none text-gray-800 leading-relaxed space-y-5 text-sm sm:text-base mt-6">
-        {article.content.split('\n\n').map((paragraph, idx) => {
-          const trimmed = paragraph.trim();
-          if (!trimmed) return null;
-          if (trimmed.startsWith('### ')) {
-            return (
-              <h2 key={idx} className="text-xl font-bold text-gray-900 mt-8 mb-2">
-                {trimmed.replace('### ', '')}
-              </h2>
-            );
-          }
-          if (trimmed.startsWith('- ')) {
-            const listItems = trimmed.split('\n').map(l => l.replace(/^[-\*]\s+/, ''));
-            return (
-              <ul key={idx} className="list-disc pl-6 space-y-1.5 my-3">
-                {listItems.map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ul>
-            );
-          }
-          if (/^\d+\.\s+/.test(trimmed)) {
-            const listItems = trimmed.split('\n').map(l => l.replace(/^\d+\.\s+/, ''));
-            return (
-              <ol key={idx} className="list-decimal pl-6 space-y-1.5 my-3">
-                {listItems.map((li, i) => (
-                  <li key={i}>{li}</li>
-                ))}
-              </ol>
-            );
-          }
-          return <p key={idx}>{trimmed}</p>;
-        })}
+        {renderMarkdown(article.content)}
       </div>
 
       <AdPlaceholder slotId="article-bottom" format="horizontal" />

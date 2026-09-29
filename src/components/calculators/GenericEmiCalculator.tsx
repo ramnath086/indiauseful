@@ -192,6 +192,9 @@ export default function GenericEmiCalculator({
             <div style={{ width: `${interestPercent}%` }} className="bg-amber-500 h-full"></div>
           </div>
         </div>
+        <p className="rounded-lg bg-white/80 p-3 text-xs leading-relaxed text-gray-600">
+          Estimate uses a fixed annual rate applied monthly to a reducing balance, with no fees, insurance, or rate changes included. Lender schedules, rounding, and charges may differ.
+        </p>
       </div>
     </div>
   );

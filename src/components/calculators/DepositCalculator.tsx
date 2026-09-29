@@ -52,7 +52,7 @@ export default function DepositCalculator({ type }: Props) {
             </label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Deposit amount (rupees)"
                 type="number"
                 min="500"
                 max={isFd ? 10000000 : 200000}
@@ -63,7 +63,7 @@ export default function DepositCalculator({ type }: Props) {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Deposit amount slider"
             type="range"
             min={isFd ? 10000 : 500}
             max={isFd ? 2000000 : 50000}
@@ -78,7 +78,7 @@ export default function DepositCalculator({ type }: Props) {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">Base Annual Interest Rate (%)</label>
             <div className="flex items-center">
-              <input
+              <input aria-label="Annual interest rate (percent)"
                 type="number"
                 min="3"
                 max="12"
@@ -90,7 +90,7 @@ export default function DepositCalculator({ type }: Props) {
               <span className="text-xs text-gray-500 ml-1">%</span>
             </div>
           </div>
-          <input
+          <input aria-label="Annual interest rate slider"
             type="range"
             min="3"
             max="10"
@@ -118,7 +118,7 @@ export default function DepositCalculator({ type }: Props) {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">Deposit Tenure (Years)</label>
             <div className="flex items-center">
-              <input
+              <input aria-label="Deposit tenure in years"
                 type="number"
                 min="1"
                 max="10"
@@ -130,7 +130,7 @@ export default function DepositCalculator({ type }: Props) {
               <span className="text-xs text-gray-500 ml-1">Years</span>
             </div>
           </div>
-          <input
+          <input aria-label="Deposit tenure slider"
             type="range"
             min="1"
             max="10"
@@ -166,8 +166,8 @@ export default function DepositCalculator({ type }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-3.5 border border-gray-100 text-xs text-gray-500 leading-relaxed">
-          💡 <strong>TDS Note:</strong> Under Section 194A, banks deduct 10% TDS if interest exceeds ₹40,000/year (₹50,000 for senior citizens) unless Form 15G/15H is submitted.
+        <div className="rounded-xl border border-gray-100 bg-gray-50 p-3.5 text-xs leading-relaxed text-gray-600">
+          Estimate assumes the selected rate remains unchanged for the full term and quarterly compounding. Actual bank and post-office products may use different terms, payment timing, compounding, and senior-citizen rates. Tax and TDS treatment depends on current rules and your circumstances.
         </div>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import { SITE_URL } from '@/lib/siteConfig';
+import { createPageMetadata } from '@/lib/metadata';
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -36,14 +37,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tool = CALCULATORS.find(c => c.slug === slug);
   if (!tool) return {};
 
-  return {
+  return createPageMetadata({
     title: tool.seoTitle,
     description: tool.seoDescription,
-    keywords: tool.keywords,
-    alternates: {
-      canonical: `${SITE_URL}/calculators/${tool.slug}`
-    }
-  };
+    path: `/calculators/${tool.slug}`,
+    keywords: tool.keywords
+  });
 }
 
 export default async function CalculatorDetailPage({ params }: Props) {
@@ -75,28 +74,28 @@ export default async function CalculatorDetailPage({ params }: Props) {
     }
   };
 
-  // FAQ Schema JSON-LD
+  const faqItems = [
+    {
+      question: 'Is this calculator free to use?',
+      answer: 'Yes. This calculator is free to use; there are no subscriptions or paywalls.'
+    },
+    {
+      question: 'Can I rely on these numbers for a bank application or financial decision?',
+      answer: 'Treat the result as an estimate, not an official quote or financial advice. It uses the inputs and simplified assumptions shown here; actual terms and amounts may vary with provider rules, timing, fees, eligibility, and applicable taxes. Verify important figures with the relevant institution or a qualified professional.'
+    }
+  ];
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `How is the ${tool.name} calculated in India?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `IndiaUseful uses exact Indian regulatory formulas (RBI reducing balance guidelines, Income Tax slabs, BIS gold hallmarking, and EPFO acts) computed 100% in your browser with zero latency.`
-        }
-      },
-      {
-        '@type': 'Question',
-        name: `Is my financial data saved or tracked?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `No. All calculation logic runs locally in your browser. We never transmit, store, or log your personal salary, loan, or investment data.`
-        }
+    mainEntity: faqItems.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer
       }
-    ]
+    }))
   };
 
   function renderCalculatorWidget(toolId: string) {
@@ -187,6 +186,9 @@ export default async function CalculatorDetailPage({ params }: Props) {
       {/* Main Calculator Interactive Area */}
       <div className="mb-10">
         {renderCalculatorWidget(tool.id)}
+        <p className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-950">
+          Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+        </p>
       </div>
 
       {/* In-Content Responsive Ad Placeholder */}
@@ -199,14 +201,14 @@ export default async function CalculatorDetailPage({ params }: Props) {
         </h2>
         <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4">
           <p>
-            The <strong>{tool.name}</strong> on IndiaUseful provides exact, real-time calculations engineered specifically for Indian standards, regulatory norms, and commercial banking rules.
+            The <strong>{tool.name}</strong> provides an instant planning estimate based on the values you enter and the assumptions shown in this tool. It is not an official quote, statement, or determination of eligibility.
           </p>
           <div className="rounded-xl bg-gray-50 p-4 border border-gray-100">
             <h3 className="font-semibold text-gray-900 text-sm mb-1">Key Benefits:</h3>
             <ul className="list-disc pl-5 text-xs sm:text-sm text-gray-600 space-y-1">
               <li><strong>Zero Wait Time:</strong> Built with responsive client-side React logic for instantaneous calculations as you move sliders.</li>
-              <li><strong>Absolute Privacy:</strong> No login or telephone number capture. Your financial data stays confidential inside your device browser.</li>
-              <li><strong>Indian Banking & Tax Alignment:</strong> Compliant with RBI compounding frequencies, Indian Rupee format, and relevant tax deductions.</li>
+              <li><strong>Browser-based calculations:</strong> No login is required, and calculator inputs are processed locally by the tool. See the Privacy Policy for information about ordinary hosting logs.</li>
+              <li><strong>Clear limitations:</strong> Rules, provider terms, rates, fees, eligibility, and tax treatment can change and may differ from the simplified model used here.</li>
             </ul>
           </div>
         </div>
@@ -217,18 +219,12 @@ export default async function CalculatorDetailPage({ params }: Props) {
             <HelpCircle className="h-5 w-5 text-emerald-600" /> Frequently Asked Questions
           </h3>
           <div className="space-y-4 text-sm">
-            <div className="rounded-xl border border-gray-100 p-4 bg-gray-50/50">
-              <h4 className="font-bold text-gray-900">Is this calculator completely free to use?</h4>
-              <p className="text-gray-600 mt-1">
-                Yes, 100% free with unlimited calculations. There are no paywalls, subscriptions, or hidden charges.
-              </p>
-            </div>
-            <div className="rounded-xl border border-gray-100 p-4 bg-gray-50/50">
-              <h4 className="font-bold text-gray-900">Can I rely on these numbers for bank applications?</h4>
-              <p className="text-gray-600 mt-1">
-                Our formulas use the exact mathematical standard used across Indian financial institutions. Actual bank statements may have minor differences (a few rupees) due to day-count conventions, processing fee amortization, or insurance levies.
-              </p>
-            </div>
+            {faqItems.map(({ question, answer }) => (
+              <div key={question} className="rounded-xl border border-gray-100 p-4 bg-gray-50/50">
+                <h4 className="font-bold text-gray-900">{question}</h4>
+                <p className="text-gray-600 mt-1">{answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
