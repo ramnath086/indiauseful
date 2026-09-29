@@ -1,7 +1,7 @@
 import { SITE_URL } from '@/lib/siteConfig';
+import { createPageMetadata } from '@/lib/metadata';
 import React from 'react';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import {
   Landmark,
   TrendingUp,
@@ -19,14 +19,11 @@ import {
 import { CALCULATORS, CATEGORIES, ARTICLES } from '@/data/calculators';
 import AdPlaceholder from '@/components/AdPlaceholder';
 
-export const metadata: Metadata = {
-  title: 'IndiaUseful - Free Online Calculators for Finance, Banking, Jobs & Gold in India',
-  description:
-    'Free, accurate Indian calculators for Loan EMI, SIP, FD, PPF, NPS, Gratuity, In-Hand Salary, Gold Rates, 3% GST, and Kerala Pavan. No sign up required.',
-  alternates: {
-    canonical: SITE_URL
-  }
-};
+export const metadata = createPageMetadata({
+  title: 'Free Online Calculators for Finance, Banking, Jobs & Gold in India',
+  description: 'Free Indian calculators for Loan EMI, SIP, FD, PPF, NPS, gratuity, take-home salary, gold rates, GST, and Kerala Pavan. No sign-up required.',
+  path: '/'
+});
 
 const categoryIconMap: Record<string, React.ReactNode> = {
   finance: <TrendingUp className="h-6 w-6 text-emerald-600" />,
@@ -87,7 +84,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AdSense Top Banner Placeholder */}
+      {/* Empty advertisement placeholder */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <AdPlaceholder slotId="home-top-responsive" format="horizontal" />
       </div>

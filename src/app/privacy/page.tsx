@@ -1,63 +1,59 @@
-import { SITE_URL } from '@/lib/siteConfig';
-import React from 'react';
-import { Metadata } from 'next';
+import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Privacy Policy',
-  description: 'IndiaUseful Privacy Policy - Strict client-side computing and Google AdSense compliance.',
-  alternates: {
-    canonical: `${SITE_URL}/privacy`
-  }
-};
+  description: 'How IndiaUseful handles calculator inputs, basic hosting logs, and third-party services.',
+  path: '/privacy'
+});
 
 export default function PrivacyPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8 text-gray-800">
+    <div className="mx-auto max-w-4xl px-4 py-10 text-gray-800 sm:px-6 lg:px-8">
       <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
-      <h1 className="text-3xl font-extrabold text-gray-900 mt-4">Privacy Policy</h1>
-      <p className="text-gray-400 text-xs mt-1">Last updated: September 2026</p>
+      <h1 className="mt-4 text-3xl font-extrabold text-gray-900">Privacy Policy</h1>
+      <p className="mt-1 text-xs text-gray-500">Last updated: September 2026</p>
 
-      <div className="mt-8 space-y-6 leading-relaxed text-sm sm:text-base">
+      <div className="mt-8 space-y-6 text-sm leading-relaxed sm:text-base">
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">1. Client-Side Financial Calculations</h2>
+          <h2 className="mb-2 text-lg font-bold text-gray-900">1. Calculator inputs</h2>
           <p>
-            At <strong>IndiaUseful</strong>, your financial privacy is paramount. All calculator inputs—including your loan amount, interest rate, salary, gold grams, and date of birth—are processed strictly in your web browser (client-side) using JavaScript. <strong>We do not transmit, log, or store your calculator inputs on any server or database.</strong>
+            Calculator inputs are processed in your browser by the calculator code and are not sent to IndiaUseful servers by those calculations. Avoid entering sensitive personal information into any website. The calculators do not require an account.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">2. Google AdSense & Third-Party Cookies</h2>
+          <h2 className="mb-2 text-lg font-bold text-gray-900">2. Advertising and cookies</h2>
           <p>
-            We may use third-party advertising companies such as Google AdSense to serve ads when you visit our website. These companies may use cookies, web beacons, and similar tracking technologies to serve ads based on your prior visits to this website or other websites on the Internet:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 mt-2 text-sm">
-            <li>Google&apos;s use of advertising cookies enables it and its partners to serve ads based on your visit to our sites and/or other sites on the Internet.</li>
-            <li>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer" className="text-emerald-600 underline">Google Ads Settings</a>.</li>
-            <li>Alternatively, you can opt out of third-party vendor use of cookies by visiting <a href="https://www.aboutads.info" target="_blank" rel="noreferrer" className="text-emerald-600 underline">aboutads.info</a>.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">3. Server Logs and Analytics</h2>
-          <p>
-            Standard technical web logs (such as browser type, referring pages, and timestamps) may be processed temporarily for security monitoring, DDoS mitigation, and site performance optimization.
+            IndiaUseful currently does not load advertising scripts, serve live ads, or use advertising cookies. Some pages may show a clearly labeled, empty advertisement placeholder for layout purposes; it does not load an ad or set an advertising cookie. If advertising or other tracking services are introduced, this policy will be updated to explain the relevant services and choices.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">4. Children&apos;s Privacy</h2>
+          <h2 className="mb-2 text-lg font-bold text-gray-900">3. Hosting and technical logs</h2>
           <p>
-            IndiaUseful does not knowingly collect personally identifiable information from children under the age of 13.
+            Our hosting provider may process ordinary request information, such as IP address, browser details, requested pages, and timestamps, for delivery, security, and reliability. The calculator code does not attach your entered values to those requests. We do not currently use a separate analytics service.
           </p>
         </section>
 
         <section>
-          <h2 className="text-lg font-bold text-gray-900 mb-2">5. Updates and Contact</h2>
+          <h2 className="mb-2 text-lg font-bold text-gray-900">4. External services</h2>
           <p>
-            If you have any questions or feedback regarding this Privacy Policy, please reach out via our <a href="/contact" className="text-emerald-600 underline">Contact Page</a>.
+            Links to external services, including GitHub for issue reports, are governed by those services&apos; own privacy practices. Review their policies before sharing information with them.
           </p>
         </section>
+
+        <section>
+          <h2 className="mb-2 text-lg font-bold text-gray-900">5. Children and policy updates</h2>
+          <p>
+            IndiaUseful is a general-purpose information site and is not designed to collect personal information from children. We may update this policy as the site changes; the date above indicates the latest revision.
+          </p>
+        </section>
+
+        <p>
+          Questions about this policy? Visit our <Link href="/contact" className="text-emerald-700 underline">Contact page</Link>.
+        </p>
       </div>
     </div>
   );

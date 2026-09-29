@@ -53,7 +53,7 @@ export default function PrepaymentCalculator() {
             <label className="text-sm font-semibold text-gray-800">Original Loan Amount</label>
             <span className="font-bold text-gray-900">{formatIndianCurrency(loanAmount)}</span>
           </div>
-          <input
+          <input aria-label="Original loan amount slider"
             type="range"
             min="500000"
             max="15000000"
@@ -67,7 +67,7 @@ export default function PrepaymentCalculator() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">Interest Rate (%)</label>
-            <input
+            <input aria-label="Annual interest rate in percent"
               type="number"
               step="0.1"
               value={interestRate}
@@ -77,7 +77,7 @@ export default function PrepaymentCalculator() {
           </div>
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">Tenure (Years)</label>
-            <input
+            <input aria-label="Loan tenure in years"
               type="number"
               value={tenureYears}
               onChange={e => setTenureYears(Number(e.target.value))}
@@ -95,7 +95,7 @@ export default function PrepaymentCalculator() {
               <label className="text-sm font-semibold text-gray-800">One-time Part Payment Amount</label>
               <span className="font-bold text-emerald-700">{formatIndianCurrency(lumpsumPrepayment)}</span>
             </div>
-            <input
+            <input aria-label="One-time part payment amount slider"
               type="range"
               min="25000"
               max="2000000"
@@ -110,7 +110,7 @@ export default function PrepaymentCalculator() {
             <label className="text-xs font-semibold text-gray-700 block mb-1">
               Make prepayment after year
             </label>
-            <select
+            <select aria-label="Year to make prepayment"
               value={prepayAfterYear}
               onChange={e => setPrepayAfterYear(Number(e.target.value))}
               className="w-full rounded-lg border border-gray-200 p-2 text-sm font-semibold"
@@ -151,8 +151,8 @@ export default function PrepaymentCalculator() {
           </div>
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-3.5 border border-gray-100 text-xs text-gray-500 leading-relaxed">
-          ⚡ <strong>RBI Regulation:</strong> Under RBI mandates, individual floating-rate home loans cannot be charged any prepayment penalties or foreclosure charges by banks!
+        <div className="rounded-xl border border-gray-100 bg-gray-50 p-3.5 text-xs leading-relaxed text-gray-600">
+          Simulation assumes the EMI and interest rate stay unchanged and applies one lump-sum payment in the selected month. It excludes lender fees, rate resets, and changes to EMI or tenure. Check your loan agreement and lender for applicable prepayment terms.
         </div>
       </div>
     </div>

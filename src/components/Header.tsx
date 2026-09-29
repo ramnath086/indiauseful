@@ -43,9 +43,10 @@ export default function Header() {
         {/* Global Search Bar (Desktop) */}
         <div className="relative hidden md:block w-72 lg:w-96">
           <div className="relative flex items-center">
-            <Search className="absolute left-3 h-4 w-4 text-gray-400" />
+            <Search aria-hidden="true" className="absolute left-3 h-4 w-4 text-gray-400" />
             <input
               type="text"
+              aria-label="Search calculators and tools"
               placeholder="Search EMI, SIP, Gold, Salary, GST..."
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
@@ -53,6 +54,8 @@ export default function Header() {
             />
             {searchQuery && (
               <button
+                type="button"
+                aria-label="Clear search"
                 onClick={() => setSearchQuery('')}
                 className="absolute right-3 text-xs text-gray-400 hover:text-gray-600"
               >
@@ -120,6 +123,8 @@ export default function Header() {
             onClick={() => setSearchOpen(!searchOpen)}
             className="rounded-lg p-2 text-gray-600 hover:bg-gray-100"
             aria-label="Toggle Search"
+            aria-expanded={searchOpen}
+            aria-controls="mobile-search-panel"
           >
             <Search className="h-5 w-5" />
           </button>
@@ -127,6 +132,8 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="rounded-lg p-2 text-gray-600 hover:bg-gray-100"
             aria-label="Toggle Menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu-panel"
           >
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -135,11 +142,12 @@ export default function Header() {
 
       {/* Mobile Search Overlay */}
       {searchOpen && (
-        <div className="border-t border-gray-100 bg-white px-4 py-3 md:hidden">
+        <div id="mobile-search-panel" className="border-t border-gray-100 bg-white px-4 py-3 md:hidden">
           <div className="relative">
-            <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+            <Search aria-hidden="true" className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
             <input
               type="text"
+              aria-label="Search calculators and tools"
               autoFocus
               placeholder="Search EMI, SIP, Gold, Salary, GST..."
               value={searchQuery}
@@ -170,7 +178,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
+        <nav id="mobile-menu-panel" aria-label="Mobile navigation" className="border-t border-gray-100 bg-white px-4 py-4 md:hidden">
           <div className="space-y-1">
             {CATEGORIES.map(cat => (
               <Link
@@ -200,7 +208,7 @@ export default function Header() {
               </Link>
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

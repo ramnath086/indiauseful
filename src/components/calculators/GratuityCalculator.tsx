@@ -33,7 +33,7 @@ export default function GratuityCalculator() {
             </label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Last drawn monthly basic salary and dearness allowance in rupees"
                 type="number"
                 min="5000"
                 max="2000000"
@@ -44,7 +44,7 @@ export default function GratuityCalculator() {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Salary slider"
             type="range"
             min="10000"
             max="300000"
@@ -60,7 +60,7 @@ export default function GratuityCalculator() {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">Completed Years of Service</label>
             <div className="flex items-center">
-              <input
+              <input aria-label="Completed years of service"
                 type="number"
                 min="1"
                 max="45"
@@ -71,7 +71,7 @@ export default function GratuityCalculator() {
               <span className="text-xs text-gray-500 ml-1">Years</span>
             </div>
           </div>
-          <input
+          <input aria-label="Years of service slider"
             type="range"
             min="1"
             max="40"
@@ -117,7 +117,7 @@ export default function GratuityCalculator() {
       <div className="lg:col-span-5 rounded-2xl border border-emerald-100 bg-gradient-to-b from-emerald-50/70 to-white p-6 shadow-xs space-y-6">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-emerald-800">
-            Calculated Gratuity Payout
+            Estimated Gratuity Payout
           </p>
           <div className="mt-1 text-3xl sm:text-4xl font-black text-gray-900">
             {formatIndianCurrency(gratuityAmount)}
@@ -129,7 +129,7 @@ export default function GratuityCalculator() {
 
         <div className="space-y-2 border-t border-emerald-100/70 pt-4 text-sm">
           <div className="flex justify-between items-center">
-            <span className="text-gray-600">Tax-Free Exemption (Max ₹20 Lakh):</span>
+            <span className="text-gray-600">Amount treated as exempt in this estimate (up to ₹20 Lakh):</span>
             <span className="font-semibold text-emerald-600">{formatIndianCurrency(exemptGratuity)}</span>
           </div>
           {taxableGratuity > 0 && (
@@ -140,8 +140,8 @@ export default function GratuityCalculator() {
           )}
         </div>
 
-        <div className="rounded-xl bg-gray-50 p-3.5 border border-gray-100 text-xs text-gray-500 leading-relaxed">
-          💼 <strong>Rounding of months rule:</strong> If you served 7 years and 7 months, it rounds up to 8 years under the Gratuity Act!
+        <div className="rounded-xl border border-gray-100 bg-gray-50 p-3.5 text-xs leading-relaxed text-gray-600">
+          Estimate uses the entered whole number of service years and a simplified formula. Statutory eligibility, the wage base, service-period rounding, coverage, exemption limits, and tax treatment depend on applicable law and individual circumstances; confirm with your employer or a qualified adviser.
         </div>
       </div>
     </div>

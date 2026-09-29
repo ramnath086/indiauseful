@@ -38,7 +38,7 @@ export default function NpsCalculator() {
           <div className="flex justify-between items-center mb-2">
             <label className="text-sm font-semibold text-gray-800">Your Current Age</label>
             <div className="flex items-center">
-              <input
+              <input aria-label="Current age in years"
                 type="number"
                 min="18"
                 max="59"
@@ -49,7 +49,7 @@ export default function NpsCalculator() {
               <span className="text-xs text-gray-500 ml-1">Yrs</span>
             </div>
           </div>
-          <input
+          <input aria-label="Current age slider"
             type="range"
             min="18"
             max="55"
@@ -65,7 +65,7 @@ export default function NpsCalculator() {
             <label className="text-sm font-semibold text-gray-800">Monthly Contribution</label>
             <div className="flex items-center">
               <span className="text-xs text-gray-500 mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Monthly NPS contribution in rupees"
                 type="number"
                 min="500"
                 max="150000"
@@ -76,7 +76,7 @@ export default function NpsCalculator() {
               />
             </div>
           </div>
-          <input
+          <input aria-label="Monthly contribution slider"
             type="range"
             min="1000"
             max="50000"
@@ -90,7 +90,7 @@ export default function NpsCalculator() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">Expected Return (CAGR %)</label>
-            <input
+            <input aria-label="Expected annual return rate in percent"
               type="number"
               min="5"
               max="16"
@@ -102,7 +102,7 @@ export default function NpsCalculator() {
           </div>
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">Annuity Reinvestment (Min 40%)</label>
-            <input
+            <input aria-label="Annuity share in percent"
               type="number"
               min="40"
               max="100"
@@ -130,12 +130,12 @@ export default function NpsCalculator() {
           <div className="text-2xl font-black text-emerald-800 mt-1">
             {formatIndianCurrency(monthlyPension)} / month
           </div>
-          <p className="text-[11px] text-emerald-700 mt-0.5">Lifelong pension after age 60</p>
+          <p className="text-[11px] text-emerald-700 mt-0.5">Illustration using a fixed 6% annual annuity payout assumption</p>
         </div>
 
         <div className="space-y-2 border-t border-emerald-100 pt-3 text-sm">
           <div className="flex justify-between">
-            <span className="text-gray-600">Lumpsum Cash Withdrawal ({100 - annuitySharePercent}% Tax-Free):</span>
+            <span className="text-gray-600">Illustrative lump-sum portion ({100 - annuitySharePercent}%):</span>
             <span className="font-semibold text-gray-900">{formatIndianCurrency(lumpsumAmount)}</span>
           </div>
           <div className="flex justify-between">
@@ -146,6 +146,9 @@ export default function NpsCalculator() {
             <span>Total Out-of-pocket Invested:</span>
             <span>{formatIndianCurrency(totalInvested)}</span>
           </div>
+          <p className="rounded-lg bg-gray-50 p-3 text-xs leading-relaxed text-gray-600">
+            Assumes contributions at the start of each month, with a fixed return until age 60 and a 6% annual annuity payout estimate. Actual NPS withdrawal limits, tax treatment, annuity pricing, and returns are subject to current rules and product terms; this is not a guaranteed pension quote.
+          </p>
         </div>
       </div>
     </div>

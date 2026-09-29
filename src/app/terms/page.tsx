@@ -1,15 +1,11 @@
-import { SITE_URL } from '@/lib/siteConfig';
-import React from 'react';
-import { Metadata } from 'next';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { createPageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Terms of Service',
-  description: 'Terms of Service for using IndiaUseful calculators and content.',
-  alternates: {
-    canonical: `${SITE_URL}/terms`
-  }
-};
+  description: 'Terms for using IndiaUseful calculators, tools, and informational content.',
+  path: '/terms'
+});
 
 export default function TermsPage() {
   return (

@@ -115,7 +115,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs space-y-4">
           <label className="text-sm font-semibold text-gray-800 block">Select Date of Birth</label>
-          <input
+          <input aria-label="Date of birth"
             type="date"
             value={dob}
             onChange={e => setDob(e.target.value)}
@@ -164,7 +164,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs space-y-4">
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">Start Date</label>
-            <input
+            <input aria-label="Start date"
               type="date"
               value={startDate}
               onChange={e => setStartDate(e.target.value)}
@@ -173,7 +173,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
           </div>
           <div>
             <label className="text-xs font-semibold text-gray-700 block mb-1">End Date</label>
-            <input
+            <input aria-label="End date"
               type="date"
               value={endDate}
               onChange={e => setEndDate(e.target.value)}
@@ -208,7 +208,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
             <label className="text-sm font-semibold text-gray-800 block mb-1">Original Price (MRP)</label>
             <div className="flex items-center">
               <span className="text-sm mr-1 font-mono">₹</span>
-              <input
+              <input aria-label="Original price in rupees"
                 type="number"
                 value={originalPrice}
                 onChange={e => setOriginalPrice(Number(e.target.value))}
@@ -221,7 +221,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
               <label className="text-sm font-semibold text-gray-800">Discount Offered (%)</label>
               <span className="font-bold text-emerald-700">{discountPercent}% OFF</span>
             </div>
-            <input
+            <input aria-label="Discount percentage slider"
               type="range"
               min="1"
               max="95"
@@ -274,7 +274,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xs space-y-5">
         <div>
           <label className="text-sm font-semibold text-gray-800 block mb-1">Height (cm)</label>
-          <input
+          <input aria-label="Height in centimetres"
             type="number"
             min="90"
             max="250"
@@ -285,7 +285,7 @@ export default function GenericUtilityCalculator({ type }: Props) {
         </div>
         <div>
           <label className="text-sm font-semibold text-gray-800 block mb-1">Weight (kg)</label>
-          <input
+          <input aria-label="Weight in kilograms"
             type="number"
             min="20"
             max="250"
