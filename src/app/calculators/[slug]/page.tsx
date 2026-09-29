@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { CALCULATORS, CATEGORIES } from '@/data/calculators';
+import { CALCULATOR_GUIDES, type CalculatorGuideKey } from '@/data/calculatorGuides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import GenericEmiCalculator from '@/components/calculators/GenericEmiCalculator';
@@ -74,26 +75,18 @@ export default async function CalculatorDetailPage({ params }: Props) {
     }
   };
 
-  const faqItems = [
-    {
-      question: 'Is this calculator free to use?',
-      answer: 'Yes. This calculator is free to use; there are no subscriptions or paywalls.'
-    },
-    {
-      question: 'Can I rely on these numbers for a bank application or financial decision?',
-      answer: 'Treat the result as an estimate, not an official quote or financial advice. It uses the inputs and simplified assumptions shown here; actual terms and amounts may vary with provider rules, timing, fees, eligibility, and applicable taxes. Verify important figures with the relevant institution or a qualified professional.'
-    }
-  ];
+  const guide = CALCULATOR_GUIDES[tool.id as CalculatorGuideKey];
+  const faqItems = guide.faqs;
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: faqItems.map(({ question, answer }) => ({
+    mainEntity: faqItems.map(({ q, a }) => ({
       '@type': 'Question',
-      name: question,
+      name: q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: answer
+        text: a
       }
     }))
   };
@@ -194,35 +187,74 @@ export default async function CalculatorDetailPage({ params }: Props) {
       {/* In-Content Responsive Ad Placeholder */}
       <AdPlaceholder slotId={`calculator-${tool.id}-mid`} format="horizontal" />
 
-      {/* Educational Explanation & Mathematical Formula */}
+      {/* Tool-specific explanation, formula, example, assumptions and FAQs */}
       <section className="mt-12 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 space-y-6">
-        <h2 className="text-xl font-bold text-gray-900">
-          Understanding {tool.name}: How It Works
-        </h2>
-        <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4">
-          <p>
-            The <strong>{tool.name}</strong> provides an instant planning estimate based on the values you enter and the assumptions shown in this tool. It is not an official quote, statement, or determination of eligibility.
+        <div>
+          <h2 className="text-xl font-bold text-gray-900">
+            How the {tool.name} works
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
+            {guide.overview}
           </p>
+        </div>
+
+        {guide.formula && (
           <div className="rounded-xl bg-gray-50 p-4 border border-gray-100">
-            <h3 className="font-semibold text-gray-900 text-sm mb-1">Key Benefits:</h3>
-            <ul className="list-disc pl-5 text-xs sm:text-sm text-gray-600 space-y-1">
-              <li><strong>Zero Wait Time:</strong> Built with responsive client-side React logic for instantaneous calculations as you move sliders.</li>
-              <li><strong>Browser-based calculations:</strong> No login is required, and calculator inputs are processed locally by the tool. See the Privacy Policy for information about ordinary hosting logs.</li>
-              <li><strong>Clear limitations:</strong> Rules, provider terms, rates, fees, eligibility, and tax treatment can change and may differ from the simplified model used here.</li>
+            <h3 className="font-semibold text-gray-900 text-sm mb-2">The calculation used</h3>
+            <p className="rounded-lg bg-white border border-gray-200 px-3 py-2 font-mono text-xs sm:text-sm text-gray-800 overflow-x-auto">
+              {guide.formula.expression}
+            </p>
+            <ul className="mt-3 list-disc pl-5 text-xs sm:text-sm text-gray-600 space-y-1">
+              {guide.formula.notes.map(note => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="border-t border-gray-100 pt-6">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Worked example</h3>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{guide.example}</p>
+        </div>
+
+        <div className="border-t border-gray-100 pt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Assumptions</h3>
+            <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
+              {guide.assumptions.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Where this estimate stops</h3>
+            <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
+              {guide.limitations.map(item => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* FAQs */}
+        <div className="border-t border-gray-100 pt-6">
+          <h3 className="text-lg font-bold text-gray-900 mb-3">Practical uses</h3>
+          <ul className="list-disc pl-5 text-sm text-gray-700 space-y-2">
+            {guide.useCases.map(item => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Tool-specific FAQs */}
         <div className="border-t border-gray-100 pt-6">
           <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
             <HelpCircle className="h-5 w-5 text-emerald-600" /> Frequently Asked Questions
           </h3>
           <div className="space-y-4 text-sm">
-            {faqItems.map(({ question, answer }) => (
-              <div key={question} className="rounded-xl border border-gray-100 p-4 bg-gray-50/50">
-                <h4 className="font-bold text-gray-900">{question}</h4>
-                <p className="text-gray-600 mt-1">{answer}</p>
+            {faqItems.map(faq => (
+              <div key={faq.q} className="rounded-xl border border-gray-100 p-4 bg-gray-50/50">
+                <h4 className="font-bold text-gray-900">{faq.q}</h4>
+                <p className="text-gray-600 mt-1">{faq.a}</p>
               </div>
             ))}
           </div>
