@@ -30,7 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return createPageMetadata({
     title: article.title,
     description: article.summary,
-    path: `/articles/${article.slug}`
+    path: `/articles/${article.slug}`,
+    ogType: 'article',
+    ogImage: `${SITE_URL}/og-image.png`
   });
 }
 
@@ -49,6 +51,7 @@ export default async function ArticlePage({ params }: Props) {
     '@type': 'Article',
     headline: article.title,
     description: article.summary,
+    image: `${SITE_URL}/og-image.png`,
     datePublished: article.date,
     author: {
       '@type': 'Organization',
@@ -58,9 +61,12 @@ export default async function ArticlePage({ params }: Props) {
     publisher: {
       '@type': 'Organization',
       name: 'IndiaUseful',
+      url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_URL}/favicon.ico`
+        url: `${SITE_URL}/logo.png`,
+        width: 512,
+        height: 512
       }
     },
     mainEntityOfPage: `${SITE_URL}/articles/${article.slug}`
