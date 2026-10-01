@@ -88,8 +88,7 @@ export default function RootLayout({
     },
     description: 'Free online calculators and financial tools for India',
     sameAs: [
-      'https://github.com/ramnath086/indiauseful',
-      'https://t.me/indiauseful'
+      'https://github.com/ramnath086/indiauseful'
     ]
   };
 

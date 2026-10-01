@@ -53,6 +53,7 @@ export default async function ArticlePage({ params }: Props) {
     description: article.summary,
     image: `${SITE_URL}/og-image.png`,
     datePublished: article.date,
+    dateModified: article.date,
     author: {
       '@type': 'Organization',
       name: 'IndiaUseful Team',
@@ -87,7 +88,7 @@ export default async function ArticlePage({ params }: Props) {
             {article.category}
           </span>
           <span className="flex items-center gap-1">
-            <Calendar className="h-3.5 w-3.5" /> {article.date}
+            <Calendar className="h-3.5 w-3.5" /> Last updated: <time dateTime={article.date}>{article.date}</time>
           </span>
           <span>•</span>
           <span className="flex items-center gap-1">
