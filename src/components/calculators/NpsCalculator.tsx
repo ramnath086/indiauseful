@@ -101,7 +101,7 @@ export default function NpsCalculator() {
             />
           </div>
           <div>
-            <label className="text-xs font-semibold text-gray-700 block mb-1">Annuity Reinvestment (Min 40%)</label>
+            <label className="text-xs font-semibold text-gray-700 block mb-1">Annuity Allocation (Modelled %)</label>
             <input aria-label="Annuity share in percent"
               type="number"
               min="40"
@@ -147,7 +147,7 @@ export default function NpsCalculator() {
             <span>{formatIndianCurrency(totalInvested)}</span>
           </div>
           <p className="rounded-lg bg-gray-50 p-3 text-xs leading-relaxed text-gray-600">
-            Assumes contributions at the start of each month, with a fixed return until age 60 and a 6% annual annuity payout estimate. Actual NPS withdrawal limits, tax treatment, annuity pricing, and returns are subject to current rules and product terms; this is not a guaranteed pension quote.
+            Assumes contributions at the start of each month, with a fixed return until age 60 and a 6% annual annuity payout estimate. For normal-exit corpus above ₹12 lakh, current minimum annuity requirements are 20% for non-government and 40% for government subscribers; smaller-corpus exceptions and premature-exit rules differ. The 40–100% input range is a modelling constraint, not a regulatory minimum. Verify exit eligibility, tax treatment and insurer terms; this is not a guaranteed pension quote.
           </p>
         </div>
       </div>

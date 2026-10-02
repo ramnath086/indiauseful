@@ -1,3 +1,5 @@
+import { GUIDES } from './guides';
+
 export interface CalculatorMeta {
   id: string;
   slug: string;
@@ -165,11 +167,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'ppf',
     slug: 'ppf-calculator',
     name: 'PPF (Public Provident Fund) Calculator',
-    shortDesc: 'Calculate 15-year tax-free guaranteed returns under government PPF scheme.',
+    shortDesc: 'Estimate PPF maturity using an assumed rate; actual interest uses government-notified rates.',
     category: 'finance',
     icon: 'ShieldCheck',
     seoTitle: 'PPF Calculator India - 15-Year Maturity',
-    seoDescription: 'Check PPF maturity amount, annual tax-free interest, and tax savings under Section 80C with current Indian sovereign interest rates.',
+    seoDescription: 'Estimate PPF maturity using an assumed rate; actual rates are government-notified. Tax savings under Section 80C depend on regime and eligibility.',
     keywords: ['ppf calculator', 'public provident fund calculator', 'ppf maturity tax free']
   },
   // 10. NPS Calculator
@@ -181,7 +183,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     category: 'finance',
     icon: 'Award',
     seoTitle: 'NPS Calculator India - Pension Wealth & Annuity',
-    seoDescription: 'Estimate your retirement corpus, lumpsum withdrawal (60%), and monthly pension payout (40% annuity) with the National Pension System.',
+    seoDescription: 'Estimate NPS retirement corpus and illustrative annuity income. Withdrawal and minimum annuity requirements depend on sector, exit type and corpus size.',
     keywords: ['nps calculator', 'national pension scheme calculator', 'retirement pension india']
   },
   // 11. Gratuity Calculator
@@ -411,14 +413,14 @@ Use our free [Home Loan EMI Calculator](/calculators/home-loan-emi-calculator) a
     category: 'finance',
     readTime: '5 min read',
     date: '2026-09-18',
-    summary: 'Why Systematic Investment Plans (SIP) beat market timing for Indian salaried individuals, backed by 15-year Nifty 50 rolling return data.',
+    summary: 'Understand SIP and lump-sum cash flows, rupee cost averaging and compounding assumptions without treating projected returns as a performance guarantee.',
     content: `
 ### What is SIP and Why Does it Work?
 
 A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly (monthly or weekly) into a mutual fund scheme. Instead of waiting for market dips, SIP enforces strict financial discipline.
 
 ### Benefits of Rupee Cost Averaging
-In volatile Indian stock markets, your fixed SIP buys more units when prices fall and fewer units when prices surge. Over 5 to 10 years, this automatically brings down your average cost per unit without needing you to predict market tops or bottoms.
+A fixed SIP buys more units when prices fall and fewer when prices rise, spreading purchases across different NAVs. This does not guarantee a profit, a lower purchase cost than a lump sum, or outperformance; the result depends on the sequence of prices and the eventual redemption value.
 
 ### Rupee Cost Averaging, With Actual Numbers
 
@@ -614,5 +616,6 @@ Treat the calculator as the steady-state estimate, and give the first two or thr
 
 Calculate your exact monthly take-home pay using our [In-Hand Salary Calculator](/calculators/salary-calculator) and [CTC Breakdown Calculator](/calculators/ctc-inhand-calculator).
     `
-  }
+  },
+  ...GUIDES
 ];

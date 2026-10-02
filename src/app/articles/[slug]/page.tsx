@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { ARTICLES, CALCULATORS } from '@/data/calculators';
+import { GUIDES } from '@/data/guides';
+import type { CalculatorGuideKey } from '@/data/calculatorGuides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import { renderMarkdown } from '@/lib/renderMarkdown';
@@ -44,7 +46,10 @@ export default async function ArticlePage({ params }: Props) {
     notFound();
   }
 
-  const relatedCalculators = CALCULATORS.filter(c => c.category === article.category).slice(0, 4);
+  const guide = GUIDES.find(g => g.slug === article.slug);
+  const relatedCalculators = CALCULATORS.filter(c =>
+    guide ? guide.calculatorIds.includes(c.id as CalculatorGuideKey) : c.category === article.category
+  ).slice(0, 4);
 
   const articleSchema = {
     '@context': 'https://schema.org',

@@ -4,7 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { CATEGORIES, CALCULATORS, ARTICLES } from '@/data/calculators';
+import { CATEGORIES, CALCULATORS } from '@/data/calculators';
+import { GUIDES } from '@/data/guides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import { ArrowRight, Calculator, BookOpen, Sparkles, Shield } from 'lucide-react';
@@ -43,19 +44,21 @@ const categoryContent: Record<string, {
     intro: 'Grow your wealth with accurate Indian tax-friendly calculators for SIP, PPF, NPS, and more.',
     keyTopics: [
       {
-        title: 'SIP vs Lump Sum: What 15 Years of Nifty 50 Data Shows',
-        content: 'Why Systematic Investment Plans beat market timing for Indian salaried investors, backed by 15-year Nifty 50 rolling return data.',
+        title: 'SIP vs Lump Sum: Cash Flows and Compounding',
+        content: 'Compare regular SIP contributions with a lump-sum investment. Rupee cost averaging spreads entry prices but does not guarantee profit or outperformance; projected returns are assumptions.',
         articleLink: '/articles/sip-vs-lumpsum-mutual-funds-guide',
         calculatorLinks: ['/calculators/sip-calculator', '/calculators/ppf-calculator', '/calculators/nps-calculator']
       },
       {
-        title: 'PPF: 15-Year Tax-Free Guaranteed Returns',
-        content: 'Public Provident Fund offers 15-year tax-free guaranteed returns under the government PPF scheme. Check maturity amount, annual tax-free interest, and tax savings under Section 80C with current Indian sovereign interest rates.',
+        title: 'PPF: Maturity and Government-Notified Interest',
+        content: 'PPF interest uses the government-notified/current applicable rate, which can change. The calculator uses a fixed 7.1% illustrative assumption, not a permanently guaranteed rate. Tax benefits depend on the applicable regime and eligibility.',
+        articleLink: '/articles/ppf-maturity-fifth-of-month-rule-guide',
         calculatorLinks: ['/calculators/ppf-calculator']
       },
       {
         title: 'NPS: Retirement Corpus & Monthly Pension Projection',
-        content: 'Estimate your retirement corpus, lumpsum withdrawal (60%), and monthly pension payout (40% annuity) with the National Pension System. Plan your retirement corpus and monthly pension payout.',
+        content: 'Project NPS corpus and illustrative pension. For normal-exit corpus above ₹12 lakh, the minimum annuity is currently 20% for non-government and 40% for government subscribers; smaller-corpus exceptions and premature-exit rules differ.',
+        articleLink: '/articles/nps-corpus-annuity-pension-guide',
         calculatorLinks: ['/calculators/nps-calculator']
       }
     ],
@@ -72,12 +75,14 @@ const categoryContent: Record<string, {
       },
       {
         title: 'FD & RD Returns with Quarterly Compounding',
-        content: 'Indian banks use quarterly compounding for FDs and RDs. Senior citizens get 0.5% extra. TDS applies above ₹40,000 interest (₹50K for seniors). Calculate maturity for SBI, HDFC, ICICI, Post Office.',
+        content: 'Indian banks use quarterly compounding for FDs and RDs. Senior citizens get 0.5% extra. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are ₹50,000 for others and ₹1,00,000 for senior citizens; the usual rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. Calculate maturity for SBI, HDFC, ICICI, Post Office.',
+        articleLink: '/articles/fd-maturity-quarterly-compounding-guide',
         calculatorLinks: ['/calculators/fd-calculator', '/calculators/rd-calculator']
       },
       {
         title: 'Loan Prepayment: Save Lakhs in Interest',
         content: 'Interest is charged on outstanding balance, so a rupee prepaid in year 3 saves interest for ~17 more years. A ₹2L prepayment on a ₹40L loan at 8.75% for 20 years saves ~₹6.1L interest and closes ~22 months early.',
+        articleLink: '/articles/loan-prepayment-emi-vs-tenure-guide',
         calculatorLinks: ['/calculators/loan-prepayment-calculator']
       }
     ],
@@ -159,6 +164,7 @@ export default async function CategoryPage({ params }: Props) {
   }
 
   const tools = CALCULATORS.filter(c => c.category === cat.id);
+  const relatedGuides = GUIDES.filter(g => g.category === cat.id);
   const content = categoryContent[cat.id];
 
   // ItemList schema for SEO
@@ -237,6 +243,22 @@ export default async function CategoryPage({ params }: Props) {
               ))}
             </div>
           </section>
+
+          {relatedGuides.length > 0 && (
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-gray-900">Calculator Guides</h2>
+              <ul className="space-y-3">
+                {relatedGuides.map(g => (
+                  <li key={g.slug}>
+                    <Link href={`/articles/${g.slug}`} className="inline-flex items-center gap-2 text-sm font-medium text-emerald-700 hover:underline">
+                      <BookOpen className="h-4 w-4 shrink-0" /> {g.title}
+                      <ArrowRight className="h-3.5 w-3.5 shrink-0" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
         </section>
       )}
 

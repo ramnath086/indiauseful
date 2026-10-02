@@ -319,7 +319,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
     faqs: [
       {
         q: 'How is FD interest taxed?',
-        a: 'Interest is generally taxable as income from other sources at your applicable slab rate, and the bank may deduct tax at source above the prescribed threshold. Confirm the current threshold and your slab rather than relying on the gross maturity figure.'
+        a: 'FD interest is generally taxable at your applicable slab rate. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are Rs 50,000 per year for others and Rs 1,00,000 for senior citizens, generally aggregated across deposits at the same bank. The usual TDS rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. TDS is not the final tax liability, and the calculator shows a gross estimate.'
       },
       {
         q: 'Is the maturity amount guaranteed?',
@@ -369,7 +369,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       },
       {
         q: 'Is RD interest taxable like FD interest?',
-        a: 'Yes. Recurring deposit interest is generally taxed as income from other sources at your slab rate, in the same way as fixed deposit interest.'
+        a: 'Yes. RD interest is generally taxable at your slab rate. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are Rs 50,000 per year for others and Rs 1,00,000 for senior citizens, generally aggregated across deposits at the same bank. The usual rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. Below the TDS threshold does not automatically mean tax-free.'
       },
       {
         q: 'What happens if I miss an installment?',
@@ -419,7 +419,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       },
       {
         q: 'What happens to a SIP when markets fall?',
-        a: 'Your fixed installment buys more units at lower prices, which lowers the average cost per unit. That helps only if you continue the plan and the market recovers by the time you redeem.'
+        a: 'Your fixed installment buys more units when prices are lower, spreading purchases across different prices. It does not guarantee a profit or outperformance; the eventual result depends on the market value when you redeem.'
       },
       {
         q: 'What is a step-up SIP?',
@@ -430,7 +430,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
 
   ppf: {
     overview:
-      'The Public Provident Fund is a long-tenure sovereign savings scheme with a 15-year term, an annual deposit limit and interest compounded annually. Contributions qualify for favourable tax treatment under the scheme, which is why it is a common long-term fixed-income allocation. This tool projects maturity from annual deposits at the rate the scheme pays when the tool was last updated.',
+      'The Public Provident Fund is a long-tenure sovereign savings scheme with a 15-year term, an annual deposit limit and interest compounded annually. Tax benefits depend on the applicable regime and eligibility. Actual interest uses the government-notified/current applicable rate, which can change. This tool projects annual deposits at a fixed 7.1% illustrative assumption, not a permanently guaranteed scheme rate.',
     formula: {
       expression: 'Closing balance = Opening balance + Deposit + Interest on (Opening balance + Deposit)',
       notes: [
@@ -441,16 +441,16 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       ]
     },
     example:
-      'Depositing Rs 1,50,000 each year for 15 years at the 7.1% rate used in the tool gives a maturity of about Rs 40,68,208 on Rs 22,50,000 invested.',
+      'Depositing Rs 1,50,000 each year for 15 years at the fixed 7.1% illustrative rate used in the tool gives a projected maturity of about Rs 40,68,208 on Rs 22,50,000 invested.',
     assumptions: [
-      'The scheme rate stays at the 7.1% used by the tool for the whole term.',
+      'The estimate holds the assumed 7.1% rate constant for the whole term; actual government-notified rates may change.',
       'One deposit is made at the start of each year, up to the annual cap.',
       'No partial withdrawals are taken during the term.',
       'The account completes the full 15-year maturity without extension.'
     ],
     limitations: [
       'The scheme rate is reviewed periodically by the government, so a 15-year projection at one rate will not match the eventual maturity if rates change.',
-      'Interest depends on deposit timing: deposits must be credited before the relevant month-end cut-off to earn interest for that month.',
+      'Monthly interest uses the lowest balance between the close of the fifth day and month-end. A new deposit should be credited on or before the fifth to count for that month; this annual model does not track monthly deposit dates.',
       'Partial withdrawal and extension rules apply at specified stages, and those reduce or extend the balance in ways this projection does not show.'
     ],
     useCases: [
@@ -465,7 +465,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       },
       {
         q: 'Does the interest rate stay the same for 15 years?',
-        a: 'No. The rate is set periodically, so the maturity value of a real account depends on the rates in force during each year of the term. A single-rate projection is a planning estimate.'
+        a: 'No. The government notifies the applicable rate periodically, so an actual account earns the rates in force for the relevant periods. The fixed 7.1% used here is an assumption for a planning estimate, not a guarantee for 15 years.'
       },
       {
         q: 'What happens at maturity?',
@@ -476,7 +476,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
 
   nps: {
     overview:
-      'The National Pension System builds a retirement corpus through regular contributions that are invested in market-linked schemes until you reach the prescribed retirement age. At that point, part of the corpus is used to buy an annuity that pays a pension and the remainder can be withdrawn as a lump sum. This tool shows how contributions grow and what those two parts could look like.',
+      'The National Pension System builds a retirement corpus through contributions invested in market-linked schemes. Exit eligibility and withdrawal or annuity requirements depend on sector, exit type, joining age and corpus size. This tool projects contributions until age 60 and illustrates a selected annuity allocation; it does not determine the legally applicable exit option.',
     formula: {
       expression: 'Corpus = M x [((1 + i)^n - 1) / i] x (1 + i), then split by annuity share',
       notes: [
@@ -487,7 +487,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       ]
     },
     example:
-      'A 30-year-old contributing Rs 5,000 a month at an assumed 10% return projects a corpus of about Rs 1,13,96,627 by age 60. With 40% directed to an annuity, the lump sum is roughly Rs 68,37,976 and the annuity about Rs 45,58,651, which at the modelled 6% yield pays about Rs 22,793 a month.',
+      'A 30-year-old contributing Rs 5,000 a month at an assumed 10% return projects a corpus of about Rs 1,13,96,627 by age 60. With an illustrative 40% directed to an annuity, the lump sum is roughly Rs 68,37,976 and the annuity about Rs 45,58,651, which at the modelled 6% yield pays about Rs 22,793 a month.',
     assumptions: [
       'Contributions are made at the start of each month until the retirement age modelled by the tool.',
       'The expected return stays constant for the whole accumulation period.',
@@ -496,7 +496,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
     ],
     limitations: [
       'NPS returns are market-linked and depend on the scheme mix you select, so the actual corpus will differ from the projection.',
-      'Withdrawal and annuity rules, including the minimum share that must be annuitised, are set by regulation and can change.',
+      'For normal-exit corpus above Rs 12 lakh, current minimum annuity requirements are 20% for non-government and 40% for government subscribers. Smaller-corpus exceptions and premature-exit rules differ; the 40-100% input range in this widget is a model constraint, not a universal regulatory minimum.',
       'Annuity rates vary by insurer, age, purchase amount and the payout option chosen, so the pension shown is an illustration rather than a quote.'
     ],
     useCases: [
@@ -507,7 +507,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
     faqs: [
       {
         q: 'Can the entire corpus be withdrawn as a lump sum at retirement?',
-        a: 'No. The framework requires a portion of the corpus to be used for an annuity, and the tool models that split. The exact minimum annuity share is set by the rules in force at the time of exit.'
+        a: 'It depends on your sector, exit type, joining age and corpus. Normal-exit provisions permit full withdrawal up to Rs 8 lakh for subscribers who joined before 60, with a separate Rs 12 lakh limit for those joining at or after 60. Above Rs 12 lakh, normal-exit minimum annuity is 20% for non-government and 40% for government subscribers. Other corpus bands and premature exits have different rules; verify the option applicable to your account.'
       },
       {
         q: 'What exactly is an annuity?',
@@ -515,7 +515,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       },
       {
         q: 'Is NPS better than PPF or a mutual fund SIP?',
-        a: 'They behave differently. NPS is market-linked and carries an annuity requirement at exit, PPF offers a fixed sovereign rate with a defined term, and a SIP has no exit restriction but no built-in pension. The right mix depends on your risk appetite and how much liquidity you need.'
+        a: 'They behave differently. NPS is market-linked with sector- and exit-specific withdrawal rules, PPF uses government-notified interest rates with a defined term, and mutual fund SIP liquidity depends on the scheme and any applicable lock-in or exit load. The right mix depends on risk appetite, goals and liquidity needs.'
       }
     ]
   },

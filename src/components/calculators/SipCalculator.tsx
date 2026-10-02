@@ -63,7 +63,7 @@ export default function SipCalculator() {
 
         <div>
           <div className="flex justify-between items-center mb-2">
-            <label className="text-sm font-semibold text-gray-800">Expected Annual Return Rate (CAGR)</label>
+            <label className="text-sm font-semibold text-gray-800">Assumed Annual Return Rate (%)</label>
             <div className="flex items-center">
               <input
                 type="number"
@@ -89,9 +89,9 @@ export default function SipCalculator() {
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-600"
           />
           <div className="flex justify-between text-[11px] text-gray-400 mt-1">
-            <span>6% (Conservative)</span>
-            <span>12% (Nifty Index)</span>
-            <span>15%+ (Mid/Small Cap)</span>
+            <span>1%</span>
+            <span>12% (assumption)</span>
+            <span>25%</span>
           </div>
         </div>
 
