@@ -1,0 +1,128 @@
+<!-- IndiaUseful Blogger Post: rd-maturity-monthly-deposits-guide -->
+<article class="iu-post-container" data-post-slug="rd-maturity-monthly-deposits-guide" data-category="banking">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/#guides" data-source-path="/#guides">Guides</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">RD Maturity Calculation: Monthly Deposits, Compounding and TDS</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-post-header">
+    <div class="iu-post-meta">
+      <span class="iu-cat-pill">banking</span>
+      <span>Last updated: <time datetime="2026-10-02">2026-10-02</time></span>
+      <span>•</span>
+      <span>6 min read</span>
+    </div>
+    <h1 class="iu-post-title">RD Maturity Calculation: Monthly Deposits, Compounding and TDS</h1>
+    <p class="iu-post-summary">See how each recurring-deposit instalment earns for a different period, calculate gross maturity and apply the corrected bank-interest TDS context.</p>
+  </header>
+
+  <div class="iu-prose iu-post-body">
+    <h3 class="iu-prose-heading">An RD Builds the Principal Over Time</h3>
+
+<p>A recurring deposit turns a regular monthly saving into a deposit balance that matures on a future date. Unlike an FD, the full principal is not present at the beginning. You add one instalment at a time, so earlier deposits earn interest for longer than later ones.</p>
+
+<p>The <a href="/p/rd-calculator.html" class="iu-inline-link" data-source-path="/calculators/rd-calculator">RD Calculator</a> estimates maturity for equal monthly deposits at a constant rate using its quarterly-compounding convention. It separates total invested from gross interest earned. It does not deduct tax, choose a current bank rate or model missed payments. The rate examples below are assumptions, not quotes from a bank or post office.</p>
+
+<h3 class="iu-prose-heading">Why You Cannot Use an FD Formula on the Total Deposits</h3>
+
+<p>Suppose you save ₹5,000 per month for three years. Total deposits are ₹1,80,000, but that whole amount is not invested for three years. The first instalment stays invested much longer than the last one. Treating ₹1,80,000 as a three-year FD overstates the period during which most of the money earns interest.</p>
+
+<p>That comparison is especially important when a quoted maturity appears lower than expected. An RD is not paying the headline annual rate on all future deposits from the first day. The rate applies to money actually deposited, for the time it remains with the provider.</p>
+
+<h3 class="iu-prose-heading">The Calculation Used by This Tool</h3>
+
+<p>For each monthly instalment A, the calculator estimates <strong>instalment maturity = A × (1 + R / 400)^(4 × months remaining / 12)</strong>. R is the annual rate in percentage points. It then adds the maturity values of all instalments.</p>
+
+<p>The first instalment is treated as invested at the start of the first modelled month. For a 36-month term, it earns for 36 months. The second earns for 35 months, and the final instalment for one month. Fractional quarterly periods are handled through the exponent in this simplified model.</p>
+
+<p>Real providers may follow different exact-day, due-date or compounding conventions. The formula describes this calculator, not every RD product's contractual maturity calculation. It is useful for comparison when the same convention is used across scenarios.</p>
+
+<h3 class="iu-prose-heading">A Three-Year Worked Example</h3>
+
+<p>Enter <strong>₹5,000 per month</strong>, an assumed annual rate of <strong>7.1%</strong> and <strong>three years</strong>:</p>
+
+<ul class="iu-prose-list">
+  <li>Number of instalments is <strong>36</strong>.</li>
+  <li>Total principal deposited is ₹5,000 × 36 = <strong>₹1,80,000</strong>.</li>
+  <li>Gross maturity is approximately <strong>₹2,01,001</strong>.</li>
+  <li>Gross interest across the term is approximately <strong>₹21,001</strong>.</li>
+</ul>
+
+<p>The gross gain is not three years of interest on ₹1,80,000 because the principal accumulated gradually. Dividing the final gain by total deposits and calling that an annual return would also ignore the different investment dates.</p>
+
+<p>If the monthly instalment doubles to ₹10,000 with the other inputs unchanged, maturity doubles to roughly ₹4,02,002 in the model. That larger corpus comes from contributing twice as much, not from receiving a better rate.</p>
+
+<h3 class="iu-prose-heading">Tenure and the Savings Commitment</h3>
+
+<p>At the same ₹5,000 monthly contribution and assumed 7.1% rate, a five-year projection has 60 deposits, ₹3 lakh invested and maturity of about <strong>₹3,60,615</strong>. The corpus is larger than the three-year example because you make more contributions and earlier deposits earn for longer.</p>
+
+<p>A longer RD is also a longer monthly commitment. Select the instalment from a dependable surplus after rent, bills, insurance, loan repayments and essential savings. An amount that fits only in a bonus month can be difficult to maintain on every due date.</p>
+
+<p>For a known goal, compare the maturity date with when the money is needed. A five-year maturity estimate cannot be used as the amount available after two years without checking premature-closure terms.</p>
+
+<h3 class="iu-prose-heading">Deposit Timing and Missed Instalments</h3>
+
+<p>The calculator assumes each payment is made at the start of its modelled month and no payment is missed. An actual RD has due dates and rules for delayed or failed payments. A late instalment may earn for fewer days and may attract a charge; continued defaults can have further consequences under the product terms.</p>
+
+<p>A standing instruction can support regular payment, but only if the linked account has enough money. Check whether the first deposit, monthly due date and final instalment line up with the calculator's timing assumption. Small differences can explain a maturity amount that does not exactly match the estimate.</p>
+
+<p>The tool does not simulate arrears or adjust the schedule after a missed month. Obtain a provider's statement rather than simply reducing total invested and assuming interest changes in the same proportion.</p>
+
+<h3 class="iu-prose-heading">Senior-Citizen Interest Assumptions</h3>
+
+<p>The senior-citizen switch adds a fixed <strong>0.50 percentage points</strong> to the base rate in the model. That is not a universal RD entitlement across every provider. Confirm whether the actual product offers an additional rate and whether you meet its eligibility conditions.</p>
+
+<p>If a senior-citizen quote already includes the additional rate, do not count it twice by entering that rate as the base and selecting the switch. Compare the effective rate displayed with the actual contracted rate. Eligibility for an interest offer and the tax rules for senior citizens are separate questions.</p>
+
+<h3 class="iu-prose-heading">Bank RD Interest and TDS from 1 April 2025</h3>
+
+<p>For resident depositors, bank FD/RD interest TDS thresholds from <strong>1 April 2025</strong> are <strong>₹50,000 per year for others</strong> and <strong>₹1,00,000 for senior citizens</strong>. Relevant interest is generally aggregated across deposits and branches of the same bank. A separate RD does not create another independent threshold alongside your FDs at that bank.</p>
+
+<p>The usual rate is <strong>10% with PAN</strong> and <strong>20% without PAN</strong>, subject to applicable exemptions, valid declarations or certificates and other conditions. The rules for non-residents or other deposit providers can differ. This is an annual interest threshold, not a threshold on instalments, principal or the entire maturity amount.</p>
+
+<p>For example, ₹35,000 of relevant FD interest plus ₹25,000 of RD interest at the same bank totals ₹60,000. For a resident non-senior depositor without an applicable exemption, the ordinary 10% TDS with PAN would be ₹6,000 on that relevant interest. It is not a deduction only on the ₹10,000 above the threshold.</p>
+
+<h3 class="iu-prose-heading">Gross Maturity, TDS and Final Income Tax</h3>
+
+<p>The calculator shows a gross estimate without deducting tax. RD interest is generally taxable at the rate applicable to your income. Interest below the TDS threshold is not automatically exempt, and a 10% deduction does not establish a final 10% tax rate for everyone.</p>
+
+<p>TDS is a credit against your tax liability. Depending on your overall income and eligibility, you may owe more tax or have a refund due. Reconcile the provider's interest statement and TDS credit with your own records instead of using only the maturity proceeds as a tax calculation.</p>
+
+<p>Check whether tax deducted during the term affects the amount that remains invested under your product. The calculator does not model that effect, which is another reason a provider's final credit can differ from the gross projection.</p>
+
+<h3 class="iu-prose-heading">RD, FD or SIP: Choose the Right Cash-Flow Model</h3>
+
+<p>An FD suits a lump sum already available. An RD suits fixed monthly deposits under the provider's terms. A mutual fund SIP also uses regular contributions, but returns are market-linked rather than a deposit's contracted rate. Identical monthly contribution amounts do not make their risks or withdrawal conditions identical.</p>
+
+<p>Compare the timing of cash flows, access before maturity, tax and the nature of returns before looking at a projected corpus. The <a href="/2026/10/fd-maturity-quarterly-compounding-guide.html" class="iu-inline-link" data-source-path="/articles/fd-maturity-quarterly-compounding-guide">FD maturity guide</a> and <a href="/2026/10/sip-return-calculation-guide.html" class="iu-inline-link" data-source-path="/articles/sip-return-calculation-guide">SIP return-calculation guide</a> explain those other models without treating their assumptions as interchangeable promises.</p>
+
+<h3 class="iu-prose-heading">Frequently Asked Questions</h3>
+
+<p><strong>Why does the last deposit earn so little?</strong> It remains invested for only a short time before maturity. The tool gives the final instalment one month, compared with the full term for the first.</p>
+
+<p><strong>Does the calculator deduct TDS?</strong> No. It estimates gross maturity. Consider relevant annual interest across your bank deposits separately.</p>
+
+<p><strong>Can I skip a month and still receive the displayed amount?</strong> No. The projection assumes every instalment is paid on time. Charges and interest changes depend on the product's rules.</p>
+
+<h3 class="iu-prose-heading">Related Tools</h3>
+
+<p>Use the <a href="/p/rd-calculator.html" class="iu-inline-link" data-source-path="/calculators/rd-calculator">RD Calculator</a> for a monthly savings illustration and the <a href="/p/fd-calculator.html" class="iu-inline-link" data-source-path="/calculators/fd-calculator">FD Calculator</a> only when the principal is available as a lump sum. For a longer-term scheme with a different monthly interest rule, read the <a href="/2026/10/ppf-maturity-fifth-of-month-rule-guide.html" class="iu-inline-link" data-source-path="/articles/ppf-maturity-fifth-of-month-rule-guide">PPF maturity guide</a>.</p>
+  </div>
+
+  <section class="iu-related-calculators-callout">
+    <h3>Related Free Calculators</h3>
+    <p>Put this knowledge into practice with our fast, private financial calculators:</p>
+    <div class="iu-related-grid">
+      <a href="/p/rd-calculator.html" data-source-path="/calculators/rd-calculator" class="iu-tool-card">
+        <div>
+          <h4>Recurring Deposit (RD) Calculator</h4>
+          <p>Compute maturity returns for monthly recurring savings schemes.</p>
+        </div>
+        <span class="iu-tool-cta">Open calculator →</span>
+      </a>
+    </div>
+  </section>
+</article>

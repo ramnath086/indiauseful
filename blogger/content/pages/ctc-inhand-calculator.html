@@ -1,0 +1,193 @@
+<!-- IndiaUseful Blogger Static Page: ctc-inhand-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="ctc-inhand-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-jobs.html" data-source-path="/category/jobs">Salary &amp; Employment</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">CTC to In-Hand Salary Breakdown</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">jobs</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">CTC to In-Hand Salary Breakdown</h1>
+    <p class="iu-page-subtitle">Illustrate modelled PF, gratuity costs and professional tax to estimate monthly pay before income-tax TDS.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="CTC to In-Hand Salary Breakdown">
+    <div class="iu-calculator-mount" data-calculator-id="ctc-inhand" data-widget-type="salary" data-mode="detailed">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-banner-blue">📋 <strong>Full CTC Breakdown View:</strong> Line-item calculation of employee vs employer statutory liabilities.</div>
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Annual Gross CTC (Cost to Company)</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="ctcAnnual" aria-label="Annual CTC in rupees" min="100000" max="100000000" step="50000" value="900000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="ctcAnnual" aria-label="Annual CTC slider" min="200000" max="4000000" step="25000" value="900000" class="iu-range" />
+        <div class="iu-range-ticks"><span>₹3 Lakhs</span><span>₹15 Lakhs</span><span>₹40 Lakhs</span></div>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Annual Variable / Performance Bonus</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="bonusAnnual" aria-label="Annual variable bonus in rupees" min="0" max="2000000" step="10000" value="50000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="bonusAnnual" aria-label="Annual bonus slider" min="0" max="500000" step="10000" value="50000" class="iu-range" />
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Monthly Professional Tax (PT)</label>
+          <select data-field="monthlyProfTax" aria-label="Monthly professional tax" class="iu-select">
+            <option value="200" selected="selected">₹200 / month (Standard: Kerala, Karnataka, MH)</option>
+            <option value="150">₹150 / month</option>
+            <option value="0">₹0 (States with no PT / Delhi)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Estimated Monthly In-Hand (Take-Home) Pay</p>
+        <div class="iu-result-primary iu-text-emerald" data-out="monthlyInHand">₹65,590</div>
+        <p class="iu-result-sub">Direct monthly bank credit (Pre-Income Tax TDS)</p>
+      </div>
+
+      <div class="iu-result-rows">
+        <div class="iu-result-row">
+          <span>Monthly Gross Salary:</span>
+          <strong data-out="monthlyGross">₹67,590</strong>
+        </div>
+        <div class="iu-result-row iu-text-red">
+          <span>Employee EPF (12%):</span>
+          <span data-out="employeePfMonthly">-₹1,800</span>
+        </div>
+        <div class="iu-result-row iu-text-red">
+          <span>Professional Tax:</span>
+          <span data-out="monthlyProfTax">-₹200</span>
+        </div>
+        <div class="iu-result-row iu-result-row-total iu-text-muted">
+          <span>Employer PF &amp; Gratuity (Included in CTC):</span>
+          <span data-out="employerCtcPart">₹3,243 /mo</span>
+        </div>
+      </div>
+
+      <p class="iu-calc-note">
+        Estimate assumes basic pay is 40% of CTC, applies the displayed PF cap and selected professional tax, and excludes income-tax TDS and employer-specific benefits or deductions. Actual payslips depend on your salary structure and current rules.
+      </p>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the CTC to In-Hand Salary Breakdown works</h2>
+      <p>An offer letter states cost to company, but the line items inside it behave very differently: some reach your account monthly, some are deferred, and some are employer contributions that only appear in the CTC total. This mode illustrates selected PF, gratuity and professional-tax amounts alongside pre-income-tax-TDS monthly pay. It does not provide a full allowance breakdown or calculate income tax or HRA exemptions.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>In-hand = (CTC - Variable pay) / 12 - Employer PF - Gratuity reserve - Employee PF - Professional tax</code></p>
+      <ul class="iu-prose-list">
+        <li>The annual variable component is removed first because it is not paid monthly.</li>
+        <li>Employer PF and the gratuity reserve are subtracted as CTC costs that do not arrive as cash.</li>
+        <li>Employee PF and professional tax are then subtracted as deductions from gross pay.</li>
+        <li>The result is the recurring monthly credit before income tax deducted at source.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>For a CTC of Rs 9,00,000 with a Rs 50,000 variable component and Rs 200 monthly professional tax, the fixed monthly gross is about Rs 67,590 after employer PF and the gratuity reserve, and the take-home is about Rs 65,590 once employee PF and professional tax are deducted.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>Basic pay is 40% of CTC, which drives the PF and gratuity lines.</li>
+          <li>Employer and employee PF are equal and capped at the statutory wage ceiling modelled.</li>
+          <li>The variable component is paid annually and in full.</li>
+          <li>Income tax deducted at source is excluded from the calculation.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>Real structures include house rent allowance, special allowance, leave travel, reimbursements and insurance, which shift the split between monthly cash and deferred benefits.</li>
+          <li>House rent allowance exemption depends on rent paid, city and regime, and is not computed here.</li>
+          <li>Employers may cap or exclude some components from PF differently from the model used here.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Comparing two offer letters with different basic pay, variable pay and benefits.</li>
+        <li>Understanding why a CTC figure does not match the monthly credit in the bank.</li>
+        <li>Negotiating the fixed component when a large share of the offer is variable.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>What is the difference between gross salary and CTC?</h4>
+          <p>Gross salary is what you earn before deductions such as provident fund and tax. CTC is larger because it also includes employer contributions and accruals such as the employer PF share, gratuity reserve and the cost of benefits.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Why is a higher variable component a risk?</h4>
+          <p>Variable pay is usually conditional on performance or company results, so it can be reduced or deferred. A high variable share makes the offer look larger while the predictable monthly amount stays lower.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>What should I compare between two offers?</h4>
+          <p>Compare the fixed monthly take-home, the provident fund and gratuity accruals, the variable component and its conditions, and any joining bonus with a clawback period. The headline CTC alone hides all of those differences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/home-loan-emi-salary-affordability-guide.html" data-source-path="/articles/home-loan-emi-salary-affordability-guide" class="iu-guide-link">Home Loan EMI and Salary Affordability: A Practical Planning Guide <span aria-hidden="true">→</span></a></li>
+      <li><a href="/2026/10/gratuity-calculation-guide.html" data-source-path="/articles/gratuity-calculation-guide" class="iu-guide-link">Gratuity Calculation: Salary, Service Years and Estimate Limits <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Salary &amp; Employment</h2>
+    <div class="iu-related-grid">
+      <a href="/p/gratuity-calculator.html" data-source-path="/calculators/gratuity-calculator" class="iu-tool-card">
+        <div>
+          <h3>Gratuity Calculator</h3>
+          <p>Calculate statutory gratuity payout as per Payment of Gratuity Act, 1972.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/salary-calculator.html" data-source-path="/calculators/salary-calculator" class="iu-tool-card">
+        <div>
+          <h3>In-Hand Salary Calculator</h3>
+          <p>Estimate pre-income-tax-TDS monthly pay after modelled PF costs and selected professional tax.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,190 @@
+<!-- IndiaUseful Blogger Static Page: gratuity-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="gratuity-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-jobs.html" data-source-path="/category/jobs">Salary &amp; Employment</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">Gratuity Calculator</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">jobs</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">Gratuity Calculator</h1>
+    <p class="iu-page-subtitle">Calculate statutory gratuity payout as per Payment of Gratuity Act, 1972.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="Gratuity Calculator">
+    <div class="iu-calculator-mount" data-calculator-id="gratuity" data-widget-type="gratuity">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Last Drawn Monthly Basic + Dearness Allowance (DA)</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="basicSalary" aria-label="Last drawn monthly basic salary and dearness allowance in rupees" min="5000" max="2000000" step="1000" value="50000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="basicSalary" aria-label="Salary slider" min="10000" max="300000" step="5000" value="50000" class="iu-range" />
+        <p class="iu-field-hint">Excludes HRA, special allowances, bonuses, and incentives.</p>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Completed Years of Service</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="yearsOfService" aria-label="Completed years of service" min="1" max="45" value="7" class="iu-num-input iu-w-20" />
+            <span class="iu-suffix">Years</span>
+          </div>
+        </div>
+        <input type="range" data-slider="yearsOfService" aria-label="Years of service slider" min="1" max="40" step="1" value="7" class="iu-range" />
+        <p class="iu-warning-hint" data-out="serviceWarning" style="display:none;">
+          ⚠️ Minimum 5 years continuous service required to qualify for statutory gratuity (except in death/disablement).
+        </p>
+      </div>
+
+      <div class="iu-field">
+        <label class="iu-label-sm">Organization Coverage</label>
+        <div class="iu-radio-group">
+          <label class="iu-radio-label">
+            <input type="radio" name="actCoverage-gratuity" data-field="isCoveredUnderAct" value="true" checked="checked" />
+            <span>Covered by Gratuity Act 1972 (10+ employees)</span>
+          </label>
+          <label class="iu-radio-label">
+            <input type="radio" name="actCoverage-gratuity" data-field="isCoveredUnderAct" value="false" />
+            <span>Not Covered (&lt; 10 employees)</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Estimated Gratuity Payout</p>
+        <div class="iu-result-primary" data-out="gratuityAmount">₹2,01,923</div>
+        <p class="iu-result-sub" data-out="gratuityFormula">Formula: (15 × ₹50,000 × 7) / 26</p>
+      </div>
+
+      <div class="iu-result-rows">
+        <div class="iu-result-row">
+          <span>Amount treated as exempt in this estimate (up to ₹20 Lakh):</span>
+          <strong class="iu-text-emerald" data-out="exemptGratuity">₹2,01,923</strong>
+        </div>
+        <div class="iu-result-row iu-text-amber" data-out="taxableRow" style="display:none;">
+          <span>Taxable Portion:</span>
+          <strong data-out="taxableGratuity">₹0</strong>
+        </div>
+      </div>
+
+      <div class="iu-calc-note">
+        Estimate uses the entered whole number of service years and a simplified formula. Statutory eligibility, the wage base, service-period rounding, coverage, exemption limits, and tax treatment depend on applicable law and individual circumstances; confirm with your employer or a qualified adviser.
+      </div>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the Gratuity Calculator works</h2>
+      <p>Gratuity is a lump sum an employer pays for long service, generally at the time of leaving the organisation. For establishments covered by the Payment of Gratuity Act, 1972, the payout follows a standard formula based on last drawn salary and completed years of service. This tool applies that formula and shows how much of the payout is covered by the exemption ceiling it models.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>Covered establishments: Gratuity = (15 x Last drawn salary x Years of service) / 26</code></p>
+      <ul class="iu-prose-list">
+        <li>The 15 represents fifteen days of salary for each completed year of service.</li>
+        <li>The divisor is 26 for employers covered by the Act, reflecting a six-day working week; for establishments outside the Act the tool uses 30.</li>
+        <li>Last drawn salary means basic pay plus dearness allowance, and the value you enter should exclude allowances that are not part of that definition.</li>
+        <li>A separate exemption ceiling is applied to the computed amount to show the likely taxable portion.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>With a last drawn salary of Rs 50,000 and 7 years of service in a covered establishment, gratuity works out to about Rs 2,01,923. The same salary and service outside the Act, computed with a divisor of 30, would be Rs 1,75,000.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>Service is counted in completed years as entered, with the Act-covered or uncovered divisor chosen by you.</li>
+          <li>Salary consists of basic pay plus dearness allowance as defined for gratuity purposes.</li>
+          <li>The employer is covered by the Payment of Gratuity Act, 1972, unless the uncovered option is selected.</li>
+          <li>The exemption ceiling applied is the one modelled in the tool.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>Entitlement normally requires a minimum period of continuous service, so leaving earlier may mean no gratuity at all.</li>
+          <li>Employers differ on what they include in salary for gratuity, and some compute on basic pay alone.</li>
+          <li>Taxability depends on whether the employer is covered and on your circumstances, so the split between exempt and taxable amounts is an indication only.</li>
+          <li>Adjustments for unpaid leave, break in service or partial years are not modelled.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Checking an exit settlement before accepting the figure quoted.</li>
+        <li>Estimating what service is worth at retirement if the same salary continues.</li>
+        <li>Comparing two offers where one includes gratuity in the CTC and the other does not.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>Is gratuity payable if I resign before completing the qualifying service?</h4>
+          <p>The statutory entitlement generally requires a minimum period of continuous service, so a shorter stint may not qualify, apart from limited exceptions. Confirm your position against the Act and your employment terms.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Is gratuity taxed?</h4>
+          <p>Gratuity is exempt up to the ceiling modelled in the tool, and amounts above that may be taxable depending on whether the employer is covered by the Act and on your category. Verify the current ceiling and your position before relying on the net figure.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Why does gratuity appear in my CTC but never in my monthly salary?</h4>
+          <p>Many employers accrue a gratuity reserve as part of cost to company because the liability builds over the years of service. It is paid at exit, so it appears in the CTC structure without ever reaching your monthly bank credit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/gratuity-calculation-guide.html" data-source-path="/articles/gratuity-calculation-guide" class="iu-guide-link">Gratuity Calculation: Salary, Service Years and Estimate Limits <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Salary &amp; Employment</h2>
+    <div class="iu-related-grid">
+      <a href="/p/salary-calculator.html" data-source-path="/calculators/salary-calculator" class="iu-tool-card">
+        <div>
+          <h3>In-Hand Salary Calculator</h3>
+          <p>Estimate pre-income-tax-TDS monthly pay after modelled PF costs and selected professional tax.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/ctc-inhand-calculator.html" data-source-path="/calculators/ctc-inhand-calculator" class="iu-tool-card">
+        <div>
+          <h3>CTC to In-Hand Salary Breakdown</h3>
+          <p>Illustrate modelled PF, gratuity costs and professional tax to estimate monthly pay before income-tax TDS.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>

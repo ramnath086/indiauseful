@@ -1,0 +1,192 @@
+<!-- IndiaUseful Blogger Static Page: nps-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="nps-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-finance.html" data-source-path="/category/finance">Finance &amp; Investments</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">NPS (National Pension System) Calculator</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">finance</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">NPS (National Pension System) Calculator</h1>
+    <p class="iu-page-subtitle">Project retirement pension wealth and monthly pension annuity.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="NPS (National Pension System) Calculator">
+    <div class="iu-calculator-mount" data-calculator-id="nps" data-widget-type="nps">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Your Current Age</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="currentAge" aria-label="Current age in years" min="18" max="59" value="30" class="iu-num-input iu-w-20" />
+            <span class="iu-suffix">Yrs</span>
+          </div>
+        </div>
+        <input type="range" data-slider="currentAge" aria-label="Current age slider" min="18" max="55" value="30" class="iu-range" />
+        <p class="iu-field-hint" data-out="investmentYearsHint">Investing for 30 years until age 60.</p>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Monthly Contribution</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="monthlyContribution" aria-label="Monthly NPS contribution in rupees" min="500" max="150000" step="500" value="5000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="monthlyContribution" aria-label="Monthly contribution slider" min="1000" max="50000" step="500" value="5000" class="iu-range" />
+      </div>
+
+      <div class="iu-two-col">
+        <div class="iu-field">
+          <label class="iu-label-sm">Expected Return (CAGR %)</label>
+          <input type="number" data-field="expectedReturn" aria-label="Expected annual return rate in percent" min="5" max="16" step="0.5" value="10" class="iu-num-input iu-w-full" />
+        </div>
+        <div class="iu-field">
+          <label class="iu-label-sm">Annuity Allocation (Modelled %)</label>
+          <input type="number" data-field="annuitySharePercent" aria-label="Annuity share in percent" min="40" max="100" step="5" value="40" class="iu-num-input iu-w-full" />
+        </div>
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Total Retirement Corpus at 60</p>
+        <div class="iu-result-primary" data-out="totalCorpus">₹1,13,96,627</div>
+      </div>
+
+      <div class="iu-highlight-box">
+        <p class="iu-result-eyebrow">Estimated Monthly Pension</p>
+        <div class="iu-result-secondary" data-out="monthlyPension">₹22,793 / month</div>
+        <p class="iu-result-sub">Illustration using a fixed 6% annual annuity payout assumption</p>
+      </div>
+
+      <div class="iu-result-rows">
+        <div class="iu-result-row">
+          <span data-out="lumpsumLabel">Illustrative lump-sum portion (60%):</span>
+          <strong data-out="lumpsumAmount">₹68,37,976</strong>
+        </div>
+        <div class="iu-result-row">
+          <span data-out="annuityLabel">Annuity Purchased (40%):</span>
+          <strong class="iu-text-emerald" data-out="annuityAmount">₹45,58,651</strong>
+        </div>
+        <div class="iu-result-row iu-text-muted">
+          <span>Total Out-of-pocket Invested:</span>
+          <span data-out="totalInvested">₹18,00,000</span>
+        </div>
+      </div>
+
+      <p class="iu-calc-note">
+        Assumes contributions at the start of each month, with a fixed return until age 60 and a 6% annual annuity payout estimate. For normal-exit corpus above ₹12 lakh, current minimum annuity requirements are 20% for non-government and 40% for government subscribers; smaller-corpus exceptions and premature-exit rules differ. The 40–100% input range is a modelling constraint, not a regulatory minimum. Verify exit eligibility, tax treatment and insurer terms; this is not a guaranteed pension quote.
+      </p>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the NPS (National Pension System) Calculator works</h2>
+      <p>The National Pension System builds a retirement corpus through contributions invested in market-linked schemes. Exit eligibility and withdrawal or annuity requirements depend on sector, exit type, joining age and corpus size. This tool projects contributions until age 60 and illustrates a selected annuity allocation; it does not determine the legally applicable exit option.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>Corpus = M x [((1 + i)^n - 1) / i] x (1 + i), then split by annuity share</code></p>
+      <ul class="iu-prose-list">
+        <li>M is the monthly contribution and i is the expected annual return divided by 12 and then by 100.</li>
+        <li>n is the number of monthly contributions between your current age and the retirement age used by the tool, 60.</li>
+        <li>The annuity share is the percentage of the corpus directed to buying a pension; the rest is the lump sum.</li>
+        <li>Monthly pension is the annuity amount multiplied by the annuity yield, divided by 12.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>A 30-year-old contributing Rs 5,000 a month at an assumed 10% return projects a corpus of about Rs 1,13,96,627 by age 60. With an illustrative 40% directed to an annuity, the lump sum is roughly Rs 68,37,976 and the annuity about Rs 45,58,651, which at the modelled 6% yield pays about Rs 22,793 a month.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>Contributions are made at the start of each month until the retirement age modelled by the tool.</li>
+          <li>The expected return stays constant for the whole accumulation period.</li>
+          <li>The annuity is priced at the fixed yield used by the tool, and the payout is shown before tax.</li>
+          <li>The contribution amount is never increased during the accumulation phase.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>NPS returns are market-linked and depend on the scheme mix you select, so the actual corpus will differ from the projection.</li>
+          <li>For normal-exit corpus above Rs 12 lakh, current minimum annuity requirements are 20% for non-government and 40% for government subscribers. Smaller-corpus exceptions and premature-exit rules differ; the 40-100% input range in this widget is a model constraint, not a universal regulatory minimum.</li>
+          <li>Annuity rates vary by insurer, age, purchase amount and the payout option chosen, so the pension shown is an illustration rather than a quote.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Estimating the retirement gap between what you are contributing and what you may need.</li>
+        <li>Understanding what share of the corpus becomes a monthly pension rather than a lump sum.</li>
+        <li>Comparing a retirement contribution against other long-term options.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>Can the entire corpus be withdrawn as a lump sum at retirement?</h4>
+          <p>It depends on your sector, exit type, joining age and corpus. Normal-exit provisions permit full withdrawal up to Rs 8 lakh for subscribers who joined before 60, with a separate Rs 12 lakh limit for those joining at or after 60. Above Rs 12 lakh, normal-exit minimum annuity is 20% for non-government and 40% for government subscribers. Other corpus bands and premature exits have different rules; verify the option applicable to your account.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>What exactly is an annuity?</h4>
+          <p>An annuity is a product that converts a lump sum into periodic payments, usually monthly, for a defined period or for life. The rate depends on the insurer and the option you choose.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Is NPS better than PPF or a mutual fund SIP?</h4>
+          <p>They behave differently. NPS is market-linked with sector- and exit-specific withdrawal rules, PPF uses government-notified interest rates with a defined term, and mutual fund SIP liquidity depends on the scheme and any applicable lock-in or exit load. The right mix depends on risk appetite, goals and liquidity needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/nps-corpus-annuity-pension-guide.html" data-source-path="/articles/nps-corpus-annuity-pension-guide" class="iu-guide-link">NPS Corpus, Annuity and Pension: Calculation and Exit-Rule Context <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Finance &amp; Investments</h2>
+    <div class="iu-related-grid">
+      <a href="/p/sip-calculator.html" data-source-path="/calculators/sip-calculator" class="iu-tool-card">
+        <div>
+          <h3>SIP Calculator (Mutual Funds)</h3>
+          <p>Calculate potential wealth creation through Systematic Investment Plans.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/ppf-calculator.html" data-source-path="/calculators/ppf-calculator" class="iu-tool-card">
+        <div>
+          <h3>PPF (Public Provident Fund) Calculator</h3>
+          <p>Estimate PPF maturity using an assumed rate; actual interest uses government-notified rates.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>
