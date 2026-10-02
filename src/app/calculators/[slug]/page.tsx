@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { CALCULATORS, CATEGORIES } from '@/data/calculators';
+import { GUIDES } from '@/data/guides';
 import { CALCULATOR_GUIDES, type CalculatorGuideKey } from '@/data/calculatorGuides';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import AdPlaceholder from '@/components/AdPlaceholder';
@@ -55,6 +56,7 @@ export default async function CalculatorDetailPage({ params }: Props) {
   }
 
   const category = CATEGORIES.find(c => c.id === tool.category);
+  const relatedGuides = GUIDES.filter(g => g.calculatorIds.includes(tool.id as CalculatorGuideKey));
   const relatedTools = CALCULATORS.filter(
     c => c.category === tool.category && c.id !== tool.id
   ).slice(0, 4);
@@ -260,6 +262,21 @@ export default async function CalculatorDetailPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {relatedGuides.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Related Guides</h2>
+          <ul className="space-y-3 text-sm">
+            {relatedGuides.map(g => (
+              <li key={g.slug}>
+                <Link href={`/articles/${g.slug}`} className="inline-flex items-center gap-2 font-medium text-emerald-700 hover:underline">
+                  {g.title} <ArrowRight className="h-4 w-4 shrink-0" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (

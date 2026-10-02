@@ -167,7 +167,7 @@ export default function DepositCalculator({ type }: Props) {
         </div>
 
         <div className="rounded-xl border border-gray-100 bg-gray-50 p-3.5 text-xs leading-relaxed text-gray-600">
-          Estimate assumes the selected rate remains unchanged for the full term and quarterly compounding. Actual bank and post-office products may use different terms, payment timing, compounding, and senior-citizen rates. Tax and TDS treatment depends on current rules and your circumstances.
+          Estimate assumes the selected rate remains unchanged for the full term and quarterly compounding. Actual bank and post-office products may use different terms, payment timing, compounding, and senior-citizen rates. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are ₹50,000 per year for others and ₹1,00,000 for senior citizens; the usual rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. TDS is not the final tax liability; this estimate does not deduct tax.
         </div>
       </div>
     </div>

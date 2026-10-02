@@ -6,9 +6,9 @@ import { formatIndianCurrency } from '@/lib/formatters';
 export default function PpfCalculator() {
   const [annualDeposit, setAnnualDeposit] = useState<number>(150000);
   const [tenureYears, setTenureYears] = useState<number>(15);
-  const interestRate = 7.1; // Government gazette PPF rate
+  const interestRate = 7.1; // Fixed illustrative assumption, not a guaranteed future PPF rate
 
-  // Yearly compounding for PPF: interest compounded annually on balances deposited before 5th of each month
+  // Simplified annual model: one contribution at the start of each modelled year
   let balance = 0;
   let totalInvested = 0;
   const yearlyBreakdown: { year: number; deposited: number; interest: number; closing: number }[] = [];
@@ -111,7 +111,7 @@ export default function PpfCalculator() {
         </div>
 
         <div className="rounded-xl bg-gray-50 p-3.5 border border-gray-100 text-xs text-gray-500 leading-relaxed">
-          Estimate assumes a fixed 7.1% annual rate and one contribution at the start of each modeled year, with annual compounding. Actual PPF rates are set periodically and interest depends on deposit timing and account rules; verify the current rate and terms. This simplified result is not an account statement or tax determination.
+          Estimate assumes a fixed 7.1% annual rate and one contribution at the start of each modeled year, with annual compounding. Actual PPF interest uses the government-notified/current applicable rate, which can change, and the lowest balance between the close of the fifth day and month-end. Verify the current rate and account terms. This simplified result is not an account statement or tax determination.
         </div>
       </div>
     </div>
