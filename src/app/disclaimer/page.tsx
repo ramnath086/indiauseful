@@ -43,7 +43,10 @@ export default function DisclaimerPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-2">4. Consult Professionals</h2>
           <p>
-            For personal financial planning, tax filing under Section 80C/Section 115BAC, or legal decisions, please consult a certified financial planner (CFP), SEBI RIA, or Chartered Accountant (CA).
+            For personal financial planning, tax filing, or legal decisions, please consult a certified financial planner (CFP), SEBI RIA, or Chartered Accountant (CA).
+          </p>
+          <p>
+            Section 80C and Section 115BAC are references to the Income-tax Act, 1961, including for FY 2025-26 (AY 2026-27). For Tax Year 2026-27, beginning 1 April 2026, the corresponding provisions of the Income-tax Act, 2025 are Section 123 (read with Schedule XV), formerly Section 80C; and Section 202, formerly Section 115BAC. Deduction eligibility depends on the applicable tax year and regime; the Section 123 deduction is not available under the default/new regime in Section 202.
           </p>
         </section>
       </div>

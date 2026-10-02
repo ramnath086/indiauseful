@@ -171,7 +171,7 @@ export const CALCULATORS: CalculatorMeta[] = [
     category: 'finance',
     icon: 'ShieldCheck',
     seoTitle: 'PPF Calculator India - 15-Year Maturity',
-    seoDescription: 'Estimate PPF maturity using an assumed rate; actual rates are government-notified. Tax savings under Section 80C depend on regime and eligibility.',
+    seoDescription: 'Estimate PPF maturity using an assumed rate; actual rates are government-notified. Tax Year 2026-27: Section 123 (read with Schedule XV), Income-tax Act, 2025, formerly Section 80C of the 1961 Act; regime and eligibility conditions apply.',
     keywords: ['ppf calculator', 'public provident fund calculator', 'ppf maturity tax free']
   },
   // 10. NPS Calculator
