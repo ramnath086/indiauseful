@@ -39,14 +39,14 @@ export const CATEGORIES: CategoryMeta[] = [
     id: 'jobs',
     name: 'Salary & Employment',
     malayalamName: 'ശമ്പളം & തൊഴിൽ',
-    description: 'Break down CTC into monthly in-hand take-home salary, Gratuity, and EPF under Indian labor laws.',
+    description: 'Estimate pre-income-tax-TDS monthly salary from a simplified CTC model, alongside gratuity and PF illustrations.',
     icon: 'Briefcase'
   },
   {
     id: 'gold',
     name: 'Gold & Jewellery',
     malayalamName: 'സ്വർണം & ആഭരണങ്ങൾ',
-    description: 'Calculate exact gold prices with hallmark purity (22K, 24K, 18K), making charges, and 3% GST.',
+    description: 'Estimate jewellery bills using user-entered gold rates, selected purity, making charges, and modelled GST and fees.',
     icon: 'Coins'
   },
   {
@@ -71,11 +71,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'emi',
     slug: 'emi-calculator',
     name: 'Loan EMI Calculator',
-    shortDesc: 'Calculate monthly installment, total interest, and complete repayment amortization.',
+    shortDesc: 'Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.',
     category: 'banking',
     icon: 'Calculator',
     seoTitle: 'EMI Calculator India - Monthly Installment & Interest',
-    seoDescription: 'Free online EMI calculator for Indian home, car, and personal loans. Calculate monthly EMI, total interest payable, and amortization schedule instantly.',
+    seoDescription: 'Estimate monthly loan EMI, total interest and total repayment using the entered principal, fixed annual rate and tenure. Fees and rate changes are excluded.',
     keywords: ['emi calculator', 'loan emi calculation', 'monthly emi india', 'sbi hdfc loan emi']
   },
   // 2. Home Loan
@@ -83,11 +83,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'home-loan',
     slug: 'home-loan-emi-calculator',
     name: 'Home Loan EMI Calculator',
-    shortDesc: 'Calculate home loan installments, processing charges, and tax deduction insights.',
+    shortDesc: 'Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.',
     category: 'banking',
     icon: 'Home',
-    seoTitle: 'Home Loan EMI Calculator India - Interest & Eligibility',
-    seoDescription: 'Plan your dream home with India’s best Home Loan EMI Calculator. Get detailed monthly breakdown, interest amounts, and tax deduction estimates.',
+    seoTitle: 'Home Loan EMI Calculator India - Interest & Repayment',
+    seoDescription: 'Estimate home loan EMI, total interest and total repayment using a fixed-rate model. Processing charges, insurance and tax deductions are not calculated.',
     keywords: ['home loan emi calculator', 'housing loan india', 'sbi home loan emi', 'hdfc home loan calculator']
   },
   // 3. Personal Loan
@@ -119,11 +119,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'loan-prepayment',
     slug: 'loan-prepayment-calculator',
     name: 'Loan Prepayment Calculator',
-    shortDesc: 'See how making part-prepayments reduces your tenure or monthly EMI.',
+    shortDesc: 'Estimate interest savings and tenure reduction from one part-payment while keeping EMI unchanged.',
     category: 'banking',
     icon: 'FastForward',
     seoTitle: 'Loan Prepayment Calculator - Save Interest',
-    seoDescription: 'Calculate how much interest you save and how many years you shave off your home or personal loan with part-payments.',
+    seoDescription: 'Estimate interest savings and tenure reduction from one loan prepayment, with the original EMI and rate unchanged. EMI reduction is not modelled.',
     keywords: ['loan prepayment calculator', 'home loan part payment', 'loan tenure reduction calculator']
   },
   // 6. FD Calculator
@@ -203,11 +203,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'salary',
     slug: 'salary-calculator',
     name: 'In-Hand Salary Calculator',
-    shortDesc: 'Calculate monthly take-home salary after PF, Professional Tax, and Income Tax deductions.',
+    shortDesc: 'Estimate pre-income-tax-TDS monthly pay after modelled PF costs and selected professional tax.',
     category: 'jobs',
     icon: 'Wallet',
-    seoTitle: 'In-Hand Salary Calculator India - Take Home Pay',
-    seoDescription: 'Accurately convert your annual Gross CTC into monthly take-home in-hand pay after deducting EPF, PT, and standard deductions.',
+    seoTitle: 'In-Hand Salary Calculator India - Pre-TDS Pay',
+    seoDescription: 'Estimate pre-income-tax-TDS monthly salary from CTC, variable pay, modelled PF and gratuity costs, and selected professional tax. Income tax is excluded.',
     keywords: ['in hand salary calculator', 'take home salary calculator', 'gross to net salary india']
   },
   // 13. CTC to In-Hand Calculator
@@ -215,11 +215,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'ctc-inhand',
     slug: 'ctc-inhand-calculator',
     name: 'CTC to In-Hand Salary Breakdown',
-    shortDesc: 'Detailed line-item breakdown of CTC: Basic, HRA, Allowances, PF, Gratuity & TDS.',
+    shortDesc: 'Illustrate modelled PF, gratuity costs and professional tax to estimate monthly pay before income-tax TDS.',
     category: 'jobs',
     icon: 'Receipt',
-    seoTitle: 'CTC to In-Hand Calculator India - Salary Breakdown',
-    seoDescription: 'Understand your Indian corporate CTC letter. Calculate employer PF, employee PF, HRA tax exemption, and true monthly bank credit.',
+    seoTitle: 'CTC to In-Hand Calculator India - Pre-TDS Breakdown',
+    seoDescription: 'Estimate pre-income-tax-TDS monthly pay with modelled PF, gratuity and professional tax. HRA exemptions, income tax and a full allowance breakdown are not calculated.',
     keywords: ['ctc to in hand calculator', 'ctc breakdown calculator', 'cost to company to net pay']
   },
   // 14. Gold Price Calculator
@@ -227,11 +227,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'gold-price',
     slug: 'gold-price-calculator',
     name: 'Gold Price & Jewellery Billing Calculator',
-    shortDesc: 'Calculate total gold ornament cost with 22K/24K rate, making charges, and 3% GST.',
+    shortDesc: 'Estimate jewellery bills using a user-entered 22K gold rate, selected purity, making charges, and modelled fees and GST.',
     category: 'gold',
     icon: 'Sparkles',
     seoTitle: 'Gold Price Calculator India - Jewellery Billing & GST',
-    seoDescription: 'Calculate exact jewellery bill amount including live gram rate, making charges (percentage or per gram), hallmarking fee, and 3% GST.',
+    seoDescription: 'Estimate jewellery cost using your entered 22K rate, derived purity rates, making charges, an assumed hallmarking fee and modelled 3% GST. No live quotes are fetched.',
     keywords: ['gold price calculator india', 'gold jewellery billing calculator', '22k gold rate with gst']
   },
   // 15. GST Calculator
@@ -239,11 +239,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'gst',
     slug: 'gst-calculator',
     name: 'GST Calculator (India)',
-    shortDesc: 'Calculate exclusive and inclusive GST for standard slabs (5%, 12%, 18%, 28%).',
+    shortDesc: 'Add or extract GST using limited/example rate presets (5%, 12%, 18%, 28%); the applicable rate is not determined.',
     category: 'tools',
     icon: 'Percent',
     seoTitle: 'GST Calculator India - Add/Remove GST',
-    seoDescription: 'Fast, accurate Indian Goods and Services Tax calculator. Calculate SGST, CGST, and IGST breakdowns for inclusive and exclusive amounts.',
+    seoDescription: 'Add or extract GST using limited/example rate presets and view a CGST/SGST illustration. Confirm the applicable rate separately; not all rates are available.',
     keywords: ['gst calculator', 'gst inclusive calculator', 'gst exclusive india', 'cgst sgst calculator']
   },
   // 16. Percentage Calculator
@@ -251,12 +251,12 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'percentage',
     slug: 'percentage-calculator',
     name: 'Percentage Calculator',
-    shortDesc: 'Quickly find percentage increase, decrease, marks percentage, and discounts.',
+    shortDesc: 'Calculate a percentage of a value or one number as a percentage share of another.',
     category: 'tools',
     icon: 'PercentCircle',
-    seoTitle: 'Percentage Calculator - Increase, Decrease & Share',
-    seoDescription: 'Multi-purpose percentage calculator for exams, business profit margins, markups, and everyday numerical ratios.',
-    keywords: ['percentage calculator', 'percentage increase calculator', 'exam percentage calculator']
+    seoTitle: 'Percentage Calculator - Percentage of a Value & Share',
+    seoDescription: 'Calculate X% of Y or X as a percentage of Y for marks, shares and everyday ratios. Percentage change between an old and new value is not calculated.',
+    keywords: ['percentage calculator', 'percentage of a number calculator', 'exam percentage calculator']
   },
   // 17. Age Calculator
   {
@@ -275,11 +275,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'date-difference',
     slug: 'date-difference-calculator',
     name: 'Date Difference / Duration Calculator',
-    shortDesc: 'Count total days, weeks, months, or working days between two dates.',
+    shortDesc: 'Count elapsed calendar days and express the interval as whole weeks plus remaining days.',
     category: 'tools',
     icon: 'CalendarRange',
     seoTitle: 'Date Difference Calculator - Days Between Dates',
-    seoDescription: 'Calculate the exact number of days, business working days, and weeks between two calendar dates for project deadlines and legal tenures.',
+    seoDescription: 'Find elapsed calendar days, whole weeks and remaining days between two dates. Weekends and holidays are included; working-day and month totals are not calculated.',
     keywords: ['date difference calculator', 'days between two dates', 'duration calculator']
   },
   // 19. Discount Calculator
@@ -287,11 +287,11 @@ export const CALCULATORS: CalculatorMeta[] = [
     id: 'discount',
     slug: 'discount-calculator',
     name: 'Discount & Sale Price Calculator',
-    shortDesc: 'Calculate final price after flat or stacked retail discounts and sale offers.',
+    shortDesc: 'Estimate the final price and saving for one percentage-discount stage per calculation.',
     category: 'tools',
     icon: 'Tag',
     seoTitle: 'Discount Calculator - Final Price & Savings',
-    seoDescription: 'Quickly calculate sale discounts, stacked percentage offers (e.g. 20% + 10%), and your total net savings during Flipkart/Amazon sales.',
+    seoDescription: 'Calculate the final price and saving for one percentage discount. For successive discounts, manually apply each stage to the previous result; stages are not combined automatically.',
     keywords: ['discount calculator', 'sale discount calculator', 'percentage off calculator']
   },
   // 20. BMI Calculator
@@ -404,7 +404,7 @@ Consider a ₹40,00,000 loan at 8.75% for 20 years with a single **₹2,00,000 p
 - Interest saved: approximately **₹6,11,721**
 - Loan closes about **22 months early** (roughly 1.8 years)
 
-Use our free [Home Loan EMI Calculator](/calculators/home-loan-emi-calculator) and [Loan Prepayment Calculator](/calculators/loan-prepayment-calculator) to simulate your exact bank statements.
+Use our free [Home Loan EMI Calculator](/calculators/home-loan-emi-calculator) and [Loan Prepayment Calculator](/calculators/loan-prepayment-calculator) to compare estimated EMI, repayment totals and fixed-EMI prepayment savings, not to reproduce a bank statement.
     `
   },
   {
@@ -553,7 +553,7 @@ Check your upcoming jewellery bills in seconds with our [Gold Price Calculator](
     category: 'jobs',
     readTime: '6 min read',
     date: '2026-09-12',
-    summary: 'Why your monthly bank credit is 20% to 30% lower than your offer letter CTC. Complete breakdown of Employer PF, Gratuity reserve, and standard deductions.',
+    summary: 'Understand CTC costs, PF, gratuity reserve, variable pay and professional tax, and distinguish a pre-income-tax-TDS estimate from actual bank credit.',
     content: `
 ### The Myth of CTC (Cost to Company)
 
@@ -614,7 +614,7 @@ The first month rarely matches a clean calculation. Common reasons:
 
 Treat the calculator as the steady-state estimate, and give the first two or three payslips time to settle before drawing conclusions.
 
-Calculate your exact monthly take-home pay using our [In-Hand Salary Calculator](/calculators/salary-calculator) and [CTC Breakdown Calculator](/calculators/ctc-inhand-calculator).
+Estimate your monthly pay before income-tax TDS using our [In-Hand Salary Calculator](/calculators/salary-calculator) and [CTC Breakdown Calculator](/calculators/ctc-inhand-calculator).
     `
   },
   ...GUIDES
