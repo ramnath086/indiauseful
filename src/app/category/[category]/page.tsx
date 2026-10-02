@@ -65,7 +65,7 @@ const categoryContent: Record<string, {
     clinicalNote: 'Projections are estimates based on assumed returns. Account for expense ratios, exit loads, capital gains tax, and inflation before making investment decisions.'
   },
   banking: {
-    intro: 'Calculate EMI, loan interest, prepayment savings, and FD/RD returns across Indian banks. From home loans to vehicle financing, get precise amortization schedules and interest breakdowns.',
+    intro: 'Estimate monthly loan EMI, total interest and repayment totals, fixed-EMI prepayment savings, and gross FD/RD maturity. These tools do not produce a month-by-month amortization table or calculate home-loan fees and tax deductions.',
     keyTopics: [
       {
         title: 'How Home Loan EMI is Calculated in India',
@@ -89,11 +89,11 @@ const categoryContent: Record<string, {
     clinicalNote: 'Results are estimates based on standard Indian banking formulas. Actual terms may vary by bank, credit profile, and loan type. Consult your bank for exact terms.'
   },
   jobs: {
-    intro: 'Break down CTC into monthly take-home salary after PF, Professional Tax, and Income Tax deductions. Understand the difference between CTC, gross, and net pay under Indian labor laws.',
+    intro: 'Estimate monthly salary before income-tax TDS using a simplified CTC model with PF, gratuity costs, variable pay and selected professional tax. Income tax, HRA exemptions and a full allowance breakdown are not calculated.',
     keyTopics: [
       {
         title: 'CTC vs In-Hand: The Hidden Components',
-        content: 'Your offer letter CTC includes non-cash items, deferred benefits, and statutory employer contributions. Employer PF (12% of Basic), Gratuity reserve (4.81%), and variable components can make monthly cash 20-30% lower than CTC/12. Understand the full breakdown.',
+        content: 'Your offer letter CTC includes non-cash items, deferred benefits, and statutory employer contributions. The tools illustrate modelled employer and employee PF, gratuity costs and variable pay rather than a complete payslip. Compare the pre-income-tax-TDS estimate with your actual salary structure.',
         articleLink: '/articles/understanding-ctc-vs-in-hand-salary-india',
         calculatorLinks: ['/calculators/salary-calculator', '/calculators/ctc-inhand-calculator']
       },
@@ -104,23 +104,39 @@ const categoryContent: Record<string, {
       },
       {
         title: 'Old vs New Tax Regime: Structure First, Then Tax',
-        content: 'Regime choice affects TDS, not the salary structure. Employer PF, gratuity reserve, and variable component behave the same in both regimes. Compare structure first, then tax impact.',
+        content: 'Regime choice affects TDS, not the salary structure. Employer PF, gratuity reserve, and variable component behave the same in both regimes. These tools estimate structure and pre-income-tax-TDS pay only; assess income tax and HRA eligibility separately.',
         calculatorLinks: ['/calculators/ctc-inhand-calculator', '/calculators/salary-calculator']
       }
     ],
     clinicalNote: 'First few payslips may differ due to mid-month joining, one-time deductions, PF start date, or tax declarations not yet submitted. Allow 2-3 payslips to settle before comparing with estimates.'
   },
-  tools: {
-    intro: 'Instant calculators for everyday math: GST breakdown (SGST/CGST/IGST), percentage increase/decrease/markup, chronological age for exams, date duration for project timelines, and BMI with Asian-Indian health thresholds.',
+  gold: {
+    intro: 'A jewellery budget starts with the quoted gold rate, weight and purity, then adds making charges and other invoice items. Use the existing calculator to compare estimates from those inputs rather than treating a default rate as a live market quote. Read the buying guide before comparing written quotations, especially when stones, wastage or separate charges are involved.',
     keyTopics: [
       {
-        title: 'GST Breakdown: SGST, CGST, IGST Made Simple',
-        content: 'Indian GST has 4 slabs (5%, 12%, 18%, 28%). For intra-state: SGST + CGST. For inter-state: IGST. Calculate exclusive/inclusive amounts and verify invoice breakdowns instantly.',
+        title: 'Gold Price & Jewellery Billing Calculator',
+        content: 'Enter the quoted 22K rate per gram, gram weight, selected purity and making-charge basis. The tool estimates metal value, making charges, a fixed hallmarking-fee assumption and modelled 3% GST. Other purity rates are derived from your input; live gold quotes are not fetched.',
+        calculatorLinks: ['/calculators/gold-price-calculator']
+      },
+      {
+        title: 'Gold-Buying Guide: Purity, HUID and Invoice Charges',
+        content: 'Read the existing guide on hallmark purity and HUID, making charges, wastage, GST and gold-weight units. Use it to ask for a clear written breakdown before comparing jewellery quotations; the calculator does not include separate stone or diamond prices.',
+        articleLink: '/articles/gold-buying-guide-hallmarking-gst-making-charges'
+      }
+    ],
+    clinicalNote: 'Use your own quoted rate and verify current charges and tax treatment with the jeweller. The displayed result is a simplified estimate, not a live price feed or a guaranteed invoice.'
+  },
+  tools: {
+    intro: 'Use limited GST rate presets for inclusive/exclusive arithmetic and a CGST/SGST illustration, calculate a percentage of a value or a share, check chronological age, count calendar days/weeks, apply one discount stage, or view BMI with Asian-Indian thresholds.',
+    keyTopics: [
+      {
+        title: 'GST Arithmetic with Limited Rate Presets',
+        content: 'The 5%, 12%, 18% and 28% buttons are limited/example presets, not a complete current GST rate list. Dated context: the 22 September 2025 reforms introduced a broad 5%/18% structure with a special 40% rate for selected supplies. Other rates, exemptions and later amendments can apply. The calculator does not determine the applicable rate and cannot model a rate missing from its presets.',
         calculatorLinks: ['/calculators/gst-calculator']
       },
       {
-        title: 'Percentage Calculator: Marks, Margins, Markups',
-        content: 'Find percentage increase/decrease, marks percentage, profit margins, and markups. Useful for exam scores, business margins, markups, and everyday ratios.',
+        title: 'Percentage of a Value and Percentage Share',
+        content: 'Calculate X% of Y or X as a percentage of Y, such as marks scored out of a total. Percentage change between an old and new value is a separate calculation, not an output of this tool.',
         calculatorLinks: ['/calculators/percentage-calculator']
       },
       {
@@ -243,6 +259,16 @@ export default async function CategoryPage({ params }: Props) {
               ))}
             </div>
           </section>
+
+          {cat.id === 'tools' && (
+            <p className="text-xs leading-relaxed text-gray-600">
+              GST rate reference: the{' '}
+              <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2163555" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">Ministry of Finance announcement dated 3 September 2025</a>{' '}
+              describes the reforms from 22 September 2025. Check the{' '}
+              <a href="https://taxinformation.cbic.gov.in/" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">current CBIC notifications and rate information</a>{' '}
+              for the classification and date of your transaction. These presets do not determine the applicable GST rate.
+            </p>
+          )}
 
           {relatedGuides.length > 0 && (
             <section className="space-y-4">

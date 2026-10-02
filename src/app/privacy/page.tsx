@@ -13,7 +13,7 @@ export default function PrivacyPage() {
     <div className="mx-auto max-w-4xl px-4 py-10 text-gray-800 sm:px-6 lg:px-8">
       <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
       <h1 className="mt-4 text-3xl font-extrabold text-gray-900">Privacy Policy</h1>
-      <p className="mt-1 text-xs text-gray-500">Last updated: September 2026</p>
+      <p className="mt-1 text-xs text-gray-500">Last updated: 2 October 2026</p>
 
       <div className="mt-8 space-y-6 text-sm leading-relaxed sm:text-base">
         <section>
@@ -28,6 +28,25 @@ export default function PrivacyPage() {
           <p>
             IndiaUseful currently does not load advertising scripts, serve live ads, or use advertising cookies. Some pages may show a clearly labeled, empty advertisement placeholder for layout purposes; it does not load an ad or set an advertising cookie. If advertising or other tracking services are introduced, this policy will be updated to explain the relevant services and choices.
           </p>
+          <p className="mt-3">
+            If Google AdSense or another third-party advertising service is enabled in the future, vendors including Google may place or read cookies, use web beacons, and process IP addresses or other identifiers for ad delivery, measurement, security, and, where applicable, personalization. Advertising cookies may enable Google and its partners to serve ads based on prior visits to this website or other websites. Personalization would depend on the services enabled, user settings, consent where required, and applicable rules; this is not a statement that those services operate here now.
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-6">
+            <li>
+              You can manage or opt out of Google ad personalization through{' '}
+              <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">Google Ads Settings</a>.
+            </li>
+            <li>
+              Participating third-party vendors provide cookie-based personalized-advertising opt-outs through{' '}
+              <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">Digital Advertising Alliance choices</a>{' '}
+              or their own privacy and opt-out pages. Any additional advertising vendors used here would be identified and linked in this policy before activation.
+            </li>
+            <li>
+              See{' '}
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">how Google uses information from sites or apps that use its services</a>{' '}
+              for details. Browser settings can also control cookies. Opting out of personalized advertising does not necessarily disable all cookies or prevent non-personalized ads if advertising is later enabled.
+            </li>
+          </ul>
         </section>
 
         <section>

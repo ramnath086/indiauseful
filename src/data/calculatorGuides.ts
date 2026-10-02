@@ -572,7 +572,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
 
   salary: {
     overview:
-      'Take-home pay is what actually reaches your bank account after the deductions on your payslip, and it is always lower than the cost to company quoted in an offer. This tool converts an annual CTC into an estimated monthly credit by modelling the employer-side costs and the standard recurring deductions. It is designed as a budgeting aid for the fixed monthly component, not as a payslip replacement.',
+      'Take-home pay is what actually reaches your bank account after the deductions on your payslip, and it is always lower than the cost to company quoted in an offer. This tool converts an annual CTC into an estimated pre-income-tax-TDS monthly amount by modelling selected employer-side costs, employee PF and professional tax. It is designed as a budgeting aid for the fixed monthly component, not as a payslip replacement.',
     formula: {
       expression: 'In-hand = Monthly gross - (Employee PF + Professional tax)',
       notes: [
@@ -618,7 +618,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
 
   'ctc-inhand': {
     overview:
-      'An offer letter states cost to company, but the line items inside it behave very differently: some reach your account monthly, some are deferred, and some are employer contributions that only appear in the CTC total. This mode of the calculator lays out that structure so you can read an offer letter line by line instead of comparing headline numbers. It is the detailed counterpart of the simple in-hand estimate.',
+      'An offer letter states cost to company, but the line items inside it behave very differently: some reach your account monthly, some are deferred, and some are employer contributions that only appear in the CTC total. This mode illustrates selected PF, gratuity and professional-tax amounts alongside pre-income-tax-TDS monthly pay. It does not provide a full allowance breakdown or calculate income tax or HRA exemptions.',
     formula: {
       expression: 'In-hand = (CTC - Variable pay) / 12 - Employer PF - Gratuity reserve - Employee PF - Professional tax',
       notes: [
@@ -899,13 +899,13 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
 
   'date-difference': {
     overview:
-      'Counting the days between two dates looks trivial until the answer decides something: a notice period, a filing deadline, a project timeline or an interest calculation. The subtlety is whether the first or last day is counted, because that single choice changes the total by a day. This tool shows the interval between two dates in days, weeks and months so the basis is explicit.',
+      'Counting the days between two dates looks trivial until the answer decides something: a notice period, a filing deadline, a project timeline or an interest calculation. The subtlety is whether the first or last day is counted, because that single choice changes the total by a day. This tool shows elapsed calendar days and the equivalent whole weeks plus remaining days; month, year and working-day outputs are not provided.',
     formula: {
       expression: 'Days = difference between the two calendar dates, with one endpoint excluded',
       notes: [
         'The tool measures the interval from the start date to the end date and does not count both endpoints.',
         'Weeks are shown as complete seven-day groups, with any leftover days reported separately.',
-        'Months and years are derived from the same interval.',
+        'No month or year totals are calculated or displayed.',
         'Because it is calendar arithmetic, weekends and public holidays are included.'
       ]
     },
@@ -950,7 +950,7 @@ export const CALCULATOR_GUIDES: Record<CalculatorGuideKey, CalculatorGuide> = {
       notes: [
         'The discount is computed on the price you enter, which should be the price the discount applies to.',
         'Discounts applied one after another multiply rather than add, because the second applies to the already-reduced price.',
-        'The tool models a single discount rate, so stacked offers are handled by applying it once per stage.',
+        'The tool models one discount stage per calculation. For successive discounts, manually enter the previous final price and apply the next rate; stages are not combined automatically.',
         'The final price can never fall below zero.'
       ]
     },

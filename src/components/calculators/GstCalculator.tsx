@@ -93,7 +93,7 @@ export default function GstCalculator() {
         </div>
 
         <div>
-          <label className="text-sm font-semibold text-gray-800 block mb-2">Standard Indian GST Slabs</label>
+          <label className="text-sm font-semibold text-gray-800 block mb-2">Limited / Example GST Rate Presets</label>
           <div className="grid grid-cols-4 gap-2">
             {[5, 12, 18, 28].map(rate => (
               <button
@@ -111,6 +111,15 @@ export default function GstCalculator() {
               </button>
             ))}
           </div>
+          <p className="mt-3 text-xs leading-relaxed text-gray-600">
+            These are limited/example presets, not a complete current GST rate list. This calculator does not determine the applicable GST rate. Confirm the classification and rate for your transaction date; if that rate is not offered here, this tool cannot model it.
+          </p>
+          <p className="mt-3 text-xs leading-relaxed text-gray-600">
+            Dated rate context: the reforms from 22 September 2025 introduced a broad 5%/18% structure and a special 40% rate for selected supplies, with other rates, exemptions and subsequent amendments to check. See the{' '}
+            <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2163555" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">Ministry of Finance announcement dated 3 September 2025</a>{' '}
+            and{' '}
+            <a href="https://taxinformation.cbic.gov.in/" target="_blank" rel="noopener noreferrer" className="text-emerald-700 underline">current CBIC notifications and rate information</a>.
+          </p>
         </div>
       </div>
 
