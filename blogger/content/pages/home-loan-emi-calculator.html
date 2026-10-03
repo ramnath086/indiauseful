@@ -1,0 +1,215 @@
+<!-- IndiaUseful Blogger Static Page: home-loan-emi-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="home-loan-emi-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-banking.html" data-source-path="/category/banking">Banking &amp; Loans</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">Home Loan EMI Calculator</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">banking</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">Home Loan EMI Calculator</h1>
+    <p class="iu-page-subtitle">Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="Home Loan EMI Calculator">
+    <div class="iu-calculator-mount" data-calculator-id="home-loan" data-widget-type="generic-emi" data-label="Home Loan">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Home Loan Amount</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="loanAmount" aria-label="Home Loan amount" min="10000" max="100000000" step="10000" value="5000000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="loanAmount" aria-label="Home Loan amount slider" min="50000" max="15000000" step="25000" value="5000000" class="iu-range" />
+        <div class="iu-range-ticks"><span>₹50,000</span><span>₹50 Lakh</span><span>₹1.5 Crore</span></div>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Interest Rate (% p.a.)</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="interestRate" aria-label="Interest rate annual percentage" min="1" max="36" step="0.1" value="8.5" class="iu-num-input iu-w-24" />
+            <span class="iu-suffix">%</span>
+          </div>
+        </div>
+        <input type="range" data-slider="interestRate" aria-label="Interest rate slider" min="6" max="24" step="0.1" value="8.5" class="iu-range" />
+        <div class="iu-range-ticks"><span>6%</span><span>12%</span><span>24%</span></div>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Tenure (Years)</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="tenureYears" aria-label="Loan tenure in years" min="1" max="35" step="1" value="20" class="iu-num-input iu-w-20" />
+            <span class="iu-suffix" data-out="tenureSuffix">Yrs (240 Mos)</span>
+          </div>
+        </div>
+        <input type="range" data-slider="tenureYears" aria-label="Loan tenure slider" min="1" max="30" step="1" value="20" class="iu-range" />
+        <div class="iu-range-ticks"><span>1 Yr</span><span>15 Yrs</span><span>30 Yrs</span></div>
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Monthly Loan EMI</p>
+        <div class="iu-result-primary" data-out="emi">₹43,391</div>
+        <p class="iu-result-sub" data-out="emiSub">per month for 240 months</p>
+      </div>
+
+      <div class="iu-result-rows">
+        <div class="iu-result-row">
+          <span>Principal Amount:</span>
+          <strong data-out="principal">₹50,00,000</strong>
+        </div>
+        <div class="iu-result-row">
+          <span>Total Interest Payable:</span>
+          <strong class="iu-text-amber" data-out="totalInterest">₹54,13,840</strong>
+        </div>
+        <div class="iu-result-row iu-result-row-total">
+          <span>Total Payment (P + I):</span>
+          <strong class="iu-text-emerald" data-out="totalPayment">₹1,04,13,840</strong>
+        </div>
+      </div>
+
+      <div class="iu-ratio-box">
+        <div class="iu-ratio-labels">
+          <span><i class="iu-dot iu-dot-emerald"></i> <span data-out="principalPercentLabel">Principal (48%)</span></span>
+          <span><i class="iu-dot iu-dot-amber"></i> <span data-out="interestPercentLabel">Interest (52%)</span></span>
+        </div>
+        <div class="iu-ratio-bar">
+          <div class="iu-ratio-fill-emerald" data-bar="principal" style="width:48%"></div>
+          <div class="iu-ratio-fill-amber" data-bar="interest" style="width:52%"></div>
+        </div>
+      </div>
+
+      <p class="iu-calc-note">
+        Estimate uses a fixed annual rate applied monthly to a reducing balance, with no fees, insurance, or rate changes included. Lender schedules, rounding, and charges may differ.
+      </p>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the Home Loan EMI Calculator works</h2>
+      <p>Home loans in India usually run much longer than other retail loans, which makes the total interest very sensitive to both the rate and the tenure. This tool models a standard reducing-balance housing loan so you can see the monthly commitment and the lifetime interest before choosing a tenure. It is the same EMI mathematics used for any loan, applied to the larger principals and longer tenures typical of property purchase.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>EMI = [P x R x (1 + R)^N] / [(1 + R)^N - 1]</code></p>
+      <ul class="iu-prose-list">
+        <li>P is the sanctioned amount, not the property price. The difference is your down payment.</li>
+        <li>R is the annual rate divided by 12 and then by 100.</li>
+        <li>N is the tenure in months. A 20-year loan is 240 installments.</li>
+        <li>Total repayment minus P gives the total interest cost of the loan.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>A housing loan of Rs 50,00,000 at 8.5% for 20 years gives an EMI of about Rs 43,391. Total repayment is roughly Rs 1,04,13,840, so the interest alone comes to about Rs 54,13,840 over the term.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>The rate stays fixed for the whole term. Floating home loans change when the benchmark moves.</li>
+          <li>No prepayment, part-payment or foreclosure happens during the term.</li>
+          <li>Disbursement is treated as a single amount at the start, so pre-EMI interest during construction is not modelled.</li>
+          <li>Registration, stamp duty, processing fees and property insurance are excluded.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>Most Indian home loans are floating rate and linked to an external benchmark, so rate resets will change the EMI or the remaining tenure.</li>
+          <li>For an under-construction property, many lenders collect interest-only pre-EMI until full disbursement, which this model does not capture.</li>
+          <li>Tax treatment of home loan interest and principal repayment depends on your tax regime, eligibility and current rules; the tool shows the loan cash flow only.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Sizing how much loan a comfortable monthly installment can support before you shortlist property.</li>
+        <li>Comparing 15, 20 and 30-year tenures to see how much extra interest a longer term costs.</li>
+        <li>Setting a realistic budget for prepayments alongside the regular EMI.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>What is pre-EMI and why is it not in this estimate?</h4>
+          <p>Pre-EMI is the interest-only payment some lenders collect on amounts already disbursed before the property is complete and the full loan is released. It sits outside a standard EMI schedule, so this tool models the post-disbursement phase only.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Does the calculator include tax deductions on the home loan?</h4>
+          <p>No. It shows the loan arithmetic: installment, total repayment and interest. Whether interest or principal qualifies for a deduction depends on your regime and circumstances, and that is best confirmed against current rules or with a professional.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Is it better to choose the shortest tenure I can afford?</h4>
+          <p>Shorter tenures cut total interest substantially but raise the monthly installment. The useful test is whether the higher EMI still leaves an emergency buffer after other commitments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/home-loan-emi-salary-affordability-guide.html" data-source-path="/articles/home-loan-emi-salary-affordability-guide" class="iu-guide-link">Home Loan EMI and Salary Affordability: A Practical Planning Guide <span aria-hidden="true">→</span></a></li>
+      <li><a href="/2026/10/loan-prepayment-emi-vs-tenure-guide.html" data-source-path="/articles/loan-prepayment-emi-vs-tenure-guide" class="iu-guide-link">Loan Prepayment: Reduce EMI or Shorten Tenure? <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Banking &amp; Loans</h2>
+    <div class="iu-related-grid">
+      <a href="/p/emi-calculator.html" data-source-path="/calculators/emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Loan EMI Calculator</h3>
+          <p>Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/personal-loan-emi-calculator.html" data-source-path="/calculators/personal-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Personal Loan EMI Calculator</h3>
+          <p>Estimate monthly outflow for quick personal credit and emergency financing.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/car-loan-emi-calculator.html" data-source-path="/calculators/car-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Car / Vehicle Loan Calculator</h3>
+          <p>Plan financing for new or pre-owned vehicles with on-road down payments.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/loan-prepayment-calculator.html" data-source-path="/calculators/loan-prepayment-calculator" class="iu-tool-card">
+        <div>
+          <h3>Loan Prepayment Calculator</h3>
+          <p>Estimate interest savings and tenure reduction from one part-payment while keeping EMI unchanged.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>

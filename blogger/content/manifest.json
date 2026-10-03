@@ -1,0 +1,947 @@
+{
+  "siteName": "IndiaUseful",
+  "edition": "blogger",
+  "sourceCommit": "8540307882a503c7e114ff78b193fd4d089bbfcd",
+  "summary": {
+    "totalStaticPages": 32,
+    "calculators": 21,
+    "categories": 6,
+    "legalPages": 5,
+    "totalPosts": 14,
+    "longFormGuides": 10,
+    "baseArticles": 4
+  },
+  "pages": [
+    {
+      "id": "emi",
+      "slug": "emi-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Loan EMI Calculator",
+      "seoTitle": "EMI Calculator India - Monthly Installment & Interest",
+      "seoDescription": "Estimate monthly loan EMI, total interest and total repayment using the entered principal, fixed annual rate and tenure. Fees and rate changes are excluded.",
+      "keywords": [
+        "emi calculator",
+        "loan emi calculation",
+        "monthly emi india",
+        "sbi hdfc loan emi"
+      ],
+      "sourcePath": "/calculators/emi-calculator",
+      "bloggerPath": "/p/emi-calculator.html",
+      "file": "content/pages/emi-calculator.html",
+      "wordCount": 747,
+      "sha256": "1c4f9b62feb90dc577d1189f4d624833e25beb2d230d46a1ba1250d4bcc67397"
+    },
+    {
+      "id": "home-loan",
+      "slug": "home-loan-emi-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Home Loan EMI Calculator",
+      "seoTitle": "Home Loan EMI Calculator India - Interest & Repayment",
+      "seoDescription": "Estimate home loan EMI, total interest and total repayment using a fixed-rate model. Processing charges, insurance and tax deductions are not calculated.",
+      "keywords": [
+        "home loan emi calculator",
+        "housing loan india",
+        "sbi home loan emi",
+        "hdfc home loan calculator"
+      ],
+      "sourcePath": "/calculators/home-loan-emi-calculator",
+      "bloggerPath": "/p/home-loan-emi-calculator.html",
+      "file": "content/pages/home-loan-emi-calculator.html",
+      "wordCount": 741,
+      "sha256": "f6d32ac11c2957df65f1187a95cf288e202272975e9c548738bfbf5d3922232f"
+    },
+    {
+      "id": "personal-loan",
+      "slug": "personal-loan-emi-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Personal Loan EMI Calculator",
+      "seoTitle": "Personal Loan EMI Calculator India - Monthly Interest Breakdown",
+      "seoDescription": "Calculate your monthly personal loan EMI, interest rates from 10.5% to 24%, and total payable amount with validation and zero signup.",
+      "keywords": [
+        "personal loan emi calculator",
+        "instant personal loan emi",
+        "bank personal loan calculator"
+      ],
+      "sourcePath": "/calculators/personal-loan-emi-calculator",
+      "bloggerPath": "/p/personal-loan-emi-calculator.html",
+      "file": "content/pages/personal-loan-emi-calculator.html",
+      "wordCount": 654,
+      "sha256": "1a9c5024bd3c9926e2c1f764e3988361ebc96c8c2eb16e47adf6bfe5dd960961"
+    },
+    {
+      "id": "car-loan",
+      "slug": "car-loan-emi-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Car / Vehicle Loan Calculator",
+      "seoTitle": "Car Loan EMI Calculator India - Auto & Two-Wheeler Loan",
+      "seoDescription": "Calculate car loan equated monthly installment, interest cost, down payment impact, and vehicle loan tenure instantly.",
+      "keywords": [
+        "car loan emi calculator",
+        "auto loan emi",
+        "bike loan emi calculator india"
+      ],
+      "sourcePath": "/calculators/car-loan-emi-calculator",
+      "bloggerPath": "/p/car-loan-emi-calculator.html",
+      "file": "content/pages/car-loan-emi-calculator.html",
+      "wordCount": 672,
+      "sha256": "c019af2357bfdc312dfaa3da12b772ff505235667b5e8c4d295464acdd5a82e8"
+    },
+    {
+      "id": "loan-prepayment",
+      "slug": "loan-prepayment-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Loan Prepayment Calculator",
+      "seoTitle": "Loan Prepayment Calculator - Save Interest",
+      "seoDescription": "Estimate interest savings and tenure reduction from one loan prepayment, with the original EMI and rate unchanged. EMI reduction is not modelled.",
+      "keywords": [
+        "loan prepayment calculator",
+        "home loan part payment",
+        "loan tenure reduction calculator"
+      ],
+      "sourcePath": "/calculators/loan-prepayment-calculator",
+      "bloggerPath": "/p/loan-prepayment-calculator.html",
+      "file": "content/pages/loan-prepayment-calculator.html",
+      "wordCount": 767,
+      "sha256": "4fbd072dce5f5efec7a001a58ca4246cb985fe0ad71e4cae452179f89576618c"
+    },
+    {
+      "id": "fd",
+      "slug": "fd-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Fixed Deposit (FD) Calculator",
+      "seoTitle": "FD Calculator India - Maturity & Interest Earnings",
+      "seoDescription": "Calculate Fixed Deposit maturity returns with quarterly compounding, senior citizen rates, and TDS insights for SBI, HDFC, ICICI, Post Office.",
+      "keywords": [
+        "fd calculator",
+        "fixed deposit maturity calculator",
+        "sbi fd interest calculator"
+      ],
+      "sourcePath": "/calculators/fd-calculator",
+      "bloggerPath": "/p/fd-calculator.html",
+      "file": "content/pages/fd-calculator.html",
+      "wordCount": 783,
+      "sha256": "45826d0145dbd4d12fab5249a0807924a491a9a667b35dc5c6caeeae3f126055"
+    },
+    {
+      "id": "rd",
+      "slug": "rd-calculator",
+      "type": "calculator",
+      "category": "banking",
+      "title": "Recurring Deposit (RD) Calculator",
+      "seoTitle": "RD Calculator India - Maturity Amount",
+      "seoDescription": "Find out the maturity amount of your monthly Recurring Deposit with quarterly compounding as per Indian banking guidelines.",
+      "keywords": [
+        "rd calculator",
+        "recurring deposit calculator",
+        "post office rd calculator"
+      ],
+      "sourcePath": "/calculators/rd-calculator",
+      "bloggerPath": "/p/rd-calculator.html",
+      "file": "content/pages/rd-calculator.html",
+      "wordCount": 747,
+      "sha256": "48036de83c39302658f6b4731b2f5f9ada2d1fcbe3fd359e374132252854c6bf"
+    },
+    {
+      "id": "sip",
+      "slug": "sip-calculator",
+      "type": "calculator",
+      "category": "finance",
+      "title": "SIP Calculator (Mutual Funds)",
+      "seoTitle": "SIP Calculator India - Mutual Fund SIP Returns",
+      "seoDescription": "Calculate future value of monthly SIP investments in Indian mutual funds and index funds with compounding wealth charts.",
+      "keywords": [
+        "sip calculator",
+        "mutual fund sip returns",
+        "monthly sip wealth calculator"
+      ],
+      "sourcePath": "/calculators/sip-calculator",
+      "bloggerPath": "/p/sip-calculator.html",
+      "file": "content/pages/sip-calculator.html",
+      "wordCount": 668,
+      "sha256": "7fc27c2809a44aad7fe58a4b96d8d634cdaf31a3e9c8795811911d56714f7fef"
+    },
+    {
+      "id": "ppf",
+      "slug": "ppf-calculator",
+      "type": "calculator",
+      "category": "finance",
+      "title": "PPF (Public Provident Fund) Calculator",
+      "seoTitle": "PPF Calculator India - 15-Year Maturity",
+      "seoDescription": "Estimate PPF maturity using an assumed rate; actual rates are government-notified. Tax Year 2026-27: Section 123 (read with Schedule XV), Income-tax Act, 2025, formerly Section 80C of the 1961 Act; regime and eligibility conditions apply.",
+      "keywords": [
+        "ppf calculator",
+        "public provident fund calculator",
+        "ppf maturity tax free"
+      ],
+      "sourcePath": "/calculators/ppf-calculator",
+      "bloggerPath": "/p/ppf-calculator.html",
+      "file": "content/pages/ppf-calculator.html",
+      "wordCount": 717,
+      "sha256": "cfaa774f14bd173dbc9f16729ef307c015dbf0fd018b8863d83627e1429e461f"
+    },
+    {
+      "id": "nps",
+      "slug": "nps-calculator",
+      "type": "calculator",
+      "category": "finance",
+      "title": "NPS (National Pension System) Calculator",
+      "seoTitle": "NPS Calculator India - Pension Wealth & Annuity",
+      "seoDescription": "Estimate NPS retirement corpus and illustrative annuity income. Withdrawal and minimum annuity requirements depend on sector, exit type and corpus size.",
+      "keywords": [
+        "nps calculator",
+        "national pension scheme calculator",
+        "retirement pension india"
+      ],
+      "sourcePath": "/calculators/nps-calculator",
+      "bloggerPath": "/p/nps-calculator.html",
+      "file": "content/pages/nps-calculator.html",
+      "wordCount": 830,
+      "sha256": "fff736309ba33789f2159f483c860036e9582e0438579c328caadc9c86b03385"
+    },
+    {
+      "id": "gratuity",
+      "slug": "gratuity-calculator",
+      "type": "calculator",
+      "category": "jobs",
+      "title": "Gratuity Calculator",
+      "seoTitle": "Gratuity Calculator India - Formula & Tax Exemption",
+      "seoDescription": "Calculate tax-exempt employee gratuity based on your last drawn basic salary + DA and total years of service under Indian labor law.",
+      "keywords": [
+        "gratuity calculator",
+        "gratuity formula india",
+        "gratuity act 1972 calculation"
+      ],
+      "sourcePath": "/calculators/gratuity-calculator",
+      "bloggerPath": "/p/gratuity-calculator.html",
+      "file": "content/pages/gratuity-calculator.html",
+      "wordCount": 764,
+      "sha256": "c64ef48552b5f284d76f952c9c0fab89eb7cd9ae7a19f6a921b5c83d961b1e67"
+    },
+    {
+      "id": "salary",
+      "slug": "salary-calculator",
+      "type": "calculator",
+      "category": "jobs",
+      "title": "In-Hand Salary Calculator",
+      "seoTitle": "In-Hand Salary Calculator India - Pre-TDS Pay",
+      "seoDescription": "Estimate pre-income-tax-TDS monthly salary from CTC, variable pay, modelled PF and gratuity costs, and selected professional tax. Income tax is excluded.",
+      "keywords": [
+        "in hand salary calculator",
+        "take home salary calculator",
+        "gross to net salary india"
+      ],
+      "sourcePath": "/calculators/salary-calculator",
+      "bloggerPath": "/p/salary-calculator.html",
+      "file": "content/pages/salary-calculator.html",
+      "wordCount": 761,
+      "sha256": "5f300cd0b299d55cb879e1e22cc4fc3bda185d92d8b3be93fb61eff0b48fb78a"
+    },
+    {
+      "id": "ctc-inhand",
+      "slug": "ctc-inhand-calculator",
+      "type": "calculator",
+      "category": "jobs",
+      "title": "CTC to In-Hand Salary Breakdown",
+      "seoTitle": "CTC to In-Hand Calculator India - Pre-TDS Breakdown",
+      "seoDescription": "Estimate pre-income-tax-TDS monthly pay with modelled PF, gratuity and professional tax. HRA exemptions, income tax and a full allowance breakdown are not calculated.",
+      "keywords": [
+        "ctc to in hand calculator",
+        "ctc breakdown calculator",
+        "cost to company to net pay"
+      ],
+      "sourcePath": "/calculators/ctc-inhand-calculator",
+      "bloggerPath": "/p/ctc-inhand-calculator.html",
+      "file": "content/pages/ctc-inhand-calculator.html",
+      "wordCount": 732,
+      "sha256": "f4f9b36bdb70e7780c33ccf78a198e94b5989e2a7c49b81d9d14cfd69e066f13"
+    },
+    {
+      "id": "gold-price",
+      "slug": "gold-price-calculator",
+      "type": "calculator",
+      "category": "gold",
+      "title": "Gold Price & Jewellery Billing Calculator",
+      "seoTitle": "Gold Price Calculator India - Jewellery Billing & GST",
+      "seoDescription": "Estimate jewellery cost using your entered 22K rate, derived purity rates, making charges, an assumed hallmarking fee and modelled 3% GST. No live quotes are fetched.",
+      "keywords": [
+        "gold price calculator india",
+        "gold jewellery billing calculator",
+        "22k gold rate with gst"
+      ],
+      "sourcePath": "/calculators/gold-price-calculator",
+      "bloggerPath": "/p/gold-price-calculator.html",
+      "file": "content/pages/gold-price-calculator.html",
+      "wordCount": 749,
+      "sha256": "a9ac27d895a3089135a4b05c8c70bb3c3a5dafd41bf12be9fdb391ce3831c1ac"
+    },
+    {
+      "id": "gst",
+      "slug": "gst-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "GST Calculator (India)",
+      "seoTitle": "GST Calculator India - Add/Remove GST",
+      "seoDescription": "Add or extract GST using limited/example rate presets and view a CGST/SGST illustration. Confirm the applicable rate separately; not all rates are available.",
+      "keywords": [
+        "gst calculator",
+        "gst inclusive calculator",
+        "gst exclusive india",
+        "cgst sgst calculator"
+      ],
+      "sourcePath": "/calculators/gst-calculator",
+      "bloggerPath": "/p/gst-calculator.html",
+      "file": "content/pages/gst-calculator.html",
+      "wordCount": 823,
+      "sha256": "ccbf810f6cc4e7754c07cbdda70690f24ef67f3f091d48e0fdc934cdaf1eddbe"
+    },
+    {
+      "id": "percentage",
+      "slug": "percentage-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "Percentage Calculator",
+      "seoTitle": "Percentage Calculator - Percentage of a Value & Share",
+      "seoDescription": "Calculate X% of Y or X as a percentage of Y for marks, shares and everyday ratios. Percentage change between an old and new value is not calculated.",
+      "keywords": [
+        "percentage calculator",
+        "percentage of a number calculator",
+        "exam percentage calculator"
+      ],
+      "sourcePath": "/calculators/percentage-calculator",
+      "bloggerPath": "/p/percentage-calculator.html",
+      "file": "content/pages/percentage-calculator.html",
+      "wordCount": 667,
+      "sha256": "b18a4146005333cb1450e9055a8717c2560cde3915fc7232fb7e01b83c8d5c0e"
+    },
+    {
+      "id": "age",
+      "slug": "age-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "Age Calculator",
+      "seoTitle": "Age Calculator - Exact Age in Years, Months, Days",
+      "seoDescription": "Find your precise chronological age from Date of Birth for competitive Indian exams (UPSC, SSC, Banking) and government job eligibility.",
+      "keywords": [
+        "age calculator",
+        "chronological age calculator",
+        "dob age calculator for govt exams"
+      ],
+      "sourcePath": "/calculators/age-calculator",
+      "bloggerPath": "/p/age-calculator.html",
+      "file": "content/pages/age-calculator.html",
+      "wordCount": 641,
+      "sha256": "10f813b74599c08a2ea5e3fdee60c9500f73822c8f2a84098d703510bd781fbf"
+    },
+    {
+      "id": "date-difference",
+      "slug": "date-difference-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "Date Difference / Duration Calculator",
+      "seoTitle": "Date Difference Calculator - Days Between Dates",
+      "seoDescription": "Find elapsed calendar days, whole weeks and remaining days between two dates. Weekends and holidays are included; working-day and month totals are not calculated.",
+      "keywords": [
+        "date difference calculator",
+        "days between two dates",
+        "duration calculator"
+      ],
+      "sourcePath": "/calculators/date-difference-calculator",
+      "bloggerPath": "/p/date-difference-calculator.html",
+      "file": "content/pages/date-difference-calculator.html",
+      "wordCount": 613,
+      "sha256": "c2e704c1c31a375c320441033d32449dac60556aaa8dda963e02ffcb9a44c84c"
+    },
+    {
+      "id": "discount",
+      "slug": "discount-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "Discount & Sale Price Calculator",
+      "seoTitle": "Discount Calculator - Final Price & Savings",
+      "seoDescription": "Calculate the final price and saving for one percentage discount. For successive discounts, manually apply each stage to the previous result; stages are not combined automatically.",
+      "keywords": [
+        "discount calculator",
+        "sale discount calculator",
+        "percentage off calculator"
+      ],
+      "sourcePath": "/calculators/discount-calculator",
+      "bloggerPath": "/p/discount-calculator.html",
+      "file": "content/pages/discount-calculator.html",
+      "wordCount": 638,
+      "sha256": "8fa2b6db24e3b1957c1113485356475d3fd4dcf550be06a5a58f75705efbf1db"
+    },
+    {
+      "id": "bmi",
+      "slug": "bmi-calculator",
+      "type": "calculator",
+      "category": "tools",
+      "title": "BMI (Body Mass Index) Calculator",
+      "seoTitle": "BMI Calculator India - Body Mass Index Asian Cutoffs",
+      "seoDescription": "Calculate your BMI instantly using Asian Indian cutoff standards (lower threshold for healthy weight to reflect cardiometabolic risks).",
+      "keywords": [
+        "bmi calculator india",
+        "body mass index asian cutoffs",
+        "healthy weight calculator"
+      ],
+      "sourcePath": "/calculators/bmi-calculator",
+      "bloggerPath": "/p/bmi-calculator.html",
+      "file": "content/pages/bmi-calculator.html",
+      "wordCount": 645,
+      "sha256": "cf54fb631c764bd1ec71650f81bb5be69e92abaa1555e2152c3ce4a8e4f93c01"
+    },
+    {
+      "id": "kerala-gold",
+      "slug": "kerala-gold-pavan-calculator",
+      "type": "calculator",
+      "category": "kerala",
+      "title": "Kerala Pavan & Sovereign Gold Calculator",
+      "seoTitle": "Kerala Gold Pavan Calculator - 1 Pavan Rate & Sovereign",
+      "seoDescription": "Specific to Kerala jewellery market: calculate 1 Pavan (8 grams), sovereign pricing, making charges, and marriage jewellery budget.",
+      "keywords": [
+        "kerala pavan rate",
+        "1 pavan how many grams",
+        "kerala gold calculator",
+        "sovereign rate today"
+      ],
+      "sourcePath": "/calculators/kerala-gold-pavan-calculator",
+      "bloggerPath": "/p/kerala-gold-pavan-calculator.html",
+      "file": "content/pages/kerala-gold-pavan-calculator.html",
+      "wordCount": 742,
+      "sha256": "5e699cf0938f11cfc8afd77a7aef6ddbc51c7823eb534dab8b254f90aecd10a0"
+    },
+    {
+      "id": "category-finance",
+      "slug": "category-finance",
+      "type": "category",
+      "category": "finance",
+      "title": "Finance & Investments",
+      "malayalamName": "ധനകാര്യം & നിക്ഷേപങ്ങൾ",
+      "seoTitle": "Finance & Investments | IndiaUseful",
+      "seoDescription": "Grow your wealth with accurate Indian tax-friendly calculators for SIP, PPF, NPS, and more.",
+      "sourcePath": "/category/finance",
+      "bloggerPath": "/p/category-finance.html",
+      "labelArchivePath": "/search/label/finance",
+      "file": "content/pages/category-finance.html",
+      "wordCount": 275,
+      "sha256": "2db6a0b01215ff063847a1dc554ad6e72d70a89da80d38f1551df1e69836789d"
+    },
+    {
+      "id": "category-banking",
+      "slug": "category-banking",
+      "type": "category",
+      "category": "banking",
+      "title": "Banking & Loans",
+      "malayalamName": "ബാങ്കിംഗ് & വായ്പകൾ",
+      "seoTitle": "Banking & Loans | IndiaUseful",
+      "seoDescription": "Calculate EMI, loan interest, prepayment savings, and FD/RD returns across Indian banks.",
+      "sourcePath": "/category/banking",
+      "bloggerPath": "/p/category-banking.html",
+      "labelArchivePath": "/search/label/banking",
+      "file": "content/pages/category-banking.html",
+      "wordCount": 458,
+      "sha256": "0ac17d2582cc4e3a9e0b4e259f4b29cd74a12f50d2307a1af27705a9948b5089"
+    },
+    {
+      "id": "category-jobs",
+      "slug": "category-jobs",
+      "type": "category",
+      "category": "jobs",
+      "title": "Salary & Employment",
+      "malayalamName": "ശമ്പളം & തൊഴിൽ",
+      "seoTitle": "Salary & Employment | IndiaUseful",
+      "seoDescription": "Estimate pre-income-tax-TDS monthly salary from a simplified CTC model, alongside gratuity and PF illustrations.",
+      "sourcePath": "/category/jobs",
+      "bloggerPath": "/p/category-jobs.html",
+      "labelArchivePath": "/search/label/jobs",
+      "file": "content/pages/category-jobs.html",
+      "wordCount": 317,
+      "sha256": "dafce13e437d1dd0ce9e93fc61e2e3f3f9ccfe329549bb4f38e9073d193c1f02"
+    },
+    {
+      "id": "category-gold",
+      "slug": "category-gold",
+      "type": "category",
+      "category": "gold",
+      "title": "Gold & Jewellery",
+      "malayalamName": "സ്വർണം & ആഭരണങ്ങൾ",
+      "seoTitle": "Gold & Jewellery | IndiaUseful",
+      "seoDescription": "Estimate jewellery bills using user-entered gold rates, selected purity, making charges, and modelled GST and fees.",
+      "sourcePath": "/category/gold",
+      "bloggerPath": "/p/category-gold.html",
+      "labelArchivePath": "/search/label/gold",
+      "file": "content/pages/category-gold.html",
+      "wordCount": 255,
+      "sha256": "3c8746c87b43fcaac55ba2c925281a99731ef4a4ef1b0d9cd708a069fadf8954"
+    },
+    {
+      "id": "category-tools",
+      "slug": "category-tools",
+      "type": "category",
+      "category": "tools",
+      "title": "Everyday Utility Tools",
+      "malayalamName": "ദൈനംദിന യൂട്ടിലിറ്റികൾ",
+      "seoTitle": "Everyday Utility Tools | IndiaUseful",
+      "seoDescription": "Instant calculators for GST breakdown, Percentage, Age, Date Differences, Discount, and BMI.",
+      "sourcePath": "/category/tools",
+      "bloggerPath": "/p/category-tools.html",
+      "labelArchivePath": "/search/label/tools",
+      "file": "content/pages/category-tools.html",
+      "wordCount": 400,
+      "sha256": "55b66df196052995cf0c0b668be551a54c9077c8c633ddb4f6dc5af5e5caab91"
+    },
+    {
+      "id": "category-kerala",
+      "slug": "category-kerala",
+      "type": "category",
+      "category": "kerala",
+      "title": "Kerala Special Corner",
+      "malayalamName": "കേരള സ്പെഷ്യൽ",
+      "seoTitle": "Kerala Special Corner | IndiaUseful",
+      "seoDescription": "Tailored calculators for Kerala: 1 Pavan (8 grams) sovereign gold rate, wedding jewellery estimates, making charges, and 3% GST.",
+      "sourcePath": "/category/kerala",
+      "bloggerPath": "/p/category-kerala.html",
+      "labelArchivePath": "/search/label/kerala",
+      "file": "content/pages/category-kerala.html",
+      "wordCount": 250,
+      "sha256": "52c26b56646e9306beda7dbe71d6cbf79b123a2f899c63f8f1afabbff35250fd"
+    },
+    {
+      "id": "about",
+      "slug": "about",
+      "type": "legal",
+      "title": "About IndiaUseful",
+      "seoTitle": "About Us | IndiaUseful",
+      "seoDescription": "Learn about IndiaUseful, an independent collection of free, privacy-conscious calculators and everyday tools designed for people in India.",
+      "sourcePath": "/about",
+      "bloggerPath": "/p/about.html",
+      "file": "content/pages/about.html",
+      "wordCount": 188,
+      "sha256": "1683a04fe26cca6e233192689ce36c8a743c1e95395e7fe1208001922e2986f3"
+    },
+    {
+      "id": "privacy",
+      "slug": "privacy",
+      "type": "legal",
+      "title": "Privacy Policy",
+      "seoTitle": "Privacy Policy | IndiaUseful",
+      "seoDescription": "How IndiaUseful handles calculator inputs, basic hosting logs, and third-party services.",
+      "sourcePath": "/privacy",
+      "bloggerPath": "/p/privacy.html",
+      "file": "content/pages/privacy.html",
+      "wordCount": 413,
+      "sha256": "72dc3eaec0688fceca7826db4028c8985f1ec86f5be2eaabce042602645928d3"
+    },
+    {
+      "id": "disclaimer",
+      "slug": "disclaimer",
+      "type": "legal",
+      "title": "Disclaimer",
+      "seoTitle": "Financial & General Disclaimer | IndiaUseful",
+      "seoDescription": "Important information about estimates, assumptions, and the limitations of IndiaUseful calculators and content.",
+      "sourcePath": "/disclaimer",
+      "bloggerPath": "/p/disclaimer.html",
+      "file": "content/pages/disclaimer.html",
+      "wordCount": 279,
+      "sha256": "7f8c3b9720ddba2810c24277fe7b3825bb776b4ea24324f24d265f6bcf9f0eac"
+    },
+    {
+      "id": "contact",
+      "slug": "contact",
+      "type": "legal",
+      "title": "Contact IndiaUseful",
+      "seoTitle": "Contact Us | IndiaUseful",
+      "seoDescription": "Contact IndiaUseful with feedback, calculator requests, corrections, or bug reports.",
+      "sourcePath": "/contact",
+      "bloggerPath": "/p/contact.html",
+      "file": "content/pages/contact.html",
+      "wordCount": 125,
+      "sha256": "6a01375dee3267bf28ac9ef9e8f753154f74703748f9de4cebae8639bf5b64be"
+    },
+    {
+      "id": "terms",
+      "slug": "terms",
+      "type": "legal",
+      "title": "Terms of Service",
+      "seoTitle": "Terms of Service | IndiaUseful",
+      "seoDescription": "Terms for using IndiaUseful calculators, tools, and informational content.",
+      "sourcePath": "/terms",
+      "bloggerPath": "/p/terms.html",
+      "file": "content/pages/terms.html",
+      "wordCount": 186,
+      "sha256": "80ebd7fc6e355bac8feea8cdb3aa6d73f0fb384d34a3bd1da1057b2eb2f67139"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "how-to-calculate-home-loan-emi-india",
+      "type": "article",
+      "isLongFormGuide": false,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "article"
+      ],
+      "title": "How Home Loan EMI is Calculated in India: Formula, Amortization, and Prepayment Hacks",
+      "seoTitle": "How Home Loan EMI is Calculated in India: Formula, Amortization, and Prepayment Hacks | IndiaUseful",
+      "seoDescription": "A comprehensive guide explaining the reducing balance method used by Indian banks (SBI, HDFC, ICICI) and how part-payments reduce total interest outflow by lakhs of rupees.",
+      "summary": "A comprehensive guide explaining the reducing balance method used by Indian banks (SBI, HDFC, ICICI) and how part-payments reduce total interest outflow by lakhs of rupees.",
+      "date": "2026-09-20",
+      "publishedIso": "2026-09-20T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "emi",
+        "home-loan",
+        "personal-loan",
+        "car-loan"
+      ],
+      "sourcePath": "/articles/how-to-calculate-home-loan-emi-india",
+      "bloggerPath": "/2026/09/how-to-calculate-home-loan-emi-india.html",
+      "file": "content/posts/how-to-calculate-home-loan-emi-india.html",
+      "wordCount": 843,
+      "sha256": "ac02fa4cc213c503e695a6fdcde6fa0168c59f629e971e9693db47d6b78e06ef"
+    },
+    {
+      "slug": "sip-vs-lumpsum-mutual-funds-guide",
+      "type": "article",
+      "isLongFormGuide": false,
+      "category": "finance",
+      "labels": [
+        "finance",
+        "article"
+      ],
+      "title": "SIP vs Lumpsum Mutual Fund Investing in India: Compounding and Rupee Cost Averaging",
+      "seoTitle": "SIP vs Lumpsum Mutual Fund Investing in India: Compounding and Rupee Cost Averaging | IndiaUseful",
+      "seoDescription": "Understand SIP and lump-sum cash flows, rupee cost averaging and compounding assumptions without treating projected returns as a performance guarantee.",
+      "summary": "Understand SIP and lump-sum cash flows, rupee cost averaging and compounding assumptions without treating projected returns as a performance guarantee.",
+      "date": "2026-09-18",
+      "publishedIso": "2026-09-18T09:00:00+05:30",
+      "readTime": "5 min read",
+      "calculatorIds": [
+        "sip",
+        "ppf",
+        "nps"
+      ],
+      "sourcePath": "/articles/sip-vs-lumpsum-mutual-funds-guide",
+      "bloggerPath": "/2026/09/sip-vs-lumpsum-mutual-funds-guide.html",
+      "file": "content/posts/sip-vs-lumpsum-mutual-funds-guide.html",
+      "wordCount": 765,
+      "sha256": "e3a81685af65a25da99223d417a6bde841ea2a48a74c43a9f38fa230e67f6dde"
+    },
+    {
+      "slug": "gold-buying-guide-hallmarking-gst-making-charges",
+      "type": "article",
+      "isLongFormGuide": false,
+      "category": "gold",
+      "labels": [
+        "gold",
+        "article"
+      ],
+      "title": "Buying Gold Jewellery in India: Hallmark HUID, 3% GST, and Making Charges Explained",
+      "seoTitle": "Buying Gold Jewellery in India: Hallmark HUID, 3% GST, and Making Charges Explained | IndiaUseful",
+      "seoDescription": "Never overpay for gold jewellery again. Understand BIS 6-digit HUID hallmarks, wastage (VA), making charges, and the compulsory 3% GST on billing.",
+      "summary": "Never overpay for gold jewellery again. Understand BIS 6-digit HUID hallmarks, wastage (VA), making charges, and the compulsory 3% GST on billing.",
+      "date": "2026-09-15",
+      "publishedIso": "2026-09-15T09:00:00+05:30",
+      "readTime": "7 min read",
+      "calculatorIds": [
+        "gold-price"
+      ],
+      "sourcePath": "/articles/gold-buying-guide-hallmarking-gst-making-charges",
+      "bloggerPath": "/2026/09/gold-buying-guide-hallmarking-gst-making-charges.html",
+      "file": "content/posts/gold-buying-guide-hallmarking-gst-making-charges.html",
+      "wordCount": 899,
+      "sha256": "8f9281aae056e7fd85201e58de52d4801c6f300e7fef96b7ade593341824cd8b"
+    },
+    {
+      "slug": "understanding-ctc-vs-in-hand-salary-india",
+      "type": "article",
+      "isLongFormGuide": false,
+      "category": "jobs",
+      "labels": [
+        "jobs",
+        "article"
+      ],
+      "title": "CTC vs In-Hand Salary Explained: EPF, Gratuity, Professional Tax, and Income Tax",
+      "seoTitle": "CTC vs In-Hand Salary Explained: EPF, Gratuity, Professional Tax, and Income Tax | IndiaUseful",
+      "seoDescription": "Understand CTC costs, PF, gratuity reserve, variable pay and professional tax, and distinguish a pre-income-tax-TDS estimate from actual bank credit.",
+      "summary": "Understand CTC costs, PF, gratuity reserve, variable pay and professional tax, and distinguish a pre-income-tax-TDS estimate from actual bank credit.",
+      "date": "2026-09-12",
+      "publishedIso": "2026-09-12T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "gratuity",
+        "salary",
+        "ctc-inhand"
+      ],
+      "sourcePath": "/articles/understanding-ctc-vs-in-hand-salary-india",
+      "bloggerPath": "/2026/09/understanding-ctc-vs-in-hand-salary-india.html",
+      "file": "content/posts/understanding-ctc-vs-in-hand-salary-india.html",
+      "wordCount": 811,
+      "sha256": "a20abb9c659e65dd40e0406e124d62824479daf768260f7ee167862a6f6a5fd0"
+    },
+    {
+      "slug": "home-loan-emi-salary-affordability-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "Home Loan EMI and Salary Affordability: A Practical Planning Guide",
+      "seoTitle": "Home Loan EMI and Salary Affordability: A Practical Planning Guide | IndiaUseful",
+      "seoDescription": "Understand home loan EMI, compare tenures and test affordability against take-home salary, existing repayments and a realistic household budget.",
+      "summary": "Understand home loan EMI, compare tenures and test affordability against take-home salary, existing repayments and a realistic household budget.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "home-loan",
+        "emi",
+        "salary",
+        "ctc-inhand"
+      ],
+      "sourcePath": "/articles/home-loan-emi-salary-affordability-guide",
+      "bloggerPath": "/2026/10/home-loan-emi-salary-affordability-guide.html",
+      "file": "content/posts/home-loan-emi-salary-affordability-guide.html",
+      "wordCount": 1302,
+      "sha256": "dff09dc54e0e046081862d628dc93f2e9c9cc50ce35ca7dc9be77651ac61769f"
+    },
+    {
+      "slug": "personal-loan-flat-vs-reducing-interest-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "Personal Loan EMI: Flat Rate vs Reducing Balance Explained",
+      "seoTitle": "Personal Loan EMI: Flat Rate vs Reducing Balance Explained | IndiaUseful",
+      "seoDescription": "Compare flat and reducing-balance personal loan quotes using EMI, total repayment, fees and the amount actually received.",
+      "summary": "Compare flat and reducing-balance personal loan quotes using EMI, total repayment, fees and the amount actually received.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "personal-loan",
+        "emi"
+      ],
+      "sourcePath": "/articles/personal-loan-flat-vs-reducing-interest-guide",
+      "bloggerPath": "/2026/10/personal-loan-flat-vs-reducing-interest-guide.html",
+      "file": "content/posts/personal-loan-flat-vs-reducing-interest-guide.html",
+      "wordCount": 1345,
+      "sha256": "fb4e45da92e3af09df6445471256e4f562e4b7b0efdc1e60b37f9d85cbcbff36"
+    },
+    {
+      "slug": "car-loan-down-payment-tenure-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "Car Loan EMI: Down Payment, On-Road Price and Tenure",
+      "seoTitle": "Car Loan EMI: Down Payment, On-Road Price and Tenure | IndiaUseful",
+      "seoDescription": "Work out the financed vehicle amount, compare down payments and tenures, and separate car loan EMI from the full cost of ownership.",
+      "summary": "Work out the financed vehicle amount, compare down payments and tenures, and separate car loan EMI from the full cost of ownership.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "car-loan",
+        "emi"
+      ],
+      "sourcePath": "/articles/car-loan-down-payment-tenure-guide",
+      "bloggerPath": "/2026/10/car-loan-down-payment-tenure-guide.html",
+      "file": "content/posts/car-loan-down-payment-tenure-guide.html",
+      "wordCount": 1345,
+      "sha256": "dc059078c414892f9f750c45f1d7a395eb3370bbe3b5d748215e52f5cbae212a"
+    },
+    {
+      "slug": "loan-prepayment-emi-vs-tenure-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "Loan Prepayment: Reduce EMI or Shorten Tenure?",
+      "seoTitle": "Loan Prepayment: Reduce EMI or Shorten Tenure? | IndiaUseful",
+      "seoDescription": "Understand how a part-payment reduces outstanding principal, why tenure reduction and EMI reduction differ, and what this calculator actually models.",
+      "summary": "Understand how a part-payment reduces outstanding principal, why tenure reduction and EMI reduction differ, and what this calculator actually models.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "loan-prepayment",
+        "home-loan"
+      ],
+      "sourcePath": "/articles/loan-prepayment-emi-vs-tenure-guide",
+      "bloggerPath": "/2026/10/loan-prepayment-emi-vs-tenure-guide.html",
+      "file": "content/posts/loan-prepayment-emi-vs-tenure-guide.html",
+      "wordCount": 1341,
+      "sha256": "dee6b043430fabbf03d6a1181073db5a2433e56a0b5981aa43770879a940de06"
+    },
+    {
+      "slug": "fd-maturity-quarterly-compounding-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "FD Maturity Calculation: Quarterly Compounding, Interest and TDS",
+      "seoTitle": "FD Maturity Calculation: Quarterly Compounding, Interest and TDS | IndiaUseful",
+      "seoDescription": "Calculate cumulative fixed-deposit maturity, understand quarterly compounding and distinguish gross interest, TDS and final tax liability.",
+      "summary": "Calculate cumulative fixed-deposit maturity, understand quarterly compounding and distinguish gross interest, TDS and final tax liability.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "fd"
+      ],
+      "sourcePath": "/articles/fd-maturity-quarterly-compounding-guide",
+      "bloggerPath": "/2026/10/fd-maturity-quarterly-compounding-guide.html",
+      "file": "content/posts/fd-maturity-quarterly-compounding-guide.html",
+      "wordCount": 1245,
+      "sha256": "2981eb826b9cfd47e73909f0c30c797ae3b4b3f6c5e656c9e4335ad0977dbcde"
+    },
+    {
+      "slug": "rd-maturity-monthly-deposits-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "banking",
+      "labels": [
+        "banking",
+        "guide"
+      ],
+      "title": "RD Maturity Calculation: Monthly Deposits, Compounding and TDS",
+      "seoTitle": "RD Maturity Calculation: Monthly Deposits, Compounding and TDS | IndiaUseful",
+      "seoDescription": "See how each recurring-deposit instalment earns for a different period, calculate gross maturity and apply the corrected bank-interest TDS context.",
+      "summary": "See how each recurring-deposit instalment earns for a different period, calculate gross maturity and apply the corrected bank-interest TDS context.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "rd"
+      ],
+      "sourcePath": "/articles/rd-maturity-monthly-deposits-guide",
+      "bloggerPath": "/2026/10/rd-maturity-monthly-deposits-guide.html",
+      "file": "content/posts/rd-maturity-monthly-deposits-guide.html",
+      "wordCount": 1426,
+      "sha256": "5cba20e456a752b53b845343db5134082081509786bb2a8f1ae7019f609b0910"
+    },
+    {
+      "slug": "sip-return-calculation-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "finance",
+      "labels": [
+        "finance",
+        "guide"
+      ],
+      "title": "SIP Return Calculation: Contributions, Compounding and Assumptions",
+      "seoTitle": "SIP Return Calculation: Contributions, Compounding and Assumptions | IndiaUseful",
+      "seoDescription": "Understand the monthly SIP future-value formula, test assumed returns and distinguish a projection from an actual mutual fund return.",
+      "summary": "Understand the monthly SIP future-value formula, test assumed returns and distinguish a projection from an actual mutual fund return.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "sip"
+      ],
+      "sourcePath": "/articles/sip-return-calculation-guide",
+      "bloggerPath": "/2026/10/sip-return-calculation-guide.html",
+      "file": "content/posts/sip-return-calculation-guide.html",
+      "wordCount": 1397,
+      "sha256": "98abb7c0a8cc309b5792f2a2b084d047d249237949c6c6918cca1318adea4b31"
+    },
+    {
+      "slug": "ppf-maturity-fifth-of-month-rule-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "finance",
+      "labels": [
+        "finance",
+        "guide"
+      ],
+      "title": "PPF Maturity and the 5th-of-the-Month Interest Rule",
+      "seoTitle": "PPF Maturity and the 5th-of-the-Month Interest Rule | IndiaUseful",
+      "seoDescription": "Understand annual PPF compounding, the monthly fifth-day balance rule and why a 7.1% maturity projection is an assumption, not a permanently fixed rate.",
+      "summary": "Understand annual PPF compounding, the monthly fifth-day balance rule and why a 7.1% maturity projection is an assumption, not a permanently fixed rate.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "ppf"
+      ],
+      "sourcePath": "/articles/ppf-maturity-fifth-of-month-rule-guide",
+      "bloggerPath": "/2026/10/ppf-maturity-fifth-of-month-rule-guide.html",
+      "file": "content/posts/ppf-maturity-fifth-of-month-rule-guide.html",
+      "wordCount": 1347,
+      "sha256": "ecbd3bd09ec09d43b8a9f8bc7d21230f240970923f3f396befdbcfd3845e0db1"
+    },
+    {
+      "slug": "nps-corpus-annuity-pension-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "finance",
+      "labels": [
+        "finance",
+        "guide"
+      ],
+      "title": "NPS Corpus, Annuity and Pension: Calculation and Exit-Rule Context",
+      "seoTitle": "NPS Corpus, Annuity and Pension: Calculation and Exit-Rule Context | IndiaUseful",
+      "seoDescription": "Separate NPS corpus growth from annuity income and understand why sector, exit type and corpus size matter more than a generic 60/40 rule.",
+      "summary": "Separate NPS corpus growth from annuity income and understand why sector, exit type and corpus size matter more than a generic 60/40 rule.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "nps"
+      ],
+      "sourcePath": "/articles/nps-corpus-annuity-pension-guide",
+      "bloggerPath": "/2026/10/nps-corpus-annuity-pension-guide.html",
+      "file": "content/posts/nps-corpus-annuity-pension-guide.html",
+      "wordCount": 1342,
+      "sha256": "f6218e9c2935a4fb1097a9bdd4502be636012c1fd35c1786619d39bc98813a06"
+    },
+    {
+      "slug": "gratuity-calculation-guide",
+      "type": "guide",
+      "isLongFormGuide": true,
+      "category": "jobs",
+      "labels": [
+        "jobs",
+        "guide"
+      ],
+      "title": "Gratuity Calculation: Salary, Service Years and Estimate Limits",
+      "seoTitle": "Gratuity Calculation: Salary, Service Years and Estimate Limits | IndiaUseful",
+      "seoDescription": "Understand the salary-and-service gratuity formula, the calculator’s covered and uncovered illustrations, and the limits of its eligibility and tax estimates.",
+      "summary": "Understand the salary-and-service gratuity formula, the calculator’s covered and uncovered illustrations, and the limits of its eligibility and tax estimates.",
+      "date": "2026-10-02",
+      "publishedIso": "2026-10-02T09:00:00+05:30",
+      "readTime": "6 min read",
+      "calculatorIds": [
+        "gratuity",
+        "salary",
+        "ctc-inhand"
+      ],
+      "sourcePath": "/articles/gratuity-calculation-guide",
+      "bloggerPath": "/2026/10/gratuity-calculation-guide.html",
+      "file": "content/posts/gratuity-calculation-guide.html",
+      "wordCount": 1467,
+      "sha256": "65e46b441bc739ac899c60675c2cfc4fb093fafafc766fd531b2246a51d82999"
+    }
+  ]
+}

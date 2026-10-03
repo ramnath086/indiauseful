@@ -1,0 +1,3588 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+  <head>
+    <meta charset='utf-8'/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <b:include data='blog' name='all-head-content'/>
+
+    <b:if cond='data:blog.url == data:blog.homepageUrl'>
+      <title>Free Online Calculators for Finance, Banking, Jobs &amp; Gold in India | IndiaUseful</title>
+    <b:elseif cond='data:blog.pageName'/>
+      <title><data:blog.pageName/> | <data:blog.title/></title>
+    <b:else/>
+      <title><data:blog.pageTitle/></title>
+    </b:if>
+
+    <b:if cond='data:blog.metaDescription'>
+      <meta expr:content='data:blog.metaDescription' name='description'/>
+    <b:else/>
+      <meta content='Free Indian calculators for Loan EMI, SIP, FD, PPF, NPS, gratuity, take-home salary, gold rates, GST, and Kerala Pavan. No sign-up required.' name='description'/>
+    </b:if>
+
+    <link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+
+    <b:if cond='data:blog.pageType in {&quot;archive&quot;, &quot;search&quot;}'>
+      <meta content='noindex,follow' name='robots'/>
+    <b:else/>
+      <meta content='index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' name='robots'/>
+    </b:if>
+
+    <!-- Open Graph / Twitter Metadata supported by Blogger -->
+    <meta content='en_IN' property='og:locale'/>
+    <meta content='IndiaUseful' property='og:site_name'/>
+    <b:if cond='data:blog.pageType == &quot;item&quot;'>
+      <meta content='article' property='og:type'/>
+    <b:else/>
+      <meta content='website' property='og:type'/>
+    </b:if>
+    <b:if cond='data:blog.pageName'>
+      <meta expr:content='data:blog.pageName + &quot; | IndiaUseful&quot;' property='og:title'/>
+      <meta expr:content='data:blog.pageName + &quot; | IndiaUseful&quot;' name='twitter:title'/>
+    <b:else/>
+      <meta content='IndiaUseful - Free Calculators for India' property='og:title'/>
+      <meta content='IndiaUseful - Free Calculators for India' name='twitter:title'/>
+    </b:if>
+    <b:if cond='data:blog.metaDescription'>
+      <meta expr:content='data:blog.metaDescription' property='og:description'/>
+      <meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+    <b:else/>
+      <meta content='Accurate, instant calculators for Loans, Investments, Salary, Gold, and Everyday Math.' property='og:description'/>
+      <meta content='Accurate, instant calculators for Loans, Investments, Salary, Gold, and Everyday Math.' name='twitter:description'/>
+    </b:if>
+    <meta expr:content='data:blog.canonicalUrl' property='og:url'/>
+    <meta content='summary_large_image' name='twitter:card'/>
+
+    <script type='application/ld+json'>
+      {
+        &quot;@context&quot;: &quot;https://schema.org&quot;,
+        &quot;@type&quot;: &quot;Organization&quot;,
+        &quot;name&quot;: &quot;IndiaUseful&quot;,
+        &quot;description&quot;: &quot;Free online calculators and financial tools for India&quot;,
+        &quot;sameAs&quot;: [
+          &quot;https://github.com/ramnath086/indiauseful&quot;
+        ]
+      }
+    </script>
+
+    <b:skin><![CDATA[
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     IndiaUseful Blogger Edition
+Designer: IndiaUseful Team
+Version:  1.0.0
+----------------------------------------------- */
+/* IndiaUseful Blogger Edition Stylesheet — Lightweight, Accessible, Mobile-First */
+:root {
+  --iu-emerald-50: #ecfdf5;
+  --iu-emerald-100: #d1fae5;
+  --iu-emerald-200: #a7f3d0;
+  --iu-emerald-500: #10b981;
+  --iu-emerald-600: #059669;
+  --iu-emerald-700: #047857;
+  --iu-emerald-800: #065f46;
+  --iu-emerald-900: #064e3b;
+  --iu-teal-700: #0f766e;
+  --iu-teal-800: #115e59;
+  --iu-amber-50: #fffbeb;
+  --iu-amber-100: #fef3c7;
+  --iu-amber-200: #fde68a;
+  --iu-amber-500: #f59e0b;
+  --iu-amber-600: #d97706;
+  --iu-amber-800: #92400e;
+  --iu-amber-900: #78350f;
+  --iu-blue-50: #eff6ff;
+  --iu-blue-100: #dbeafe;
+  --iu-blue-700: #1d4ed8;
+  --iu-blue-800: #1e40af;
+  --iu-red-100: #fee2e2;
+  --iu-red-600: #dc2626;
+  --iu-red-800: #991b1b;
+  --iu-gray-50: #f9fafb;
+  --iu-gray-100: #f3f4f6;
+  --iu-gray-200: #e5e7eb;
+  --iu-gray-300: #d1d5db;
+  --iu-gray-400: #9ca3af;
+  --iu-gray-500: #6b7280;
+  --iu-gray-600: #4b5563;
+  --iu-gray-700: #374151;
+  --iu-gray-800: #1f2937;
+  --iu-gray-900: #111827;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: var(--iu-gray-900);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Noto Sans Malayalam", sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.iu-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--iu-emerald-700);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+.iu-skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* Header & Navigation */
+.iu-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--iu-gray-100);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+}
+.iu-header-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.iu-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.iu-brand-mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, var(--iu-emerald-600), #14b8a6);
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iu-brand-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--iu-gray-900);
+}
+.iu-brand-title span {
+  color: var(--iu-emerald-600);
+}
+.iu-brand-badge {
+  background: var(--iu-emerald-50);
+  color: var(--iu-emerald-700);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  margin-left: 0.3rem;
+}
+.iu-brand-tag {
+  font-size: 0.68rem;
+  color: var(--iu-gray-400);
+  margin: 0;
+}
+
+.iu-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 22rem;
+}
+.iu-search-input {
+  width: 100%;
+  border: 1px solid var(--iu-gray-200);
+  background: var(--iu-gray-50);
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.875rem;
+  color: var(--iu-gray-800);
+}
+.iu-search-input:focus {
+  outline: 2px solid var(--iu-emerald-500);
+  background: #fff;
+}
+.iu-search-dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.35rem);
+  background: #fff;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 60;
+}
+.iu-search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.85rem;
+  color: var(--iu-gray-800);
+}
+.iu-search-item:hover {
+  background: var(--iu-emerald-50);
+}
+.iu-search-item small {
+  background: var(--iu-gray-100);
+  color: var(--iu-gray-600);
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+}
+.iu-search-empty {
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--iu-gray-500);
+  text-align: center;
+}
+
+.iu-desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--iu-gray-600);
+}
+.iu-desktop-nav a:hover {
+  color: var(--iu-emerald-600);
+}
+.iu-desktop-nav .iu-kerala-link {
+  color: var(--iu-emerald-700);
+  font-weight: 700;
+}
+
+.iu-mobile-controls {
+  display: none;
+  gap: 0.4rem;
+}
+.iu-icon-btn {
+  border: 1px solid var(--iu-gray-200);
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.iu-mobile-panel {
+  border-top: 1px solid var(--iu-gray-100);
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+.iu-mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.iu-mobile-nav-list a {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--iu-gray-700);
+}
+.iu-mobile-nav-list a:hover {
+  background: var(--iu-emerald-50);
+  color: var(--iu-emerald-700);
+}
+
+/* Main Layout & Containers */
+.iu-page-container, .iu-post-container, .iu-home-section-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.iu-post-container, .iu-legal-page {
+  max-width: 56rem;
+}
+
+/* Breadcrumbs */
+.iu-breadcrumbs {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.78rem;
+  color: var(--iu-gray-500);
+}
+.iu-breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+.iu-breadcrumbs a:hover {
+  color: var(--iu-emerald-600);
+}
+.iu-crumb-sep {
+  margin-right: 0.35rem;
+  color: var(--iu-gray-400);
+}
+
+/* Homepage Hero & Grids */
+.iu-home-hero {
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.75) 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--iu-gray-100);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.iu-hero-pill {
+  display: inline-block;
+  border: 1px solid var(--iu-emerald-200);
+  background: var(--iu-emerald-50);
+  color: var(--iu-emerald-800);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.iu-home-hero h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  max-width: 46rem;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+.iu-home-hero h1 span {
+  color: var(--iu-emerald-600);
+}
+.iu-home-hero p {
+  max-width: 40rem;
+  margin: 1rem auto 0;
+  color: var(--iu-gray-600);
+  font-size: 1.05rem;
+}
+.iu-trust-badges {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+.iu-trust-badge {
+  background: #fff;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--iu-gray-600);
+}
+
+.iu-home-band {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--iu-gray-100);
+}
+.iu-home-band-alt {
+  background: var(--iu-gray-50);
+}
+.iu-section-head {
+  margin-bottom: 1.5rem;
+}
+.iu-section-head h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+.iu-section-head p {
+  font-size: 0.9rem;
+  color: var(--iu-gray-500);
+  margin: 0.25rem 0 0;
+}
+
+.iu-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: 1.25rem;
+}
+.iu-cat-card, .iu-tool-card, .iu-article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1.35rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.iu-cat-card:hover, .iu-tool-card:hover, .iu-article-card:hover {
+  border-color: var(--iu-emerald-500);
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.08);
+}
+.iu-cat-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+.iu-cat-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--iu-emerald-700);
+  background: var(--iu-emerald-50);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.iu-cat-malayalam {
+  font-size: 0.78rem;
+  color: var(--iu-emerald-700);
+  margin: 0.15rem 0 0.5rem;
+  font-weight: 600;
+}
+.iu-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1rem;
+}
+.iu-tool-card h3, .iu-tool-card h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+  color: var(--iu-gray-900);
+}
+.iu-tool-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--iu-gray-500);
+}
+.iu-tool-cta {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--iu-emerald-600);
+}
+
+.iu-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+  gap: 0.75rem;
+}
+.iu-index-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.iu-index-item:hover {
+  border-color: var(--iu-emerald-500);
+  background: var(--iu-emerald-50);
+}
+.iu-index-item small {
+  font-size: 0.7rem;
+  color: var(--iu-gray-500);
+  text-transform: capitalize;
+}
+
+.iu-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  gap: 1.25rem;
+}
+
+/* Calculator Widget Layout */
+.iu-page-hero {
+  margin-bottom: 1.75rem;
+}
+.iu-hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.iu-cat-pill {
+  background: var(--iu-emerald-100);
+  color: var(--iu-emerald-800);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.35rem;
+  text-transform: uppercase;
+}
+.iu-free-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--iu-emerald-700);
+}
+.iu-page-title, .iu-post-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0.25rem 0;
+  line-height: 1.25;
+}
+.iu-page-subtitle {
+  color: var(--iu-gray-600);
+  font-size: 1rem;
+  max-width: 48rem;
+  margin: 0.35rem 0 0;
+}
+
+.iu-calc-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+.iu-two-col-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.iu-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.iu-card {
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+}
+.iu-result-card {
+  border: 1px solid var(--iu-emerald-100);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(236, 253, 245, 0.7) 0%, #ffffff 100%);
+  padding: 1.5rem;
+}
+.iu-result-card-amber {
+  border-color: var(--iu-amber-200);
+  background: linear-gradient(180deg, rgba(255, 251, 235, 0.75) 0%, #ffffff 100%);
+}
+
+.iu-field {
+  margin-bottom: 1.25rem;
+}
+.iu-field:last-child {
+  margin-bottom: 0;
+}
+.iu-field-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.45rem;
+  gap: 0.5rem;
+}
+.iu-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--iu-gray-800);
+  display: block;
+}
+.iu-label-sm {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--iu-gray-700);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.iu-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.iu-prefix, .iu-suffix {
+  font-size: 0.78rem;
+  color: var(--iu-gray-500);
+}
+.iu-num-input, .iu-select, .iu-date-input {
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--iu-gray-900);
+  text-align: right;
+  width: 7.5rem;
+}
+.iu-select, .iu-date-input {
+  text-align: left;
+  width: auto;
+}
+.iu-w-20 { width: 5.2rem; }
+.iu-w-24 { width: 6.2rem; }
+.iu-w-full { width: 100%; }
+
+.iu-range {
+  width: 100%;
+  accent-color: var(--iu-emerald-600);
+  cursor: pointer;
+}
+.iu-range-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--iu-gray-400);
+  margin-top: 0.2rem;
+}
+.iu-field-hint {
+  font-size: 0.72rem;
+  color: var(--iu-gray-500);
+  margin: 0.25rem 0 0;
+}
+.iu-warning-hint {
+  font-size: 0.75rem;
+  color: var(--iu-amber-600);
+  font-weight: 600;
+  margin: 0.35rem 0 0;
+}
+
+.iu-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--iu-emerald-50);
+  border: 1px solid var(--iu-emerald-100);
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.iu-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+.iu-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.iu-btn-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+.iu-btn-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+.iu-choice-btn, .iu-rate-btn {
+  border: 1px solid var(--iu-gray-200);
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.4rem;
+  cursor: pointer;
+  text-align: center;
+}
+.iu-choice-btn-active {
+  border-color: var(--iu-emerald-500);
+  background: var(--iu-emerald-50);
+  color: var(--iu-emerald-900);
+  font-weight: 700;
+}
+.iu-rate-btn {
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.iu-rate-btn-active {
+  background: var(--iu-emerald-600);
+  border-color: var(--iu-emerald-600);
+  color: #fff;
+}
+.iu-choice-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.iu-choice-sub {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--iu-gray-500);
+}
+.iu-toggle-pair {
+  display: flex;
+  gap: 0.35rem;
+}
+.iu-mini-btn {
+  border: 1px solid var(--iu-gray-200);
+  background: var(--iu-gray-100);
+  border-radius: 0.35rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+.iu-mini-btn-active {
+  background: var(--iu-amber-600);
+  border-color: var(--iu-amber-600);
+  color: #fff;
+}
+
+.iu-result-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--iu-emerald-800);
+  margin: 0;
+}
+.iu-result-primary {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--iu-gray-900);
+  margin: 0.25rem 0;
+}
+.iu-result-secondary {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--iu-emerald-800);
+}
+.iu-result-sub {
+  font-size: 0.75rem;
+  color: var(--iu-gray-500);
+  margin: 0;
+}
+.iu-result-rows {
+  border-top: 1px solid var(--iu-emerald-100);
+  padding-top: 0.85rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.875rem;
+}
+.iu-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.iu-result-row-total {
+  border-top: 1px dashed var(--iu-gray-200);
+  padding-top: 0.55rem;
+  font-weight: 700;
+}
+.iu-sub-row {
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--iu-emerald-200);
+  font-size: 0.78rem;
+  color: var(--iu-gray-500);
+}
+
+.iu-ratio-box {
+  margin-top: 1rem;
+}
+.iu-ratio-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--iu-gray-600);
+  margin-bottom: 0.35rem;
+}
+.iu-dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+}
+.iu-dot-emerald, .iu-ratio-fill-emerald { background: var(--iu-emerald-600); }
+.iu-dot-amber, .iu-ratio-fill-amber { background: var(--iu-amber-500); }
+.iu-dot-gray, .iu-ratio-fill-gray { background: var(--iu-gray-400); }
+.iu-ratio-bar {
+  height: 0.65rem;
+  border-radius: 999px;
+  background: var(--iu-gray-200);
+  overflow: hidden;
+  display: flex;
+}
+
+.iu-calc-note {
+  margin-top: 1rem;
+  background: var(--iu-gray-50);
+  border: 1px solid var(--iu-gray-100);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--iu-gray-600);
+  line-height: 1.5;
+}
+.iu-calc-note a, .iu-inline-link {
+  color: var(--iu-emerald-700);
+  text-decoration: underline;
+}
+.iu-planning-disclaimer {
+  margin-top: 1rem;
+  border: 1px solid var(--iu-amber-200);
+  background: var(--iu-amber-50);
+  color: var(--iu-amber-900);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.78rem;
+}
+
+.iu-highlight-box {
+  margin-top: 1rem;
+  background: var(--iu-emerald-50);
+  border: 1px solid var(--iu-emerald-200);
+  border-radius: 0.75rem;
+  padding: 0.85rem;
+}
+.iu-highlight-blue {
+  background: var(--iu-blue-50);
+  border-color: var(--iu-blue-100);
+}
+.iu-banner-amber {
+  background: var(--iu-amber-50);
+  border: 1px solid var(--iu-amber-200);
+  color: var(--iu-amber-900);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+.iu-banner-blue {
+  background: var(--iu-blue-50);
+  border: 1px solid var(--iu-blue-100);
+  color: var(--iu-blue-800);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+.iu-info-pill {
+  display: flex;
+  justify-content: space-between;
+  background: var(--iu-gray-50);
+  border: 1px solid var(--iu-gray-200);
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.75rem;
+  font-size: 0.82rem;
+  margin-top: 0.35rem;
+}
+.iu-inline-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.75rem 0;
+}
+.iu-stat-tile {
+  background: #fff;
+  border: 1px solid var(--iu-emerald-100);
+  border-radius: 0.65rem;
+  padding: 0.65rem;
+}
+.iu-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.iu-badge-emerald { background: var(--iu-emerald-100); color: var(--iu-emerald-800); }
+.iu-badge-blue { background: var(--iu-blue-100); color: var(--iu-blue-800); }
+.iu-badge-amber { background: var(--iu-amber-100); color: var(--iu-amber-800); }
+.iu-badge-red { background: var(--iu-red-100); color: var(--iu-red-800); }
+
+.iu-text-emerald { color: var(--iu-emerald-700); }
+.iu-text-amber { color: var(--iu-amber-600); }
+.iu-text-red { color: var(--iu-red-600); }
+.iu-text-muted { color: var(--iu-gray-500); font-size: 0.78rem; }
+
+/* Guide Card & Prose */
+.iu-guide-card {
+  margin-top: 2.5rem;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1.75rem;
+}
+.iu-guide-block {
+  border-top: 1px solid var(--iu-gray-100);
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+}
+.iu-formula-box {
+  background: var(--iu-gray-50);
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.iu-formula-expr {
+  background: #fff;
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+.iu-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.iu-faq-item {
+  border: 1px solid var(--iu-gray-100);
+  background: var(--iu-gray-50);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.iu-faq-item h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+.iu-faq-item p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--iu-gray-600);
+}
+
+.iu-related-section {
+  margin-top: 2.5rem;
+}
+.iu-guide-link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.iu-guide-link {
+  color: var(--iu-emerald-700);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.iu-guide-link:hover {
+  text-decoration: underline;
+}
+
+/* Category Hub Banner & Topics */
+.iu-category-banner {
+  background: linear-gradient(135deg, var(--iu-emerald-700), var(--iu-teal-800));
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.iu-banner-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.iu-malayalam-sub {
+  color: var(--iu-emerald-200);
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+.iu-category-desc {
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 44rem;
+  margin: 0.5rem 0 0;
+}
+.iu-topic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.iu-topic-card {
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.85rem;
+  padding: 1.25rem;
+  background: #fff;
+}
+.iu-topic-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+.iu-topic-links {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.iu-topic-article-link {
+  color: var(--iu-emerald-700);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.iu-topic-calc-link {
+  background: var(--iu-emerald-50);
+  border: 1px solid var(--iu-emerald-200);
+  color: var(--iu-emerald-700);
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.iu-important-note {
+  margin-top: 2rem;
+  background: var(--iu-gray-50);
+  border: 1px solid var(--iu-gray-200);
+  border-radius: 0.85rem;
+  padding: 1.15rem;
+}
+
+/* Post / Article Layout */
+.iu-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--iu-gray-500);
+  margin-bottom: 0.5rem;
+}
+.iu-post-summary {
+  border-left: 4px solid var(--iu-emerald-500);
+  background: var(--iu-emerald-50);
+  padding: 0.65rem 1rem;
+  font-style: italic;
+  color: var(--iu-gray-700);
+  margin: 1rem 0 1.5rem;
+}
+.iu-prose p {
+  margin: 0 0 1.1rem;
+  color: var(--iu-gray-800);
+}
+.iu-prose h2, .iu-prose h3, .iu-prose-heading {
+  color: var(--iu-gray-900);
+  margin: 1.75rem 0 0.6rem;
+  font-size: 1.3rem;
+}
+.iu-prose-list, .iu-prose-olist {
+  padding-left: 1.4rem;
+  margin: 0.75rem 0 1.1rem;
+}
+.iu-prose-list li, .iu-prose-olist li {
+  margin-bottom: 0.4rem;
+}
+.iu-inline-code {
+  background: var(--iu-gray-100);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+}
+.iu-related-calculators-callout {
+  margin-top: 2.5rem;
+  background: var(--iu-emerald-50);
+  border: 1px solid var(--iu-emerald-200);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Contact Grid */
+.iu-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.iu-span-2 {
+  grid-column: span 2;
+}
+.iu-btn-primary {
+  display: inline-block;
+  background: var(--iu-emerald-700);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.5rem;
+}
+.iu-btn-primary:hover {
+  background: var(--iu-emerald-800);
+}
+
+/* Footer */
+.iu-site-footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--iu-gray-200);
+  background: var(--iu-gray-50);
+  color: var(--iu-gray-600);
+}
+.iu-footer-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+.iu-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.iu-footer-col h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--iu-gray-900);
+  margin: 0 0 0.75rem;
+}
+.iu-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.875rem;
+}
+.iu-footer-col a:hover {
+  color: var(--iu-emerald-600);
+}
+.iu-footer-bottom {
+  margin-top: 2.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--iu-gray-200);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--iu-gray-500);
+}
+
+@media (max-width: 900px) {
+  .iu-desktop-nav, .iu-search-wrap {
+    display: none;
+  }
+  .iu-mobile-controls {
+    display: flex;
+  }
+  .iu-calc-grid, .iu-two-col-cards, .iu-contact-grid, .iu-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .iu-span-2 {
+    grid-column: span 1;
+  }
+  .iu-home-hero h1 {
+    font-size: 1.75rem;
+  }
+}
+
+    ]]></b:skin>
+  </head>
+
+  <body>
+    <a class='iu-skip-link' href='#main-content'>Skip to main content</a>
+
+    <header class='iu-site-header' role='banner'>
+      <div class='iu-header-inner'>
+        <a class='iu-brand' expr:href='data:blog.homepageUrl'>
+          <div class='iu-brand-mark'>IU</div>
+          <div>
+            <div>
+              <span class='iu-brand-title'>India<span>Useful</span></span>
+              <span class='iu-brand-badge'>IN</span>
+            </div>
+            <p class='iu-brand-tag'>Smart Calculators &amp; Utilities</p>
+          </div>
+        </a>
+
+        <div class='iu-search-wrap' role='search'>
+          <input aria-label='Search calculators and tools' autocomplete='off' class='iu-search-input' id='iu-search-input' placeholder='Search EMI, SIP, Gold, Salary, GST...' type='search'/>
+          <div class='iu-search-dropdown' hidden='hidden' id='iu-search-results'/>
+        </div>
+
+        <nav aria-label='Primary categories' class='iu-desktop-nav'>
+          <a href='/p/category-finance.html'>Finance</a>
+          <a href='/p/category-banking.html'>Banking</a>
+          <a href='/p/category-jobs.html'>Jobs &amp; CTC</a>
+          <a href='/p/category-gold.html'>Gold</a>
+          <a href='/p/category-tools.html'>Utility Tools</a>
+          <a class='iu-kerala-link' href='/p/category-kerala.html'>കേരളം</a>
+        </nav>
+
+        <div class='iu-mobile-controls'>
+          <button aria-controls='mobile-search-panel' aria-expanded='false' aria-label='Toggle Search' class='iu-icon-btn' id='iu-mobile-search-btn' type='button'>Search</button>
+          <button aria-controls='mobile-menu-panel' aria-expanded='false' aria-label='Toggle Menu' class='iu-icon-btn' id='iu-mobile-menu-btn' type='button'>Menu</button>
+        </div>
+      </div>
+
+      <div class='iu-mobile-panel' hidden='hidden' id='mobile-search-panel'>
+        <input aria-label='Search calculators and tools' autocomplete='off' class='iu-search-input' id='iu-mobile-search-input' placeholder='Search EMI, SIP, Gold, Salary, GST...' type='search'/>
+        <div class='iu-search-dropdown' hidden='hidden' id='iu-mobile-search-results'/>
+      </div>
+
+      <nav aria-label='Mobile navigation' class='iu-mobile-panel' hidden='hidden' id='mobile-menu-panel'>
+        <div class='iu-mobile-nav-list'>
+          <a href='/p/category-finance.html'><span>Finance &amp; Investments</span><small>ധനകാര്യം &amp; നിക്ഷേപങ്ങൾ</small></a>
+          <a href='/p/category-banking.html'><span>Banking &amp; Loans</span><small>ബാങ്കിംഗ് &amp; വായ്പകൾ</small></a>
+          <a href='/p/category-jobs.html'><span>Salary &amp; Employment</span><small>ശമ്പളം &amp; തൊഴിൽ</small></a>
+          <a href='/p/category-gold.html'><span>Gold &amp; Jewellery</span><small>സ്വർണം &amp; ആഭരണങ്ങൾ</small></a>
+          <a href='/p/category-tools.html'><span>Everyday Utility Tools</span><small>ദൈനംദിന യൂട്ടിലിറ്റികൾ</small></a>
+          <a href='/p/category-kerala.html'><span>Kerala Special Corner</span><small>കേരള സ്പെഷ്യൽ</small></a>
+          <a href='/p/about.html'><span>About IndiaUseful</span></a>
+          <a href='/p/contact.html'><span>Contact Us</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id='main-content' role='main'>
+      <b:section class='main-section' id='main' showaddelement='yes'>
+        <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2'>
+          <b:includable id='main' var='top'>
+            <b:if cond='data:blog.url == data:blog.homepageUrl'>
+              <!-- Crawlable IndiaUseful Homepage -->
+              <section class='iu-home-hero'>
+                <div class='iu-hero-pill'>✨ 100% Free • No Signup • Indian Standards</div>
+                <h1>Everyday Financial &amp; Utility Calculators for <span>India</span></h1>
+                <p>Accurate, lightning-fast tools for your loan EMIs, mutual fund SIPs, salary in-hand, gold jewellery billing, and Kerala sovereign rates.</p>
+                <div class='iu-trust-badges'>
+                  <span class='iu-trust-badge'>⚡ Instant Calculations</span>
+                  <span class='iu-trust-badge'>🛡️ Private &amp; Client-side</span>
+                  <span class='iu-trust-badge'>🧮 Built using Indian financial rules and clearly stated assumptions.</span>
+                </div>
+              </section>
+
+              <section class='iu-home-band' id='categories'>
+                <div class='iu-home-section-inner'>
+                  <div class='iu-section-head'>
+                    <h2>Browse by Category</h2>
+                    <p>Explore specialized tools tailored to Indian financial and daily needs.</p>
+                  </div>
+                  <div class='iu-cat-grid'>
+                    <a href="/p/category-finance.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Finance &amp; Investments</strong>
+                    <span class="iu-cat-count">3 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">ധനകാര്യം &amp; നിക്ഷേപങ്ങൾ</p>
+                  <p>Grow your wealth with accurate Indian tax-friendly calculators for SIP, PPF, NPS, and more.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+              <a href="/p/category-banking.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Banking &amp; Loans</strong>
+                    <span class="iu-cat-count">7 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">ബാങ്കിംഗ് &amp; വായ്പകൾ</p>
+                  <p>Calculate EMI, loan interest, prepayment savings, and FD/RD returns across Indian banks.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+              <a href="/p/category-jobs.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Salary &amp; Employment</strong>
+                    <span class="iu-cat-count">3 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">ശമ്പളം &amp; തൊഴിൽ</p>
+                  <p>Estimate pre-income-tax-TDS monthly salary from a simplified CTC model, alongside gratuity and PF illustrations.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+              <a href="/p/category-gold.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Gold &amp; Jewellery</strong>
+                    <span class="iu-cat-count">1 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">സ്വർണം &amp; ആഭരണങ്ങൾ</p>
+                  <p>Estimate jewellery bills using user-entered gold rates, selected purity, making charges, and modelled GST and fees.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+              <a href="/p/category-tools.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Everyday Utility Tools</strong>
+                    <span class="iu-cat-count">6 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">ദൈനംദിന യൂട്ടിലിറ്റികൾ</p>
+                  <p>Instant calculators for GST breakdown, Percentage, Age, Date Differences, Discount, and BMI.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+              <a href="/p/category-kerala.html" class="iu-cat-card">
+                <div>
+                  <div class="iu-cat-card-top">
+                    <strong>Kerala Special Corner</strong>
+                    <span class="iu-cat-count">1 tools</span>
+                  </div>
+                  <p class="iu-cat-malayalam">കേരള സ്പെഷ്യൽ</p>
+                  <p>Tailored calculators for Kerala: 1 Pavan (8 grams) sovereign gold rate, wedding jewellery estimates, making charges, and 3% GST.</p>
+                </div>
+                <span class="iu-tool-cta">Explore Tools →</span>
+              </a>
+                  </div>
+                </div>
+              </section>
+
+              <section class='iu-home-band iu-home-band-alt'>
+                <div class='iu-home-section-inner'>
+                  <div class='iu-section-head'>
+                    <h2>Most Popular Calculators</h2>
+                    <p>Frequently used tools for loans, investments, taxes, and daily calculations.</p>
+                  </div>
+                  <div class='iu-related-grid'>
+                    <a href="/p/emi-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Loan EMI Calculator</h3>
+                  <p>Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/home-loan-emi-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Home Loan EMI Calculator</h3>
+                  <p>Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/personal-loan-emi-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Personal Loan EMI Calculator</h3>
+                  <p>Estimate monthly outflow for quick personal credit and emergency financing.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/car-loan-emi-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Car / Vehicle Loan Calculator</h3>
+                  <p>Plan financing for new or pre-owned vehicles with on-road down payments.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/loan-prepayment-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Loan Prepayment Calculator</h3>
+                  <p>Estimate interest savings and tenure reduction from one part-payment while keeping EMI unchanged.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/fd-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Fixed Deposit (FD) Calculator</h3>
+                  <p>Calculate maturity value and interest earnings on bank and post office term deposits.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/rd-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">banking</span>
+                  <h3>Recurring Deposit (RD) Calculator</h3>
+                  <p>Compute maturity returns for monthly recurring savings schemes.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+              <a href="/p/sip-calculator.html" class="iu-tool-card">
+                <div>
+                  <span class="iu-cat-pill">finance</span>
+                  <h3>SIP Calculator (Mutual Funds)</h3>
+                  <p>Calculate potential wealth creation through Systematic Investment Plans.</p>
+                </div>
+                <span class="iu-tool-cta">Calculate now →</span>
+              </a>
+                  </div>
+                </div>
+              </section>
+
+              <section class='iu-home-band'>
+                <div class='iu-home-section-inner'>
+                  <div class='iu-section-head'>
+                    <h2>All Free Tools &amp; Calculators Index</h2>
+                    <p>Complete directory of all 21 interactive calculators.</p>
+                  </div>
+                  <div class='iu-index-grid'>
+                    <a href="/p/emi-calculator.html" class="iu-index-item">
+                <span>Loan EMI Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/home-loan-emi-calculator.html" class="iu-index-item">
+                <span>Home Loan EMI Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/personal-loan-emi-calculator.html" class="iu-index-item">
+                <span>Personal Loan EMI Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/car-loan-emi-calculator.html" class="iu-index-item">
+                <span>Car / Vehicle Loan Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/loan-prepayment-calculator.html" class="iu-index-item">
+                <span>Loan Prepayment Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/fd-calculator.html" class="iu-index-item">
+                <span>Fixed Deposit (FD) Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/rd-calculator.html" class="iu-index-item">
+                <span>Recurring Deposit (RD) Calculator</span>
+                <small>banking</small>
+              </a>
+              <a href="/p/sip-calculator.html" class="iu-index-item">
+                <span>SIP Calculator (Mutual Funds)</span>
+                <small>finance</small>
+              </a>
+              <a href="/p/ppf-calculator.html" class="iu-index-item">
+                <span>PPF (Public Provident Fund) Calculator</span>
+                <small>finance</small>
+              </a>
+              <a href="/p/nps-calculator.html" class="iu-index-item">
+                <span>NPS (National Pension System) Calculator</span>
+                <small>finance</small>
+              </a>
+              <a href="/p/gratuity-calculator.html" class="iu-index-item">
+                <span>Gratuity Calculator</span>
+                <small>jobs</small>
+              </a>
+              <a href="/p/salary-calculator.html" class="iu-index-item">
+                <span>In-Hand Salary Calculator</span>
+                <small>jobs</small>
+              </a>
+              <a href="/p/ctc-inhand-calculator.html" class="iu-index-item">
+                <span>CTC to In-Hand Salary Breakdown</span>
+                <small>jobs</small>
+              </a>
+              <a href="/p/gold-price-calculator.html" class="iu-index-item">
+                <span>Gold Price &amp; Jewellery Billing Calculator</span>
+                <small>gold</small>
+              </a>
+              <a href="/p/gst-calculator.html" class="iu-index-item">
+                <span>GST Calculator (India)</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/percentage-calculator.html" class="iu-index-item">
+                <span>Percentage Calculator</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/age-calculator.html" class="iu-index-item">
+                <span>Age Calculator</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/date-difference-calculator.html" class="iu-index-item">
+                <span>Date Difference / Duration Calculator</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/discount-calculator.html" class="iu-index-item">
+                <span>Discount &amp; Sale Price Calculator</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/bmi-calculator.html" class="iu-index-item">
+                <span>BMI (Body Mass Index) Calculator</span>
+                <small>tools</small>
+              </a>
+              <a href="/p/kerala-gold-pavan-calculator.html" class="iu-index-item">
+                <span>Kerala Pavan &amp; Sovereign Gold Calculator</span>
+                <small>kerala</small>
+              </a>
+                  </div>
+                </div>
+              </section>
+
+              <section class='iu-home-band iu-home-band-alt' id='guides'>
+                <div class='iu-home-section-inner'>
+                  <div class='iu-section-head'>
+                    <h2>Indian Practical Finance Guides</h2>
+                    <p>In-depth financial knowledge base, formulas, and practical walkthroughs.</p>
+                  </div>
+                  <div class='iu-articles-grid'>
+                    <a href="/2026/09/how-to-calculate-home-loan-emi-india.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>How Home Loan EMI is Calculated in India: Formula, Amortization, and Prepayment Hacks</h3>
+                  <p>A comprehensive guide explaining the reducing balance method used by Indian banks (SBI, HDFC, ICICI) and how part-payments reduce total interest outflow by lakhs of rupees.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/09/sip-vs-lumpsum-mutual-funds-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">finance</span>
+                    <span>•</span>
+                    <span>5 min read</span>
+                  </div>
+                  <h3>SIP vs Lumpsum Mutual Fund Investing in India: Compounding and Rupee Cost Averaging</h3>
+                  <p>Understand SIP and lump-sum cash flows, rupee cost averaging and compounding assumptions without treating projected returns as a performance guarantee.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/09/gold-buying-guide-hallmarking-gst-making-charges.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">gold</span>
+                    <span>•</span>
+                    <span>7 min read</span>
+                  </div>
+                  <h3>Buying Gold Jewellery in India: Hallmark HUID, 3% GST, and Making Charges Explained</h3>
+                  <p>Never overpay for gold jewellery again. Understand BIS 6-digit HUID hallmarks, wastage (VA), making charges, and the compulsory 3% GST on billing.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/09/understanding-ctc-vs-in-hand-salary-india.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">jobs</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>CTC vs In-Hand Salary Explained: EPF, Gratuity, Professional Tax, and Income Tax</h3>
+                  <p>Understand CTC costs, PF, gratuity reserve, variable pay and professional tax, and distinguish a pre-income-tax-TDS estimate from actual bank credit.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/home-loan-emi-salary-affordability-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>Home Loan EMI and Salary Affordability: A Practical Planning Guide</h3>
+                  <p>Understand home loan EMI, compare tenures and test affordability against take-home salary, existing repayments and a realistic household budget.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/personal-loan-flat-vs-reducing-interest-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>Personal Loan EMI: Flat Rate vs Reducing Balance Explained</h3>
+                  <p>Compare flat and reducing-balance personal loan quotes using EMI, total repayment, fees and the amount actually received.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/car-loan-down-payment-tenure-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>Car Loan EMI: Down Payment, On-Road Price and Tenure</h3>
+                  <p>Work out the financed vehicle amount, compare down payments and tenures, and separate car loan EMI from the full cost of ownership.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/loan-prepayment-emi-vs-tenure-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>Loan Prepayment: Reduce EMI or Shorten Tenure?</h3>
+                  <p>Understand how a part-payment reduces outstanding principal, why tenure reduction and EMI reduction differ, and what this calculator actually models.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/fd-maturity-quarterly-compounding-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>FD Maturity Calculation: Quarterly Compounding, Interest and TDS</h3>
+                  <p>Calculate cumulative fixed-deposit maturity, understand quarterly compounding and distinguish gross interest, TDS and final tax liability.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/rd-maturity-monthly-deposits-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">banking</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>RD Maturity Calculation: Monthly Deposits, Compounding and TDS</h3>
+                  <p>See how each recurring-deposit instalment earns for a different period, calculate gross maturity and apply the corrected bank-interest TDS context.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/sip-return-calculation-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">finance</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>SIP Return Calculation: Contributions, Compounding and Assumptions</h3>
+                  <p>Understand the monthly SIP future-value formula, test assumed returns and distinguish a projection from an actual mutual fund return.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/ppf-maturity-fifth-of-month-rule-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">finance</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>PPF Maturity and the 5th-of-the-Month Interest Rule</h3>
+                  <p>Understand annual PPF compounding, the monthly fifth-day balance rule and why a 7.1% maturity projection is an assumption, not a permanently fixed rate.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/nps-corpus-annuity-pension-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">finance</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>NPS Corpus, Annuity and Pension: Calculation and Exit-Rule Context</h3>
+                  <p>Separate NPS corpus growth from annuity income and understand why sector, exit type and corpus size matter more than a generic 60/40 rule.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+              <a href="/2026/10/gratuity-calculation-guide.html" class="iu-article-card">
+                <div>
+                  <div class="iu-post-meta">
+                    <span class="iu-cat-pill">jobs</span>
+                    <span>•</span>
+                    <span>6 min read</span>
+                  </div>
+                  <h3>Gratuity Calculation: Salary, Service Years and Estimate Limits</h3>
+                  <p>Understand the salary-and-service gratuity formula, the calculator’s covered and uncovered illustrations, and the limits of its eligibility and tax estimates.</p>
+                </div>
+                <span class="iu-tool-cta">Read complete guide →</span>
+              </a>
+                  </div>
+                </div>
+              </section>
+
+            <b:elseif cond='data:blog.pageType == &quot;static_page&quot;'/>
+              <b:loop values='data:posts' var='post'>
+                <div class='iu-static-page-wrapper'>
+                  <data:post.body/>
+                </div>
+              </b:loop>
+
+            <b:elseif cond='data:blog.pageType == &quot;item&quot;'/>
+              <b:loop values='data:posts' var='post'>
+                <div class='iu-post-item-wrapper'>
+                  <data:post.body/>
+                </div>
+              </b:loop>
+
+            <b:elseif cond='data:blog.pageType in {&quot;index&quot;, &quot;archive&quot;}'/>
+              <div class='iu-page-container'>
+                <nav aria-label='Breadcrumb' class='iu-breadcrumbs'>
+                  <ol>
+                    <li><a expr:href='data:blog.homepageUrl'>Home</a></li>
+                    <b:if cond='data:blog.searchLabel'>
+                      <li><span aria-hidden='true' class='iu-crumb-sep'>›</span><span aria-current='page'><data:blog.searchLabel/></span></li>
+                    </b:if>
+                  </ol>
+                </nav>
+                <header class='iu-page-hero'>
+                  <b:if cond='data:blog.searchLabel'>
+                    <h1 class='iu-page-title'>Guides &amp; Articles: <data:blog.searchLabel/></h1>
+                    <p class='iu-page-subtitle'>Browse our full category hub and calculators or read the guides below.</p>
+                  <b:else/>
+                    <h1 class='iu-page-title'>All Guides &amp; Articles</h1>
+                  </b:if>
+                </header>
+                <div class='iu-articles-grid'>
+                  <b:loop values='data:posts' var='post'>
+                    <a class='iu-article-card' expr:href='data:post.url'>
+                      <div>
+                        <h3><data:post.title/></h3>
+                        <p><data:post.snippet/></p>
+                      </div>
+                      <span class='iu-tool-cta'>Read complete guide →</span>
+                    </a>
+                  </b:loop>
+                </div>
+              </div>
+
+            <b:else/>
+              <div class='iu-page-container'>
+                <h1 class='iu-page-title'>Page Not Found</h1>
+                <p class='iu-page-subtitle'>The page you requested could not be found. Explore our free Indian calculators from the homepage.</p>
+                <p><a class='iu-btn-primary' expr:href='data:blog.homepageUrl'>Return to IndiaUseful Home</a></p>
+              </div>
+            </b:if>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </main>
+
+    <footer class='iu-site-footer' role='contentinfo'>
+      <div class='iu-footer-inner'>
+        <div class='iu-footer-grid'>
+          <div class='iu-footer-col'>
+            <div class='iu-brand'>
+              <div class='iu-brand-mark'>IU</div>
+              <span class='iu-brand-title'>India<span>Useful</span></span>
+            </div>
+            <p>IndiaUseful offers free calculators and practical guides for common questions in India. Calculator inputs are processed in your browser; the site may still receive ordinary hosting request data. No account is required.</p>
+            <p class='iu-text-muted'>ഭാരതീയർക്കായുള്ള ലളിതമായ കണക്കുകൂട്ടൽ സഹായികൾ. കൂടുതൽ വിവരങ്ങൾക്ക് സ്വകാര്യതാ നയം കാണുക.</p>
+          </div>
+
+          <div class='iu-footer-col'>
+            <h3>Categories</h3>
+            <ul>
+              <li><a href="/p/category-finance.html">Finance &amp; Investments</a></li>
+              <li><a href="/p/category-banking.html">Banking &amp; Loans</a></li>
+              <li><a href="/p/category-jobs.html">Salary &amp; Employment</a></li>
+              <li><a href="/p/category-gold.html">Gold &amp; Jewellery</a></li>
+              <li><a href="/p/category-tools.html">Everyday Utility Tools</a></li>
+              <li><a href="/p/category-kerala.html">Kerala Special Corner</a></li>
+            </ul>
+          </div>
+
+          <div class='iu-footer-col'>
+            <h3>Popular Tools</h3>
+            <ul>
+              <li><a href='/p/emi-calculator.html'>Loan EMI Calculator</a></li>
+              <li><a href='/p/sip-calculator.html'>SIP Wealth Calculator</a></li>
+              <li><a href='/p/salary-calculator.html'>In-Hand Salary</a></li>
+              <li><a href='/p/gold-price-calculator.html'>Gold Billing &amp; GST</a></li>
+              <li><a href='/p/kerala-gold-pavan-calculator.html'>Kerala Pavan Gold</a></li>
+              <li><a href='/p/gst-calculator.html'>Indian GST Calculator</a></li>
+            </ul>
+          </div>
+
+          <div class='iu-footer-col'>
+            <h3>Legal &amp; Trust</h3>
+            <ul>
+              <li><a href='/p/about.html'>About Us</a></li>
+              <li><a href='/p/contact.html'>Contact</a></li>
+              <li><a href='/p/privacy.html'>Privacy Policy</a></li>
+              <li><a href='/p/terms.html'>Terms of Service</a></li>
+              <li><a href='/p/disclaimer.html'>Financial Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class='iu-footer-bottom'>
+          <p>© 2026 IndiaUseful. All rights reserved. Built for India with precision.</p>
+          <p>Calculations are for informational purposes only. Consult certified financial or legal advisors for regulated transactions.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type='text/javascript'>
+//<![CDATA[
+/* IndiaUseful Blogger Client-Side Calculator Runtime (All 21 Calculators) */
+(function () {
+  'use strict';
+
+  const CALCULATOR_SPECS = {
+  "emi": {
+    "id": "emi",
+    "slug": "emi-calculator",
+    "widgetType": "generic-emi",
+    "label": "Loan",
+    "defaults": {
+      "loanAmount": 2500000,
+      "interestRate": 9,
+      "tenureYears": 15
+    },
+    "bounds": {
+      "loanAmount": {
+        "min": 10000,
+        "max": 100000000,
+        "step": 10000,
+        "sliderMin": 50000,
+        "sliderMax": 15000000,
+        "sliderStep": 25000
+      },
+      "interestRate": {
+        "min": 1,
+        "max": 36,
+        "step": 0.1,
+        "sliderMin": 6,
+        "sliderMax": 24,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 35,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 30,
+        "sliderStep": 1
+      }
+    }
+  },
+  "home-loan": {
+    "id": "home-loan",
+    "slug": "home-loan-emi-calculator",
+    "widgetType": "generic-emi",
+    "label": "Home Loan",
+    "defaults": {
+      "loanAmount": 5000000,
+      "interestRate": 8.5,
+      "tenureYears": 20
+    },
+    "bounds": {
+      "loanAmount": {
+        "min": 10000,
+        "max": 100000000,
+        "step": 10000,
+        "sliderMin": 50000,
+        "sliderMax": 15000000,
+        "sliderStep": 25000
+      },
+      "interestRate": {
+        "min": 1,
+        "max": 36,
+        "step": 0.1,
+        "sliderMin": 6,
+        "sliderMax": 24,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 35,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 30,
+        "sliderStep": 1
+      }
+    }
+  },
+  "personal-loan": {
+    "id": "personal-loan",
+    "slug": "personal-loan-emi-calculator",
+    "widgetType": "generic-emi",
+    "label": "Personal Loan",
+    "defaults": {
+      "loanAmount": 300000,
+      "interestRate": 12.5,
+      "tenureYears": 3
+    },
+    "bounds": {
+      "loanAmount": {
+        "min": 10000,
+        "max": 100000000,
+        "step": 10000,
+        "sliderMin": 50000,
+        "sliderMax": 15000000,
+        "sliderStep": 25000
+      },
+      "interestRate": {
+        "min": 1,
+        "max": 36,
+        "step": 0.1,
+        "sliderMin": 6,
+        "sliderMax": 24,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 35,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 30,
+        "sliderStep": 1
+      }
+    }
+  },
+  "car-loan": {
+    "id": "car-loan",
+    "slug": "car-loan-emi-calculator",
+    "widgetType": "generic-emi",
+    "label": "Vehicle Loan",
+    "defaults": {
+      "loanAmount": 800000,
+      "interestRate": 8.9,
+      "tenureYears": 5
+    },
+    "bounds": {
+      "loanAmount": {
+        "min": 10000,
+        "max": 100000000,
+        "step": 10000,
+        "sliderMin": 50000,
+        "sliderMax": 15000000,
+        "sliderStep": 25000
+      },
+      "interestRate": {
+        "min": 1,
+        "max": 36,
+        "step": 0.1,
+        "sliderMin": 6,
+        "sliderMax": 24,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 35,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 30,
+        "sliderStep": 1
+      }
+    }
+  },
+  "loan-prepayment": {
+    "id": "loan-prepayment",
+    "slug": "loan-prepayment-calculator",
+    "widgetType": "prepayment",
+    "defaults": {
+      "loanAmount": 4000000,
+      "interestRate": 8.75,
+      "tenureYears": 20,
+      "lumpsumPrepayment": 200000,
+      "prepayAfterYear": 3
+    },
+    "bounds": {
+      "loanAmount": {
+        "sliderMin": 500000,
+        "sliderMax": 15000000,
+        "sliderStep": 50000
+      },
+      "interestRate": {
+        "step": 0.1
+      },
+      "lumpsumPrepayment": {
+        "sliderMin": 25000,
+        "sliderMax": 2000000,
+        "sliderStep": 25000
+      },
+      "prepayAfterYearPresets": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        10
+      ]
+    }
+  },
+  "fd": {
+    "id": "fd",
+    "slug": "fd-calculator",
+    "widgetType": "deposit",
+    "depositType": "fd",
+    "defaults": {
+      "depositAmount": 100000,
+      "interestRate": 7.1,
+      "tenureYears": 5,
+      "isSeniorCitizen": false
+    },
+    "bounds": {
+      "depositAmount": {
+        "min": 500,
+        "max": 10000000,
+        "step": 5000,
+        "sliderMin": 10000,
+        "sliderMax": 2000000,
+        "sliderStep": 5000
+      },
+      "interestRate": {
+        "min": 3,
+        "max": 12,
+        "step": 0.1,
+        "sliderMin": 3,
+        "sliderMax": 10,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 10,
+        "sliderStep": 1
+      }
+    }
+  },
+  "rd": {
+    "id": "rd",
+    "slug": "rd-calculator",
+    "widgetType": "deposit",
+    "depositType": "rd",
+    "defaults": {
+      "depositAmount": 5000,
+      "interestRate": 7.1,
+      "tenureYears": 3,
+      "isSeniorCitizen": false
+    },
+    "bounds": {
+      "depositAmount": {
+        "min": 500,
+        "max": 200000,
+        "step": 500,
+        "sliderMin": 500,
+        "sliderMax": 50000,
+        "sliderStep": 500
+      },
+      "interestRate": {
+        "min": 3,
+        "max": 12,
+        "step": 0.1,
+        "sliderMin": 3,
+        "sliderMax": 10,
+        "sliderStep": 0.1
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 10,
+        "sliderStep": 1
+      }
+    }
+  },
+  "sip": {
+    "id": "sip",
+    "slug": "sip-calculator",
+    "widgetType": "sip",
+    "defaults": {
+      "monthlyInvestment": 10000,
+      "expectedRate": 12,
+      "tenureYears": 15
+    },
+    "bounds": {
+      "monthlyInvestment": {
+        "min": 500,
+        "max": 500000,
+        "step": 500,
+        "sliderMin": 500,
+        "sliderMax": 100000,
+        "sliderStep": 500
+      },
+      "expectedRate": {
+        "min": 1,
+        "max": 30,
+        "step": 0.5,
+        "sliderMin": 1,
+        "sliderMax": 25,
+        "sliderStep": 0.5
+      },
+      "tenureYears": {
+        "min": 1,
+        "max": 40,
+        "step": 1,
+        "sliderMin": 1,
+        "sliderMax": 35,
+        "sliderStep": 1
+      }
+    }
+  },
+  "ppf": {
+    "id": "ppf",
+    "slug": "ppf-calculator",
+    "widgetType": "ppf",
+    "defaults": {
+      "annualDeposit": 150000,
+      "tenureYears": 15,
+      "interestRate": 7.1
+    },
+    "bounds": {
+      "annualDeposit": {
+        "min": 500,
+        "max": 150000,
+        "step": 5000,
+        "sliderMin": 500,
+        "sliderMax": 150000,
+        "sliderStep": 5000
+      },
+      "tenureYearsPresets": [
+        15,
+        20,
+        25,
+        30
+      ]
+    }
+  },
+  "nps": {
+    "id": "nps",
+    "slug": "nps-calculator",
+    "widgetType": "nps",
+    "defaults": {
+      "currentAge": 30,
+      "monthlyContribution": 5000,
+      "expectedReturn": 10,
+      "annuitySharePercent": 40,
+      "annuityReturnRate": 6
+    },
+    "bounds": {
+      "currentAge": {
+        "min": 18,
+        "max": 59,
+        "sliderMin": 18,
+        "sliderMax": 55
+      },
+      "monthlyContribution": {
+        "min": 500,
+        "max": 150000,
+        "step": 500,
+        "sliderMin": 1000,
+        "sliderMax": 50000,
+        "sliderStep": 500
+      },
+      "expectedReturn": {
+        "min": 5,
+        "max": 16,
+        "step": 0.5
+      },
+      "annuitySharePercent": {
+        "min": 40,
+        "max": 100,
+        "step": 5
+      }
+    }
+  },
+  "gratuity": {
+    "id": "gratuity",
+    "slug": "gratuity-calculator",
+    "widgetType": "gratuity",
+    "defaults": {
+      "basicSalary": 50000,
+      "yearsOfService": 7,
+      "isCoveredUnderAct": true
+    },
+    "bounds": {
+      "basicSalary": {
+        "min": 5000,
+        "max": 2000000,
+        "step": 1000,
+        "sliderMin": 10000,
+        "sliderMax": 300000,
+        "sliderStep": 5000
+      },
+      "yearsOfService": {
+        "min": 1,
+        "max": 45,
+        "sliderMin": 1,
+        "sliderMax": 40,
+        "sliderStep": 1
+      }
+    }
+  },
+  "salary": {
+    "id": "salary",
+    "slug": "salary-calculator",
+    "widgetType": "salary",
+    "mode": "simple",
+    "defaults": {
+      "ctcAnnual": 900000,
+      "bonusAnnual": 50000,
+      "monthlyProfTax": 200
+    },
+    "bounds": {
+      "ctcAnnual": {
+        "min": 100000,
+        "max": 100000000,
+        "step": 50000,
+        "sliderMin": 200000,
+        "sliderMax": 4000000,
+        "sliderStep": 25000
+      },
+      "bonusAnnual": {
+        "min": 0,
+        "max": 2000000,
+        "step": 10000,
+        "sliderMin": 0,
+        "sliderMax": 500000,
+        "sliderStep": 10000
+      },
+      "monthlyProfTaxPresets": [
+        200,
+        150,
+        0
+      ]
+    }
+  },
+  "ctc-inhand": {
+    "id": "ctc-inhand",
+    "slug": "ctc-inhand-calculator",
+    "widgetType": "salary",
+    "mode": "detailed",
+    "defaults": {
+      "ctcAnnual": 900000,
+      "bonusAnnual": 50000,
+      "monthlyProfTax": 200
+    },
+    "bounds": {
+      "ctcAnnual": {
+        "min": 100000,
+        "max": 100000000,
+        "step": 50000,
+        "sliderMin": 200000,
+        "sliderMax": 4000000,
+        "sliderStep": 25000
+      },
+      "bonusAnnual": {
+        "min": 0,
+        "max": 2000000,
+        "step": 10000,
+        "sliderMin": 0,
+        "sliderMax": 500000,
+        "sliderStep": 10000
+      },
+      "monthlyProfTaxPresets": [
+        200,
+        150,
+        0
+      ]
+    }
+  },
+  "gold-price": {
+    "id": "gold-price",
+    "slug": "gold-price-calculator",
+    "widgetType": "gold",
+    "isKeralaPavan": false,
+    "defaults": {
+      "gramWeight": 10,
+      "ratePerGram22k": 6800,
+      "purity": "22k",
+      "makingChargeType": "percent",
+      "makingChargeValue": 12,
+      "hallmarkFee": 45
+    },
+    "bounds": {
+      "gramWeight": {
+        "min": 0.1,
+        "max": 5000,
+        "step": 0.1
+      },
+      "ratePerGram22k": {
+        "min": 3000,
+        "max": 15000,
+        "step": 10
+      },
+      "purityPresets": [
+        "22k",
+        "24k",
+        "18k"
+      ],
+      "makingChargeTypePresets": [
+        "percent",
+        "perGram"
+      ],
+      "makingChargePercent": {
+        "min": 0,
+        "max": 40,
+        "step": 0.5
+      },
+      "makingChargePerGram": {
+        "min": 0,
+        "max": 3000,
+        "step": 50
+      }
+    }
+  },
+  "gst": {
+    "id": "gst",
+    "slug": "gst-calculator",
+    "widgetType": "gst",
+    "defaults": {
+      "amount": 10000,
+      "gstRate": 18,
+      "calculationType": "exclusive"
+    },
+    "bounds": {
+      "amount": {
+        "min": 1,
+        "max": 100000000,
+        "step": 100,
+        "sliderMin": 100,
+        "sliderMax": 200000,
+        "sliderStep": 100
+      },
+      "gstRatePresets": [
+        5,
+        12,
+        18,
+        28
+      ],
+      "calculationTypePresets": [
+        "exclusive",
+        "inclusive"
+      ]
+    }
+  },
+  "percentage": {
+    "id": "percentage",
+    "slug": "percentage-calculator",
+    "widgetType": "percentage",
+    "defaults": {
+      "percNum1": 25,
+      "percNum2": 200
+    }
+  },
+  "age": {
+    "id": "age",
+    "slug": "age-calculator",
+    "widgetType": "age",
+    "defaults": {
+      "dob": "1998-05-15"
+    }
+  },
+  "date-difference": {
+    "id": "date-difference",
+    "slug": "date-difference-calculator",
+    "widgetType": "date-difference",
+    "defaults": {
+      "startDate": "2026-01-01",
+      "endDate": "2026-12-31"
+    }
+  },
+  "discount": {
+    "id": "discount",
+    "slug": "discount-calculator",
+    "widgetType": "discount",
+    "defaults": {
+      "originalPrice": 2499,
+      "discountPercent": 30
+    },
+    "bounds": {
+      "discountPercent": {
+        "sliderMin": 1,
+        "sliderMax": 95
+      }
+    }
+  },
+  "bmi": {
+    "id": "bmi",
+    "slug": "bmi-calculator",
+    "widgetType": "bmi",
+    "defaults": {
+      "heightCm": 172,
+      "weightKg": 68
+    },
+    "bounds": {
+      "heightCm": {
+        "min": 90,
+        "max": 250
+      },
+      "weightKg": {
+        "min": 20,
+        "max": 250
+      }
+    }
+  },
+  "kerala-gold": {
+    "id": "kerala-gold",
+    "slug": "kerala-gold-pavan-calculator",
+    "widgetType": "gold",
+    "isKeralaPavan": true,
+    "defaults": {
+      "gramWeight": 8,
+      "ratePerGram22k": 6800,
+      "purity": "22k",
+      "makingChargeType": "percent",
+      "makingChargeValue": 12,
+      "hallmarkFee": 45
+    },
+    "bounds": {
+      "gramWeight": {
+        "min": 0.1,
+        "max": 5000,
+        "step": 0.1
+      },
+      "ratePerGram22k": {
+        "min": 3000,
+        "max": 15000,
+        "step": 10
+      },
+      "purityPresets": [
+        "22k",
+        "24k",
+        "18k"
+      ],
+      "makingChargeTypePresets": [
+        "percent",
+        "perGram"
+      ],
+      "makingChargePercent": {
+        "min": 0,
+        "max": 40,
+        "step": 0.5
+      },
+      "makingChargePerGram": {
+        "min": 0,
+        "max": 3000,
+        "step": 50
+      }
+    }
+  }
+};
+  const SEARCH_INDEX = [
+  {
+    "id": "emi",
+    "slug": "emi-calculator",
+    "name": "Loan EMI Calculator",
+    "shortDesc": "Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.",
+    "category": "banking",
+    "keywords": [
+      "emi calculator",
+      "loan emi calculation",
+      "monthly emi india",
+      "sbi hdfc loan emi"
+    ],
+    "bloggerUrl": "/p/emi-calculator.html"
+  },
+  {
+    "id": "home-loan",
+    "slug": "home-loan-emi-calculator",
+    "name": "Home Loan EMI Calculator",
+    "shortDesc": "Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.",
+    "category": "banking",
+    "keywords": [
+      "home loan emi calculator",
+      "housing loan india",
+      "sbi home loan emi",
+      "hdfc home loan calculator"
+    ],
+    "bloggerUrl": "/p/home-loan-emi-calculator.html"
+  },
+  {
+    "id": "personal-loan",
+    "slug": "personal-loan-emi-calculator",
+    "name": "Personal Loan EMI Calculator",
+    "shortDesc": "Estimate monthly outflow for quick personal credit and emergency financing.",
+    "category": "banking",
+    "keywords": [
+      "personal loan emi calculator",
+      "instant personal loan emi",
+      "bank personal loan calculator"
+    ],
+    "bloggerUrl": "/p/personal-loan-emi-calculator.html"
+  },
+  {
+    "id": "car-loan",
+    "slug": "car-loan-emi-calculator",
+    "name": "Car / Vehicle Loan Calculator",
+    "shortDesc": "Plan financing for new or pre-owned vehicles with on-road down payments.",
+    "category": "banking",
+    "keywords": [
+      "car loan emi calculator",
+      "auto loan emi",
+      "bike loan emi calculator india"
+    ],
+    "bloggerUrl": "/p/car-loan-emi-calculator.html"
+  },
+  {
+    "id": "loan-prepayment",
+    "slug": "loan-prepayment-calculator",
+    "name": "Loan Prepayment Calculator",
+    "shortDesc": "Estimate interest savings and tenure reduction from one part-payment while keeping EMI unchanged.",
+    "category": "banking",
+    "keywords": [
+      "loan prepayment calculator",
+      "home loan part payment",
+      "loan tenure reduction calculator"
+    ],
+    "bloggerUrl": "/p/loan-prepayment-calculator.html"
+  },
+  {
+    "id": "fd",
+    "slug": "fd-calculator",
+    "name": "Fixed Deposit (FD) Calculator",
+    "shortDesc": "Calculate maturity value and interest earnings on bank and post office term deposits.",
+    "category": "banking",
+    "keywords": [
+      "fd calculator",
+      "fixed deposit maturity calculator",
+      "sbi fd interest calculator"
+    ],
+    "bloggerUrl": "/p/fd-calculator.html"
+  },
+  {
+    "id": "rd",
+    "slug": "rd-calculator",
+    "name": "Recurring Deposit (RD) Calculator",
+    "shortDesc": "Compute maturity returns for monthly recurring savings schemes.",
+    "category": "banking",
+    "keywords": [
+      "rd calculator",
+      "recurring deposit calculator",
+      "post office rd calculator"
+    ],
+    "bloggerUrl": "/p/rd-calculator.html"
+  },
+  {
+    "id": "sip",
+    "slug": "sip-calculator",
+    "name": "SIP Calculator (Mutual Funds)",
+    "shortDesc": "Calculate potential wealth creation through Systematic Investment Plans.",
+    "category": "finance",
+    "keywords": [
+      "sip calculator",
+      "mutual fund sip returns",
+      "monthly sip wealth calculator"
+    ],
+    "bloggerUrl": "/p/sip-calculator.html"
+  },
+  {
+    "id": "ppf",
+    "slug": "ppf-calculator",
+    "name": "PPF (Public Provident Fund) Calculator",
+    "shortDesc": "Estimate PPF maturity using an assumed rate; actual interest uses government-notified rates.",
+    "category": "finance",
+    "keywords": [
+      "ppf calculator",
+      "public provident fund calculator",
+      "ppf maturity tax free"
+    ],
+    "bloggerUrl": "/p/ppf-calculator.html"
+  },
+  {
+    "id": "nps",
+    "slug": "nps-calculator",
+    "name": "NPS (National Pension System) Calculator",
+    "shortDesc": "Project retirement pension wealth and monthly pension annuity.",
+    "category": "finance",
+    "keywords": [
+      "nps calculator",
+      "national pension scheme calculator",
+      "retirement pension india"
+    ],
+    "bloggerUrl": "/p/nps-calculator.html"
+  },
+  {
+    "id": "gratuity",
+    "slug": "gratuity-calculator",
+    "name": "Gratuity Calculator",
+    "shortDesc": "Calculate statutory gratuity payout as per Payment of Gratuity Act, 1972.",
+    "category": "jobs",
+    "keywords": [
+      "gratuity calculator",
+      "gratuity formula india",
+      "gratuity act 1972 calculation"
+    ],
+    "bloggerUrl": "/p/gratuity-calculator.html"
+  },
+  {
+    "id": "salary",
+    "slug": "salary-calculator",
+    "name": "In-Hand Salary Calculator",
+    "shortDesc": "Estimate pre-income-tax-TDS monthly pay after modelled PF costs and selected professional tax.",
+    "category": "jobs",
+    "keywords": [
+      "in hand salary calculator",
+      "take home salary calculator",
+      "gross to net salary india"
+    ],
+    "bloggerUrl": "/p/salary-calculator.html"
+  },
+  {
+    "id": "ctc-inhand",
+    "slug": "ctc-inhand-calculator",
+    "name": "CTC to In-Hand Salary Breakdown",
+    "shortDesc": "Illustrate modelled PF, gratuity costs and professional tax to estimate monthly pay before income-tax TDS.",
+    "category": "jobs",
+    "keywords": [
+      "ctc to in hand calculator",
+      "ctc breakdown calculator",
+      "cost to company to net pay"
+    ],
+    "bloggerUrl": "/p/ctc-inhand-calculator.html"
+  },
+  {
+    "id": "gold-price",
+    "slug": "gold-price-calculator",
+    "name": "Gold Price & Jewellery Billing Calculator",
+    "shortDesc": "Estimate jewellery bills using a user-entered 22K gold rate, selected purity, making charges, and modelled fees and GST.",
+    "category": "gold",
+    "keywords": [
+      "gold price calculator india",
+      "gold jewellery billing calculator",
+      "22k gold rate with gst"
+    ],
+    "bloggerUrl": "/p/gold-price-calculator.html"
+  },
+  {
+    "id": "gst",
+    "slug": "gst-calculator",
+    "name": "GST Calculator (India)",
+    "shortDesc": "Add or extract GST using limited/example rate presets (5%, 12%, 18%, 28%); the applicable rate is not determined.",
+    "category": "tools",
+    "keywords": [
+      "gst calculator",
+      "gst inclusive calculator",
+      "gst exclusive india",
+      "cgst sgst calculator"
+    ],
+    "bloggerUrl": "/p/gst-calculator.html"
+  },
+  {
+    "id": "percentage",
+    "slug": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "shortDesc": "Calculate a percentage of a value or one number as a percentage share of another.",
+    "category": "tools",
+    "keywords": [
+      "percentage calculator",
+      "percentage of a number calculator",
+      "exam percentage calculator"
+    ],
+    "bloggerUrl": "/p/percentage-calculator.html"
+  },
+  {
+    "id": "age",
+    "slug": "age-calculator",
+    "name": "Age Calculator",
+    "shortDesc": "Calculate exact age in years, months, weeks, and days from date of birth.",
+    "category": "tools",
+    "keywords": [
+      "age calculator",
+      "chronological age calculator",
+      "dob age calculator for govt exams"
+    ],
+    "bloggerUrl": "/p/age-calculator.html"
+  },
+  {
+    "id": "date-difference",
+    "slug": "date-difference-calculator",
+    "name": "Date Difference / Duration Calculator",
+    "shortDesc": "Count elapsed calendar days and express the interval as whole weeks plus remaining days.",
+    "category": "tools",
+    "keywords": [
+      "date difference calculator",
+      "days between two dates",
+      "duration calculator"
+    ],
+    "bloggerUrl": "/p/date-difference-calculator.html"
+  },
+  {
+    "id": "discount",
+    "slug": "discount-calculator",
+    "name": "Discount & Sale Price Calculator",
+    "shortDesc": "Estimate the final price and saving for one percentage-discount stage per calculation.",
+    "category": "tools",
+    "keywords": [
+      "discount calculator",
+      "sale discount calculator",
+      "percentage off calculator"
+    ],
+    "bloggerUrl": "/p/discount-calculator.html"
+  },
+  {
+    "id": "bmi",
+    "slug": "bmi-calculator",
+    "name": "BMI (Body Mass Index) Calculator",
+    "shortDesc": "Check your BMI classification according to WHO and Asian-Indian health criteria.",
+    "category": "tools",
+    "keywords": [
+      "bmi calculator india",
+      "body mass index asian cutoffs",
+      "healthy weight calculator"
+    ],
+    "bloggerUrl": "/p/bmi-calculator.html"
+  },
+  {
+    "id": "kerala-gold",
+    "slug": "kerala-gold-pavan-calculator",
+    "name": "Kerala Pavan & Sovereign Gold Calculator",
+    "shortDesc": "Convert Pavan (8 grams) to grams, sovereign rates, and wedding budget estimations.",
+    "category": "kerala",
+    "keywords": [
+      "kerala pavan rate",
+      "1 pavan how many grams",
+      "kerala gold calculator",
+      "sovereign rate today"
+    ],
+    "bloggerUrl": "/p/kerala-gold-pavan-calculator.html"
+  }
+];
+
+  function formatIndianCurrency(amount) {
+    if (Number.isNaN(amount) || !Number.isFinite(amount)) return '₹0';
+    const rounded = Math.round(amount);
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      maximumFractionDigits: 0
+    }).format(rounded);
+  }
+
+  function formatIndianNumber(value, decimals) {
+    const dec = typeof decimals === 'number' ? decimals : 2;
+    if (Number.isNaN(value) || !Number.isFinite(value)) return '0';
+    return new Intl.NumberFormat('en-IN', {
+      maximumFractionDigits: dec,
+      minimumFractionDigits: 0
+    }).format(value);
+  }
+
+  function formatLakhsCrores(amount) {
+    if (Number.isNaN(amount) || amount === 0) return '₹0';
+    const abs = Math.abs(amount);
+    if (abs >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+    if (abs >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+    if (abs >= 1000) return '₹' + (amount / 1000).toFixed(1) + ' K';
+    return formatIndianCurrency(amount);
+  }
+
+  function calculateGenericEmi(state) {
+    const loanAmount = Number(state.loanAmount);
+    const interestRate = Number(state.interestRate);
+    const tenureYears = Number(state.tenureYears);
+    const principal = loanAmount > 0 ? loanAmount : 0;
+    const monthlyRate = interestRate > 0 ? interestRate / (12 * 100) : 0;
+    const totalMonths = tenureYears > 0 ? tenureYears * 12 : 1;
+
+    let emi = 0;
+    let totalInterest = 0;
+    let totalPayment = 0;
+
+    if (principal > 0 && monthlyRate > 0 && totalMonths > 0) {
+      const factor = Math.pow(1 + monthlyRate, totalMonths);
+      emi = Math.round((principal * monthlyRate * factor) / (factor - 1));
+      totalPayment = emi * totalMonths;
+      totalInterest = totalPayment - principal;
+    } else if (principal > 0 && monthlyRate === 0) {
+      emi = Math.round(principal / totalMonths);
+      totalPayment = principal;
+      totalInterest = 0;
+    }
+
+    const principalPercent = totalPayment > 0 ? Math.round((principal / totalPayment) * 100) : 0;
+    const interestPercent = 100 - principalPercent;
+
+    return {
+      principal: principal,
+      monthlyRate: monthlyRate,
+      totalMonths: totalMonths,
+      emi: emi,
+      totalInterest: totalInterest,
+      totalPayment: totalPayment,
+      principalPercent: principalPercent,
+      interestPercent: interestPercent
+    };
+  }
+
+  function calculatePrepayment(state) {
+    const loanAmount = Number(state.loanAmount);
+    const interestRate = Number(state.interestRate);
+    const tenureYears = Number(state.tenureYears);
+    const lumpsumPrepayment = Number(state.lumpsumPrepayment);
+    const prepayAfterYear = Number(state.prepayAfterYear);
+
+    const monthlyRate = interestRate / (12 * 100);
+    const totalMonths = tenureYears * 12;
+    const factor = Math.pow(1 + monthlyRate, totalMonths);
+    const normalEmi = Math.round((loanAmount * monthlyRate * factor) / (factor - 1));
+    const normalTotalInterest = normalEmi * totalMonths - loanAmount;
+
+    let balance = loanAmount;
+    let monthsWithPrepay = 0;
+    let totalInterestWithPrepay = 0;
+    const prepayMonth = prepayAfterYear * 12;
+
+    for (let m = 1; m <= totalMonths; m++) {
+      if (balance <= 0) break;
+      const interestForMonth = balance * monthlyRate;
+      totalInterestWithPrepay += interestForMonth;
+      const principalPaid = normalEmi - interestForMonth;
+      balance -= principalPaid;
+
+      if (m === prepayMonth) {
+        balance -= lumpsumPrepayment;
+      }
+
+      monthsWithPrepay = m;
+      if (balance <= 0) {
+        balance = 0;
+        break;
+      }
+    }
+
+    const interestSaved = Math.max(0, Math.round(normalTotalInterest - totalInterestWithPrepay));
+    const monthsSaved = Math.max(0, totalMonths - monthsWithPrepay);
+    const yearsSaved = (monthsSaved / 12).toFixed(1);
+    const newPayoffYears = (monthsWithPrepay / 12).toFixed(1);
+
+    return {
+      normalEmi: normalEmi,
+      normalTotalInterest: normalTotalInterest,
+      monthsWithPrepay: monthsWithPrepay,
+      interestSaved: interestSaved,
+      monthsSaved: monthsSaved,
+      yearsSaved: yearsSaved,
+      newPayoffYears: newPayoffYears
+    };
+  }
+
+  function calculateDeposit(state) {
+    const depositAmount = Number(state.depositAmount);
+    const interestRate = Number(state.interestRate);
+    const tenureYears = Number(state.tenureYears);
+    const isSeniorCitizen = Boolean(state.isSeniorCitizen);
+    const isFd = Boolean(state.isFd);
+
+    const effectiveRate = interestRate + (isSeniorCitizen ? 0.5 : 0);
+    let maturityAmount = 0;
+    let totalInvested = 0;
+
+    if (isFd) {
+      totalInvested = depositAmount;
+      const nQuarter = 4;
+      maturityAmount = Math.round(
+        depositAmount * Math.pow(1 + effectiveRate / (100 * nQuarter), nQuarter * tenureYears)
+      );
+    } else {
+      const totalMonths = tenureYears * 12;
+      totalInvested = depositAmount * totalMonths;
+      let sum = 0;
+      const r = effectiveRate / 100;
+      for (let m = 1; m <= totalMonths; m++) {
+        const tRem = (totalMonths - m + 1) / 12;
+        sum += depositAmount * Math.pow(1 + r / 4, 4 * tRem);
+      }
+      maturityAmount = Math.round(sum);
+    }
+
+    const interestEarned = Math.max(0, maturityAmount - totalInvested);
+
+    return {
+      effectiveRate: effectiveRate,
+      totalInvested: totalInvested,
+      maturityAmount: maturityAmount,
+      interestEarned: interestEarned
+    };
+  }
+
+  function calculateSip(state) {
+    const monthlyInvestment = Number(state.monthlyInvestment);
+    const expectedRate = Number(state.expectedRate);
+    const tenureYears = Number(state.tenureYears);
+
+    const i = expectedRate / (12 * 100);
+    const n = tenureYears * 12;
+    const investedAmount = monthlyInvestment * n;
+
+    let futureValue = 0;
+    if (i > 0 && n > 0 && monthlyInvestment > 0) {
+      futureValue = Math.round(monthlyInvestment * ((Math.pow(1 + i, n) - 1) / i) * (1 + i));
+    } else {
+      futureValue = investedAmount;
+    }
+
+    const wealthGained = Math.max(0, futureValue - investedAmount);
+    const investedPercent = futureValue > 0 ? Math.round((investedAmount / futureValue) * 100) : 0;
+    const wealthPercent = 100 - investedPercent;
+
+    return {
+      investedAmount: investedAmount,
+      futureValue: futureValue,
+      wealthGained: wealthGained,
+      investedPercent: investedPercent,
+      wealthPercent: wealthPercent,
+      totalMonths: n
+    };
+  }
+
+  function calculatePpf(state) {
+    const clampedDeposit = Math.min(150000, Number(state.annualDeposit));
+    const tenureYears = Number(state.tenureYears);
+    const interestRate = 7.1;
+
+    let balance = 0;
+    let totalInvested = 0;
+    for (let y = 1; y <= tenureYears; y++) {
+      totalInvested += clampedDeposit;
+      const interest = Math.round((balance + clampedDeposit) * (interestRate / 100));
+      balance = balance + clampedDeposit + interest;
+    }
+
+    const totalInterest = balance - totalInvested;
+    return {
+      annualDeposit: clampedDeposit,
+      interestRate: interestRate,
+      totalInvested: totalInvested,
+      totalInterest: totalInterest,
+      balance: balance
+    };
+  }
+
+  function calculateNps(state) {
+    const currentAge = Number(state.currentAge);
+    const monthlyContribution = Number(state.monthlyContribution);
+    const expectedReturn = Number(state.expectedReturn);
+    const clampedAnnuityShare = Math.max(40, Number(state.annuitySharePercent));
+    const annuityReturnRate = 6;
+
+    const retirementAge = 60;
+    const investmentYears = Math.max(1, retirementAge - currentAge);
+    const totalMonths = investmentYears * 12;
+
+    const r = expectedReturn / (12 * 100);
+    let totalCorpus = 0;
+    const totalInvested = monthlyContribution * totalMonths;
+
+    if (r > 0) {
+      totalCorpus = Math.round(monthlyContribution * ((Math.pow(1 + r, totalMonths) - 1) / r) * (1 + r));
+    } else {
+      totalCorpus = totalInvested;
+    }
+
+    const annuityAmount = Math.round((totalCorpus * clampedAnnuityShare) / 100);
+    const lumpsumAmount = totalCorpus - annuityAmount;
+    const monthlyPension = Math.round((annuityAmount * (annuityReturnRate / 100)) / 12);
+
+    return {
+      annuitySharePercent: clampedAnnuityShare,
+      investmentYears: investmentYears,
+      totalMonths: totalMonths,
+      totalInvested: totalInvested,
+      totalCorpus: totalCorpus,
+      annuityAmount: annuityAmount,
+      lumpsumAmount: lumpsumAmount,
+      monthlyPension: monthlyPension
+    };
+  }
+
+  function calculateGratuity(state) {
+    const basicSalary = Number(state.basicSalary);
+    const yearsOfService = Number(state.yearsOfService);
+    const isCoveredUnderAct = Boolean(state.isCoveredUnderAct);
+
+    const denominator = isCoveredUnderAct ? 26 : 30;
+    let gratuityAmount = 0;
+
+    if (yearsOfService >= 5 && basicSalary > 0) {
+      gratuityAmount = Math.round((15 * basicSalary * yearsOfService) / denominator);
+    }
+
+    const taxExemptLimit = 2000000;
+    const exemptGratuity = Math.min(gratuityAmount, taxExemptLimit);
+    const taxableGratuity = Math.max(0, gratuityAmount - taxExemptLimit);
+
+    return {
+      denominator: denominator,
+      gratuityAmount: gratuityAmount,
+      exemptGratuity: exemptGratuity,
+      taxableGratuity: taxableGratuity
+    };
+  }
+
+  function calculateSalary(state) {
+    const ctcAnnual = Number(state.ctcAnnual);
+    const bonusAnnual = Number(state.bonusAnnual);
+    const monthlyProfTax = Number(state.monthlyProfTax);
+
+    const basicAnnual = Math.round(ctcAnnual * 0.40);
+    const employerPfMonthly = Math.min(1800, Math.round((basicAnnual / 12) * 0.12));
+    const employeePfMonthly = employerPfMonthly;
+    const gratuityMonthlyReserve = Math.round((basicAnnual / 12) * 0.0481);
+
+    const monthlyGross = Math.round((ctcAnnual - bonusAnnual) / 12) - employerPfMonthly - gratuityMonthlyReserve;
+    const monthlyDeductions = employeePfMonthly + monthlyProfTax;
+    const monthlyInHand = Math.max(0, monthlyGross - monthlyDeductions);
+
+    return {
+      basicAnnual: basicAnnual,
+      employerPfMonthly: employerPfMonthly,
+      employeePfMonthly: employeePfMonthly,
+      gratuityMonthlyReserve: gratuityMonthlyReserve,
+      monthlyGross: monthlyGross,
+      monthlyDeductions: monthlyDeductions,
+      monthlyInHand: monthlyInHand
+    };
+  }
+
+  function calculateGold(state) {
+    const clampedWeight = Math.max(0.1, Number(state.gramWeight));
+    const ratePerGram22k = Number(state.ratePerGram22k);
+    const purity = state.purity || '22k';
+    const makingChargeType = state.makingChargeType || 'percent';
+    const makingChargeValue = Number(state.makingChargeValue);
+    const hallmarkFee = 45;
+
+    const base24k = ratePerGram22k * (24 / 22);
+    let effectiveGramRate = ratePerGram22k;
+    if (purity === '24k') {
+      effectiveGramRate = Math.round(base24k);
+    } else if (purity === '18k') {
+      effectiveGramRate = Math.round(base24k * 0.75);
+    }
+
+    const rawGoldValue = clampedWeight * effectiveGramRate;
+    let makingChargeAmount = 0;
+    if (makingChargeType === 'percent') {
+      makingChargeAmount = Math.round((rawGoldValue * makingChargeValue) / 100);
+    } else {
+      makingChargeAmount = Math.round(clampedWeight * makingChargeValue);
+    }
+
+    const subTotalBeforeGst = rawGoldValue + makingChargeAmount + hallmarkFee;
+    const gstAmount = Math.round(subTotalBeforeGst * 0.03);
+    const totalBillAmount = subTotalBeforeGst + gstAmount;
+    const pavans = (clampedWeight / 8).toFixed(2);
+
+    return {
+      gramWeight: clampedWeight,
+      effectiveGramRate: effectiveGramRate,
+      rawGoldValue: rawGoldValue,
+      makingChargeAmount: makingChargeAmount,
+      hallmarkFee: hallmarkFee,
+      subTotalBeforeGst: subTotalBeforeGst,
+      gstAmount: gstAmount,
+      totalBillAmount: totalBillAmount,
+      pavans: pavans
+    };
+  }
+
+  function calculateGst(state) {
+    const amount = Number(state.amount);
+    const gstRate = Number(state.gstRate);
+    const calculationType = state.calculationType || 'exclusive';
+
+    let netAmount = 0;
+    let gstAmount = 0;
+    let totalAmount = 0;
+
+    if (calculationType === 'exclusive') {
+      netAmount = amount;
+      gstAmount = Math.round((amount * gstRate) / 100);
+      totalAmount = netAmount + gstAmount;
+    } else {
+      totalAmount = amount;
+      netAmount = Math.round((amount * 100) / (100 + gstRate));
+      gstAmount = totalAmount - netAmount;
+    }
+
+    const halfGst = Math.round(gstAmount / 2);
+
+    return {
+      netAmount: netAmount,
+      gstAmount: gstAmount,
+      totalAmount: totalAmount,
+      halfGst: halfGst
+    };
+  }
+
+  function calculatePercentage(state) {
+    const percNum1 = Number(state.percNum1);
+    const percNum2 = Number(state.percNum2);
+    const isOf = (percNum1 / 100) * percNum2;
+    const whatPercent = percNum2 !== 0 ? ((percNum1 / percNum2) * 100).toFixed(2) : 0;
+    return { isOf: isOf, whatPercent: whatPercent };
+  }
+
+  function calculateAge(state) {
+    const birth = new Date(state.dob);
+    const now = state.referenceDate ? new Date(state.referenceDate) : new Date();
+    let years = now.getFullYear() - birth.getFullYear();
+    let months = now.getMonth() - birth.getMonth();
+    let days = now.getDate() - birth.getDate();
+
+    if (days < 0) {
+      months -= 1;
+      const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+
+    const diffTime = Math.abs(now.getTime() - birth.getTime());
+    const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const totalWeeks = Math.floor(totalDays / 7);
+
+    return {
+      years: years,
+      months: months,
+      days: days,
+      totalDays: totalDays,
+      totalWeeks: totalWeeks
+    };
+  }
+
+  function calculateDateDifference(state) {
+    const d1 = new Date(state.startDate);
+    const d2 = new Date(state.endDate);
+    const diffTime = Math.abs(d2.getTime() - d1.getTime());
+    const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const weeks = Math.floor(totalDays / 7);
+    const remainderDays = totalDays % 7;
+
+    return {
+      totalDays: totalDays,
+      weeks: weeks,
+      remainderDays: remainderDays
+    };
+  }
+
+  function calculateDiscount(state) {
+    const originalPrice = Number(state.originalPrice);
+    const discountPercent = Number(state.discountPercent);
+    const discountAmount = Math.round((originalPrice * discountPercent) / 100);
+    const finalPrice = Math.max(0, originalPrice - discountAmount);
+    return {
+      discountAmount: discountAmount,
+      finalPrice: finalPrice
+    };
+  }
+
+  function calculateBmi(state) {
+    const heightCm = Number(state.heightCm);
+    const weightKg = Number(state.weightKg);
+    const heightM = heightCm / 100;
+    const bmi = heightM > 0 ? (weightKg / (heightM * heightM)).toFixed(1) : '0';
+    const numericBmi = parseFloat(bmi);
+
+    let category = 'Normal';
+    let badgeTone = 'emerald';
+    if (numericBmi < 18.5) {
+      category = 'Underweight (< 18.5)';
+      badgeTone = 'blue';
+    } else if (numericBmi <= 22.9) {
+      category = 'Healthy / Normal (18.5 - 22.9 Asian Cutoff)';
+      badgeTone = 'emerald';
+    } else if (numericBmi <= 24.9) {
+      category = 'Overweight (23.0 - 24.9 Asian Cutoff)';
+      badgeTone = 'amber';
+    } else {
+      category = 'Obese (≥ 25 Asian Cutoff)';
+      badgeTone = 'red';
+    }
+
+    return {
+      bmi: bmi,
+      numericBmi: numericBmi,
+      category: category,
+      badgeTone: badgeTone
+    };
+  }
+
+  function computeCalculatorById(id, inputOverrides) {
+    const spec = CALCULATOR_SPECS[id];
+    if (!spec) return null;
+    const state = Object.assign({}, spec.defaults, inputOverrides || {});
+    switch (spec.widgetType) {
+      case 'generic-emi':
+        return calculateGenericEmi(state);
+      case 'prepayment':
+        return calculatePrepayment(state);
+      case 'deposit':
+        return calculateDeposit(Object.assign({}, state, { isFd: spec.depositType === 'fd' }));
+      case 'sip':
+        return calculateSip(state);
+      case 'ppf':
+        return calculatePpf(state);
+      case 'nps':
+        return calculateNps(state);
+      case 'gratuity':
+        return calculateGratuity(state);
+      case 'salary':
+        return calculateSalary(state);
+      case 'gold':
+        return calculateGold(state);
+      case 'gst':
+        return calculateGst(state);
+      case 'percentage':
+        return calculatePercentage(state);
+      case 'age':
+        return calculateAge(state);
+      case 'date-difference':
+        return calculateDateDifference(state);
+      case 'discount':
+        return calculateDiscount(state);
+      case 'bmi':
+        return calculateBmi(state);
+      default:
+        return null;
+    }
+  }
+
+  function setText(root, key, val) {
+    const el = root.querySelector('[data-out="' + key + '"]');
+    if (el) el.textContent = String(val);
+  }
+
+  function setBarWidth(root, key, pct) {
+    const el = root.querySelector('[data-bar="' + key + '"]');
+    if (el) el.style.width = pct + '%';
+  }
+
+  function bindCalculatorMount(mountEl) {
+    const calcId = mountEl.getAttribute('data-calculator-id');
+    const spec = CALCULATOR_SPECS[calcId];
+    if (!spec) return;
+
+    const state = Object.assign({}, spec.defaults);
+
+    function syncInputs(changedField, newVal) {
+      const fInput = mountEl.querySelector('[data-field="' + changedField + '"]');
+      const sInput = mountEl.querySelector('[data-slider="' + changedField + '"]');
+      if (fInput && fInput.type !== 'checkbox' && fInput.type !== 'radio' && String(fInput.value) !== String(newVal)) {
+        fInput.value = String(newVal);
+      }
+      if (sInput && String(sInput.value) !== String(newVal)) {
+        sInput.value = String(newVal);
+      }
+    }
+
+    function updateOutputs() {
+      const res = computeCalculatorById(calcId, state);
+      if (!res) return;
+
+      if (spec.widgetType === 'generic-emi') {
+        setText(mountEl, 'tenureSuffix', 'Yrs (' + (state.tenureYears * 12) + ' Mos)');
+        setText(mountEl, 'emi', formatIndianCurrency(res.emi));
+        setText(mountEl, 'emiSub', 'per month for ' + (state.tenureYears * 12) + ' months');
+        setText(mountEl, 'principal', formatIndianCurrency(res.principal));
+        setText(mountEl, 'totalInterest', formatIndianCurrency(res.totalInterest));
+        setText(mountEl, 'totalPayment', formatIndianCurrency(res.totalPayment));
+        setText(mountEl, 'principalPercentLabel', 'Principal (' + res.principalPercent + '%)');
+        setText(mountEl, 'interestPercentLabel', 'Interest (' + res.interestPercent + '%)');
+        setBarWidth(mountEl, 'principal', res.principalPercent);
+        setBarWidth(mountEl, 'interest', res.interestPercent);
+      } else if (spec.widgetType === 'prepayment') {
+        setText(mountEl, 'loanAmountDisplay', formatIndianCurrency(state.loanAmount));
+        setText(mountEl, 'lumpsumPrepaymentDisplay', formatIndianCurrency(state.lumpsumPrepayment));
+        setText(mountEl, 'interestSaved', formatIndianCurrency(res.interestSaved));
+        setText(mountEl, 'tenureReduction', res.yearsSaved + ' Years earlier (' + res.monthsSaved + ' months)');
+        setText(mountEl, 'newPayoffTime', res.newPayoffYears + ' Years');
+        setText(mountEl, 'normalEmi', formatIndianCurrency(res.normalEmi));
+      } else if (spec.widgetType === 'deposit') {
+        setText(mountEl, 'maturityAmount', formatIndianCurrency(res.maturityAmount));
+        setText(mountEl, 'effectiveRateSub', 'Effective Interest: ' + res.effectiveRate.toFixed(2) + '% with Indian quarterly compounding');
+        setText(mountEl, 'totalInvested', formatIndianCurrency(res.totalInvested));
+        setText(mountEl, 'interestEarned', '+' + formatIndianCurrency(res.interestEarned));
+      } else if (spec.widgetType === 'sip') {
+        setText(mountEl, 'futureValue', formatIndianCurrency(res.futureValue));
+        setText(mountEl, 'sipSub', 'after ' + state.tenureYears + ' years (' + (state.tenureYears * 12) + ' installments)');
+        setText(mountEl, 'investedAmount', formatIndianCurrency(res.investedAmount));
+        setText(mountEl, 'wealthGained', '+' + formatIndianCurrency(res.wealthGained));
+        setText(mountEl, 'investedPercentLabel', 'Principal (' + res.investedPercent + '%)');
+        setText(mountEl, 'wealthPercentLabel', 'Gain (' + res.wealthPercent + '%)');
+        setBarWidth(mountEl, 'invested', res.investedPercent);
+        setBarWidth(mountEl, 'wealth', res.wealthPercent);
+      } else if (spec.widgetType === 'ppf') {
+        setText(mountEl, 'balance', formatIndianCurrency(res.balance));
+        setText(mountEl, 'totalInvested', formatIndianCurrency(res.totalInvested));
+        setText(mountEl, 'totalInterest', '+' + formatIndianCurrency(res.totalInterest));
+      } else if (spec.widgetType === 'nps') {
+        setText(mountEl, 'investmentYearsHint', 'Investing for ' + res.investmentYears + ' years until age 60.');
+        setText(mountEl, 'totalCorpus', formatIndianCurrency(res.totalCorpus));
+        setText(mountEl, 'monthlyPension', formatIndianCurrency(res.monthlyPension) + ' / month');
+        setText(mountEl, 'lumpsumLabel', 'Illustrative lump-sum portion (' + (100 - res.annuitySharePercent) + '%):');
+        setText(mountEl, 'lumpsumAmount', formatIndianCurrency(res.lumpsumAmount));
+        setText(mountEl, 'annuityLabel', 'Annuity Purchased (' + res.annuitySharePercent + '%):');
+        setText(mountEl, 'annuityAmount', formatIndianCurrency(res.annuityAmount));
+        setText(mountEl, 'totalInvested', formatIndianCurrency(res.totalInvested));
+      } else if (spec.widgetType === 'gratuity') {
+        const warn = mountEl.querySelector('[data-out="serviceWarning"]');
+        if (warn) warn.style.display = state.yearsOfService < 5 ? 'block' : 'none';
+        setText(mountEl, 'gratuityAmount', formatIndianCurrency(res.gratuityAmount));
+        setText(mountEl, 'gratuityFormula', 'Formula: (15 × ' + formatIndianCurrency(state.basicSalary) + ' × ' + state.yearsOfService + ') / ' + res.denominator);
+        setText(mountEl, 'exemptGratuity', formatIndianCurrency(res.exemptGratuity));
+        const taxRow = mountEl.querySelector('[data-out="taxableRow"]');
+        if (taxRow) taxRow.style.display = res.taxableGratuity > 0 ? 'flex' : 'none';
+        setText(mountEl, 'taxableGratuity', formatIndianCurrency(res.taxableGratuity));
+      } else if (spec.widgetType === 'salary') {
+        setText(mountEl, 'monthlyInHand', formatIndianCurrency(res.monthlyInHand));
+        setText(mountEl, 'monthlyGross', formatIndianCurrency(res.monthlyGross));
+        setText(mountEl, 'employeePfMonthly', '-' + formatIndianCurrency(res.employeePfMonthly));
+        setText(mountEl, 'monthlyProfTax', '-' + formatIndianCurrency(state.monthlyProfTax));
+        setText(mountEl, 'employerCtcPart', formatIndianCurrency(res.employerPfMonthly + res.gratuityMonthlyReserve) + ' /mo');
+      } else if (spec.widgetType === 'gold') {
+        setText(mountEl, 'pavansHint', '= ' + res.pavans + ' Kerala Pavan');
+        setText(mountEl, 'pavanRateHint', '1 Pavan = ' + formatIndianCurrency(state.ratePerGram22k * 8));
+        setText(mountEl, 'totalBillAmount', formatIndianCurrency(res.totalBillAmount));
+        setText(mountEl, 'netGoldLabel', 'Net Gold Value (' + res.gramWeight + 'g @ ' + formatIndianCurrency(res.effectiveGramRate) + '/g):');
+        setText(mountEl, 'rawGoldValue', formatIndianCurrency(res.rawGoldValue));
+        setText(
+          mountEl,
+          'makingChargeLabel',
+          'Making Charges (' + (state.makingChargeType === 'percent' ? state.makingChargeValue + '%' : '₹' + state.makingChargeValue + '/g') + '):'
+        );
+        setText(mountEl, 'makingChargeAmount', formatIndianCurrency(res.makingChargeAmount));
+        setText(mountEl, 'gstAmount', '+' + formatIndianCurrency(res.gstAmount));
+      } else if (spec.widgetType === 'gst') {
+        const isExcl = state.calculationType === 'exclusive';
+        setText(mountEl, 'amountLabel', isExcl ? 'Base Amount (Without GST)' : 'MRP / Invoice Total (With GST)');
+        setText(mountEl, 'primaryHeader', isExcl ? 'Final Total Bill (Incl. GST)' : 'Net Base Price (Excl. GST)');
+        setText(mountEl, 'primaryAmount', formatIndianCurrency(isExcl ? res.totalAmount : res.netAmount));
+        setText(mountEl, 'gstRateSub', 'GST Rate applied: ' + state.gstRate + '%');
+        setText(mountEl, 'netAmount', formatIndianCurrency(res.netAmount));
+        setText(mountEl, 'totalGstLabel', 'Total GST (' + state.gstRate + '%):');
+        setText(mountEl, 'gstAmount', '+' + formatIndianCurrency(res.gstAmount));
+        setText(mountEl, 'cgstLabel', 'CGST (' + (state.gstRate / 2) + '%):');
+        setText(mountEl, 'cgstAmount', formatIndianCurrency(res.halfGst));
+        setText(mountEl, 'sgstLabel', 'SGST / UTGST (' + (state.gstRate / 2) + '%):');
+        setText(mountEl, 'sgstAmount', formatIndianCurrency(res.halfGst));
+        setText(mountEl, 'totalAmount', formatIndianCurrency(res.totalAmount));
+      } else if (spec.widgetType === 'percentage') {
+        setText(mountEl, 'isOf', res.isOf);
+        setText(mountEl, 'whatPercent', res.whatPercent + '%');
+      } else if (spec.widgetType === 'age') {
+        const agePrimary = mountEl.querySelector('[data-out="agePrimary"]');
+        if (agePrimary) {
+          agePrimary.innerHTML =
+            res.years + ' <span class="iu-unit">Yrs</span> ' +
+            res.months + ' <span class="iu-unit">Mos</span> ' +
+            res.days + ' <span class="iu-unit">Days</span>';
+        }
+        setText(mountEl, 'totalWeeks', res.totalWeeks.toLocaleString() + ' weeks');
+        setText(mountEl, 'totalDays', res.totalDays.toLocaleString() + ' days');
+      } else if (spec.widgetType === 'date-difference') {
+        const totalDaysEl = mountEl.querySelector('[data-out="totalDaysDisplay"]');
+        if (totalDaysEl) {
+          totalDaysEl.innerHTML = res.totalDays + ' <span class="iu-unit">Days</span>';
+        }
+        setText(mountEl, 'weeksRemainderDisplay', 'Equivalent to: ' + res.weeks + ' weeks and ' + res.remainderDays + ' days');
+      } else if (spec.widgetType === 'discount') {
+        setText(mountEl, 'discountOfferBadge', state.discountPercent + '% OFF');
+        setText(mountEl, 'finalPrice', formatIndianCurrency(res.finalPrice));
+        setText(mountEl, 'savingBanner', '🎉 You save ' + formatIndianCurrency(res.discountAmount) + ' (' + state.discountPercent + '% discount)');
+      } else if (spec.widgetType === 'bmi') {
+        const bmiValEl = mountEl.querySelector('[data-out="bmiValue"]');
+        if (bmiValEl) {
+          bmiValEl.innerHTML = res.bmi + ' <span class="iu-unit">kg/m²</span>';
+        }
+        const catEl = mountEl.querySelector('[data-out="bmiCategory"]');
+        if (catEl) {
+          catEl.textContent = 'Classification: ' + res.category;
+          catEl.className = 'iu-badge iu-badge-' + res.badgeTone;
+        }
+      }
+    }
+
+    mountEl.querySelectorAll('[data-field], [data-slider]').forEach(function (inputEl) {
+      const fieldName = inputEl.getAttribute('data-field') || inputEl.getAttribute('data-slider');
+      const isSlider = inputEl.hasAttribute('data-slider');
+
+      function handleInput() {
+        if (inputEl.type === 'checkbox') {
+          state[fieldName] = inputEl.checked;
+        } else if (inputEl.type === 'radio') {
+          if (inputEl.checked) {
+            state[fieldName] = inputEl.value === 'true';
+          }
+        } else if (inputEl.type === 'date') {
+          state[fieldName] = inputEl.value;
+        } else if (fieldName === 'percNum1Mirror') {
+          state.percNum1 = Number(inputEl.value);
+          syncInputs('percNum1', state.percNum1);
+        } else if (fieldName === 'percNum2Mirror') {
+          state.percNum2 = Number(inputEl.value);
+          syncInputs('percNum2', state.percNum2);
+        } else {
+          let numVal = Number(inputEl.value);
+          if (calcId === 'ppf' && fieldName === 'annualDeposit' && !isSlider) {
+            numVal = Math.min(150000, numVal);
+          } else if (calcId === 'nps' && fieldName === 'annuitySharePercent') {
+            numVal = Math.max(40, numVal);
+          } else if (spec.widgetType === 'gold' && fieldName === 'gramWeight') {
+            numVal = Math.max(0.1, numVal);
+          }
+          state[fieldName] = numVal;
+          syncInputs(fieldName, numVal);
+          if (fieldName === 'percNum1') syncInputs('percNum1Mirror', numVal);
+          if (fieldName === 'percNum2') syncInputs('percNum2Mirror', numVal);
+        }
+        updateOutputs();
+      }
+
+      inputEl.addEventListener('input', handleInput);
+      inputEl.addEventListener('change', handleInput);
+    });
+
+    // Gold purity buttons
+    mountEl.querySelectorAll('[data-purity]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.purity = btn.getAttribute('data-purity');
+        mountEl.querySelectorAll('[data-purity]').forEach(function (b) {
+          const active = b.getAttribute('data-purity') === state.purity;
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          b.classList.toggle('iu-choice-btn-active', active);
+        });
+        updateOutputs();
+      });
+    });
+
+    // Gold makingChargeType buttons
+    mountEl.querySelectorAll('[data-making-type]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.makingChargeType = btn.getAttribute('data-making-type');
+        mountEl.querySelectorAll('[data-making-type]').forEach(function (b) {
+          const active = b.getAttribute('data-making-type') === state.makingChargeType;
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          b.classList.toggle('iu-mini-btn-active', active);
+        });
+        const mcInput = mountEl.querySelector('[data-field="makingChargeValue"]');
+        if (mcInput) {
+          mcInput.max = state.makingChargeType === 'percent' ? '40' : '3000';
+          mcInput.step = state.makingChargeType === 'percent' ? '0.5' : '50';
+        }
+        updateOutputs();
+      });
+    });
+
+    // GST calculationType buttons
+    mountEl.querySelectorAll('[data-calc-type]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.calculationType = btn.getAttribute('data-calc-type');
+        mountEl.querySelectorAll('[data-calc-type]').forEach(function (b) {
+          const active = b.getAttribute('data-calc-type') === state.calculationType;
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          b.classList.toggle('iu-choice-btn-active', active);
+        });
+        updateOutputs();
+      });
+    });
+
+    // GST rate preset buttons
+    mountEl.querySelectorAll('[data-gst-rate]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        state.gstRate = Number(btn.getAttribute('data-gst-rate'));
+        mountEl.querySelectorAll('[data-gst-rate]').forEach(function (b) {
+          const active = Number(b.getAttribute('data-gst-rate')) === state.gstRate;
+          b.setAttribute('aria-pressed', active ? 'true' : 'false');
+          b.classList.toggle('iu-rate-btn-active', active);
+        });
+        updateOutputs();
+      });
+    });
+
+    updateOutputs();
+  }
+
+  function initCalculators() {
+    if (typeof document === 'undefined') return;
+    document.querySelectorAll('.iu-calculator-mount[data-calculator-id]').forEach(bindCalculatorMount);
+  }
+
+  function initHeaderUi() {
+    if (typeof document === 'undefined') return;
+
+    const menuBtn = document.getElementById('iu-mobile-menu-btn');
+    const menuPanel = document.getElementById('mobile-menu-panel');
+    if (menuBtn && menuPanel) {
+      menuBtn.addEventListener('click', function () {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        menuPanel.hidden = isOpen;
+      });
+    }
+
+    const searchBtn = document.getElementById('iu-mobile-search-btn');
+    const searchPanel = document.getElementById('mobile-search-panel');
+    if (searchBtn && searchPanel) {
+      searchBtn.addEventListener('click', function () {
+        const isOpen = searchBtn.getAttribute('aria-expanded') === 'true';
+        searchBtn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        searchPanel.hidden = isOpen;
+      });
+    }
+
+    function wireSearchInput(inputId, resultsId) {
+      const input = document.getElementById(inputId);
+      const resultsBox = document.getElementById(resultsId);
+      if (!input || !resultsBox) return;
+
+      input.addEventListener('input', function () {
+        const q = input.value.trim().toLowerCase();
+        if (!q) {
+          resultsBox.hidden = true;
+          resultsBox.innerHTML = '';
+          return;
+        }
+        const matches = SEARCH_INDEX.filter(function (c) {
+          return (
+            c.name.toLowerCase().indexOf(q) !== -1 ||
+            c.shortDesc.toLowerCase().indexOf(q) !== -1 ||
+            c.keywords.some(function (k) {
+              return k.toLowerCase().indexOf(q) !== -1;
+            })
+          );
+        }).slice(0, 6);
+
+        resultsBox.hidden = false;
+        if (matches.length === 0) {
+          resultsBox.innerHTML = '<div class="iu-search-empty">No matching calculator found</div>';
+          return;
+        }
+        resultsBox.innerHTML = matches
+          .map(function (m) {
+            return (
+              '<a class="iu-search-item" href="' +
+              m.bloggerUrl +
+              '"><span>' +
+              m.name +
+              '</span><small>' +
+              m.category +
+              '</small></a>'
+            );
+          })
+          .join('');
+      });
+    }
+
+    wireSearchInput('iu-search-input', 'iu-search-results');
+    wireSearchInput('iu-mobile-search-input', 'iu-mobile-search-results');
+  }
+
+  if (typeof window !== 'undefined') {
+    window.IndiaUsefulCalculators = {
+      CALCULATOR_SPECS: CALCULATOR_SPECS,
+      computeCalculatorById: computeCalculatorById,
+      formatIndianCurrency: formatIndianCurrency,
+      formatIndianNumber: formatIndianNumber,
+      formatLakhsCrores: formatLakhsCrores,
+      initCalculators: initCalculators,
+      initHeaderUi: initHeaderUi
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        initCalculators();
+        initHeaderUi();
+      });
+    } else {
+      initCalculators();
+      initHeaderUi();
+    }
+  }
+})();
+
+//]]>
+    </script>
+  </body>
+</html>

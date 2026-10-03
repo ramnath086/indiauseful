@@ -1,0 +1,201 @@
+<!-- IndiaUseful Blogger Static Page: rd-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="rd-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-banking.html" data-source-path="/category/banking">Banking &amp; Loans</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">Recurring Deposit (RD) Calculator</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">banking</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">Recurring Deposit (RD) Calculator</h1>
+    <p class="iu-page-subtitle">Compute maturity returns for monthly recurring savings schemes.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="Recurring Deposit (RD) Calculator">
+    <div class="iu-calculator-mount" data-calculator-id="rd" data-widget-type="deposit" data-deposit-type="rd">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Monthly Deposit Amount</label>
+          <div class="iu-input-group">
+            <span class="iu-prefix">₹</span>
+            <input type="number" data-field="depositAmount" aria-label="Deposit amount (rupees)" min="500" max="200000" step="500" value="5000" class="iu-num-input" />
+          </div>
+        </div>
+        <input type="range" data-slider="depositAmount" aria-label="Deposit amount slider" min="500" max="50000" step="500" value="5000" class="iu-range" />
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Base Annual Interest Rate (%)</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="interestRate" aria-label="Annual interest rate (percent)" min="3" max="12" step="0.1" value="7.1" class="iu-num-input iu-w-20" />
+            <span class="iu-suffix">%</span>
+          </div>
+        </div>
+        <input type="range" data-slider="interestRate" aria-label="Annual interest rate slider" min="3" max="10" step="0.1" value="7.1" class="iu-range" />
+      </div>
+
+      <div class="iu-checkbox-row">
+        <input type="checkbox" id="seniorCitizen-rd" data-field="isSeniorCitizen" />
+        <label for="seniorCitizen-rd">Senior Citizen (+0.50% extra interest)</label>
+      </div>
+
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Deposit Tenure (Years)</label>
+          <div class="iu-input-group">
+            <input type="number" data-field="tenureYears" aria-label="Deposit tenure in years" min="1" max="10" step="1" value="3" class="iu-num-input iu-w-20" />
+            <span class="iu-suffix">Years</span>
+          </div>
+        </div>
+        <input type="range" data-slider="tenureYears" aria-label="Deposit tenure slider" min="1" max="10" step="1" value="3" class="iu-range" />
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Total Maturity Value</p>
+        <div class="iu-result-primary" data-out="maturityAmount">₹2,01,001</div>
+        <p class="iu-result-sub" data-out="effectiveRateSub">Effective Interest: 7.10% with Indian quarterly compounding</p>
+      </div>
+
+      <div class="iu-result-rows">
+        <div class="iu-result-row">
+          <span>Total Invested:</span>
+          <strong data-out="totalInvested">₹1,80,000</strong>
+        </div>
+        <div class="iu-result-row">
+          <span>Total Interest Earned:</span>
+          <strong class="iu-text-emerald" data-out="interestEarned">+₹21,001</strong>
+        </div>
+      </div>
+
+      <div class="iu-calc-note">
+        Estimate assumes the selected rate remains unchanged for the full term and quarterly compounding. Actual bank and post-office products may use different terms, payment timing, compounding, and senior-citizen rates. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are ₹50,000 per year for others and ₹1,00,000 for senior citizens; the usual rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. TDS is not the final tax liability; this estimate does not deduct tax.
+      </div>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the Recurring Deposit (RD) Calculator works</h2>
+      <p>A recurring deposit accepts a fixed amount every month and pays deposit-style interest on the accumulating balance until maturity. Each installment earns for a different length of time, so the first deposit earns the most and the final one earns for barely a month. This tool models that structure with quarterly compounding, which is how Indian banks and post offices typically compute recurring deposit maturity.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>Maturity = Sum over each installment of [A x (1 + r/4)^(4 x months remaining / 12)]</code></p>
+      <ul class="iu-prose-list">
+        <li>A is the monthly installment amount, and the sum runs across all installments.</li>
+        <li>The exponent depends on how many months each installment stays invested before maturity.</li>
+        <li>Interest is compounded quarterly, so the quarterly rate is the annual rate divided by 400.</li>
+        <li>Total invested is simply the installment multiplied by the number of months.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>Depositing Rs 5,000 every month at 7.1% for 3 years produces a maturity value of about Rs 2,01,001 against Rs 1,80,000 invested, or roughly Rs 21,001 of interest.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>Every installment is paid on time and in full for the whole term.</li>
+          <li>The interest rate stays unchanged until maturity and compounding is quarterly.</li>
+          <li>The deposit runs to maturity with no penalties for delay.</li>
+          <li>No tax is deducted from the projection.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>Missed or late installments attract charges and change the maturity amount, since the missing deposit earns nothing for its remaining period.</li>
+          <li>Interest is taxable, so the effective return is lower for anyone with taxable income.</li>
+          <li>Banks may apply their own compounding convention, which can shift the final figure slightly.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Turning a monthly surplus into a defined corpus over a known period.</li>
+        <li>Building an emergency fund without needing a lump sum at the start.</li>
+        <li>Working backwards from a savings target to find the monthly installment needed.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>Is a recurring deposit better than a fixed deposit?</h4>
+          <p>They solve different problems. A fixed deposit suits money you already hold and usually earns the same headline rate on the full amount from day one. A recurring deposit suits regular saving from income, but only later installments benefit from the full term.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Is RD interest taxable like FD interest?</h4>
+          <p>Yes. RD interest is generally taxable at your slab rate. For resident depositors, bank FD/RD interest TDS thresholds from 1 Apr 2025 are Rs 50,000 per year for others and Rs 1,00,000 for senior citizens, generally aggregated across deposits at the same bank. The usual rate is 10% with PAN and 20% without PAN, subject to applicable exemptions. Below the TDS threshold does not automatically mean tax-free.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>What happens if I miss an installment?</h4>
+          <p>Banks normally levy a penalty for each missed installment and the maturity value falls because that deposit never earns interest. Sustained defaults can lead to the account being closed early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/rd-maturity-monthly-deposits-guide.html" data-source-path="/articles/rd-maturity-monthly-deposits-guide" class="iu-guide-link">RD Maturity Calculation: Monthly Deposits, Compounding and TDS <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Banking &amp; Loans</h2>
+    <div class="iu-related-grid">
+      <a href="/p/emi-calculator.html" data-source-path="/calculators/emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Loan EMI Calculator</h3>
+          <p>Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/home-loan-emi-calculator.html" data-source-path="/calculators/home-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Home Loan EMI Calculator</h3>
+          <p>Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/personal-loan-emi-calculator.html" data-source-path="/calculators/personal-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Personal Loan EMI Calculator</h3>
+          <p>Estimate monthly outflow for quick personal credit and emergency financing.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/car-loan-emi-calculator.html" data-source-path="/calculators/car-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Car / Vehicle Loan Calculator</h3>
+          <p>Plan financing for new or pre-owned vehicles with on-road down payments.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,204 @@
+<!-- IndiaUseful Blogger Static Page: loan-prepayment-calculator -->
+<div class="iu-page-container iu-calculator-page" data-page-type="calculator" data-calculator-slug="loan-prepayment-calculator">
+  <nav aria-label="Breadcrumb" class="iu-breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><a href="/p/category-banking.html" data-source-path="/category/banking">Banking &amp; Loans</a></li>
+    <li><span class="iu-crumb-sep" aria-hidden="true">›</span><span aria-current="page">Loan Prepayment Calculator</span></li>
+  </ol>
+</nav>
+
+  <header class="iu-page-hero">
+    <div class="iu-hero-badges">
+      <span class="iu-cat-pill">banking</span>
+      <span class="iu-free-pill">✨ 100% Free &amp; Instant</span>
+    </div>
+    <h1 class="iu-page-title">Loan Prepayment Calculator</h1>
+    <p class="iu-page-subtitle">Estimate interest savings and tenure reduction from one part-payment while keeping EMI unchanged.</p>
+  </header>
+
+  <section class="iu-calculator-section" aria-label="Loan Prepayment Calculator">
+    <div class="iu-calculator-mount" data-calculator-id="loan-prepayment" data-widget-type="prepayment">
+  <div class="iu-calc-grid">
+    <div class="iu-calc-inputs iu-card">
+      <div class="iu-field">
+        <div class="iu-field-header">
+          <label class="iu-label">Original Loan Amount</label>
+          <strong data-out="loanAmountDisplay">₹40,00,000</strong>
+        </div>
+        <input type="range" data-field="loanAmount" aria-label="Original loan amount slider" min="500000" max="15000000" step="50000" value="4000000" class="iu-range" />
+      </div>
+
+      <div class="iu-two-col">
+        <div class="iu-field">
+          <label class="iu-label-sm">Interest Rate (%)</label>
+          <input type="number" data-field="interestRate" aria-label="Annual interest rate in percent" step="0.1" value="8.75" class="iu-num-input iu-w-full" />
+        </div>
+        <div class="iu-field">
+          <label class="iu-label-sm">Tenure (Years)</label>
+          <input type="number" data-field="tenureYears" aria-label="Loan tenure in years" value="20" class="iu-num-input iu-w-full" />
+        </div>
+      </div>
+
+      <div class="iu-divider-section">
+        <h3 class="iu-section-subhead">Prepayment Details</h3>
+        <div class="iu-field">
+          <div class="iu-field-header">
+            <label class="iu-label">One-time Part Payment Amount</label>
+            <strong class="iu-text-emerald" data-out="lumpsumPrepaymentDisplay">₹2,00,000</strong>
+          </div>
+          <input type="range" data-field="lumpsumPrepayment" aria-label="One-time part payment amount slider" min="25000" max="2000000" step="25000" value="200000" class="iu-range" />
+        </div>
+
+        <div class="iu-field">
+          <label class="iu-label-sm">Make prepayment after year</label>
+          <select data-field="prepayAfterYear" aria-label="Year to make prepayment" class="iu-select iu-w-full">
+            <option value="1">After Year 1 (12th EMI)</option><option value="2">After Year 2 (24th EMI)</option><option value="3" selected="selected">After Year 3 (36th EMI)</option><option value="5">After Year 5 (60th EMI)</option><option value="7">After Year 7 (84th EMI)</option><option value="10">After Year 10 (120th EMI)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="iu-calc-results iu-result-card">
+      <div>
+        <p class="iu-result-eyebrow">Total Interest Saved</p>
+        <div class="iu-result-primary iu-text-emerald" data-out="interestSaved">₹6,11,721</div>
+        <p class="iu-result-sub">Direct interest money kept in your pocket</p>
+      </div>
+
+      <div class="iu-result-rows iu-white-box">
+        <div class="iu-result-row">
+          <span>Tenure Reduction:</span>
+          <strong data-out="tenureReduction">1.8 Years earlier (22 months)</strong>
+        </div>
+        <div class="iu-result-row">
+          <span>New Loan Payoff Time:</span>
+          <strong class="iu-text-emerald" data-out="newPayoffTime">18.2 Years</strong>
+        </div>
+        <div class="iu-result-row iu-result-row-total">
+          <span>Monthly EMI (Unchanged):</span>
+          <strong data-out="normalEmi">₹35,348</strong>
+        </div>
+      </div>
+
+      <div class="iu-calc-note">
+        Simulation assumes the EMI and interest rate stay unchanged and applies one lump-sum payment in the selected month. It excludes lender fees, rate resets, and changes to EMI or tenure. Check your loan agreement and lender for applicable prepayment terms.
+      </div>
+    </div>
+  </div>
+</div>
+    <p class="iu-planning-disclaimer">
+      Planning estimate only. Results use the inputs and simplified assumptions shown in this calculator; actual amounts may vary with provider terms, timing, eligibility, fees, and applicable taxes. Verify important figures before acting.
+    </p>
+  </section>
+
+  <section class="iu-guide-card">
+    <div>
+      <h2>How the Loan Prepayment Calculator works</h2>
+      <p>A prepayment is a lump sum paid against the outstanding principal rather than toward the scheduled installment. Because interest is charged on the reducing balance, every rupee of principal removed early also removes all the interest that rupee would have attracted for the rest of the tenure. The earlier in the loan a prepayment lands, the larger the saving, which is exactly what this tool quantifies.</p>
+    </div>
+
+    <div class="iu-formula-box">
+      <h3>The calculation used</h3>
+      <p class="iu-formula-expr"><code>Interest saved = Scheduled total interest - Interest paid after prepayment</code></p>
+      <ul class="iu-prose-list">
+        <li>The tool first builds the original schedule, then replays it with a single lump sum applied in the chosen year.</li>
+        <li>The EMI is held constant in this model, so the prepayment shortens the tenure instead of lowering the installment.</li>
+        <li>Schedules are recalculated month by month on the reducing balance, which is why the saving is not simply the prepaid amount.</li>
+        <li>The difference between the two schedules gives both the interest saved and the months removed from the loan.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Worked example</h3>
+      <p>On a Rs 40,00,000 loan at 8.75% for 20 years, a single Rs 2,00,000 prepayment after 3 years saves roughly Rs 6,11,721 in interest and closes the loan about 22 months (around 1.8 years) early.</p>
+    </div>
+
+    <div class="iu-guide-block iu-two-col">
+      <div>
+        <h3>Assumptions</h3>
+        <ul class="iu-prose-list">
+          <li>One lump-sum prepayment is made at the start of the selected year.</li>
+          <li>The EMI stays the same after prepayment, so the benefit appears as a shorter tenure.</li>
+          <li>No prepayment penalty or foreclosure charge applies.</li>
+          <li>The interest rate remains unchanged for the whole term.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Where this estimate stops</h3>
+        <ul class="iu-prose-list">
+          <li>Many lenders respond to a prepayment by reducing the EMI and keeping the tenure, which saves less interest than this model shows.</li>
+          <li>Some fixed-rate loans and certain lender categories carry prepayment charges that offset part of the saving.</li>
+          <li>The tool models a single prepayment, not a series of them, and cannot capture rate resets on a floating loan.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Practical uses</h3>
+      <ul class="iu-prose-list">
+        <li>Deciding whether to deploy a bonus or maturity proceeds against a loan or elsewhere.</li>
+        <li>Judging whether giving up liquidity for an interest saving is worthwhile at your loan rate.</li>
+        <li>Checking whether a prepayment penalty still leaves a net benefit.</li>
+      </ul>
+    </div>
+
+    <div class="iu-guide-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="iu-faq-list">
+        <div class="iu-faq-item">
+          <h4>Should I reduce the EMI or the tenure after prepaying?</h4>
+          <p>Reducing the tenure saves more total interest because the balance clears faster. Reducing the EMI improves monthly cash flow but leaves interest accruing for longer. The right choice depends on whether your priority is total cost or monthly breathing room.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>When is prepaying not the best use of the money?</h4>
+          <p>If the loan rate is low and stable, and the money can earn more after tax elsewhere, prepaying may cost you more than it saves. Prepaying is most clearly valuable when the loan rate is high or when the removed installment improves your monthly position.</p>
+        </div>
+        <div class="iu-faq-item">
+          <h4>Does a prepayment reduce the next installment automatically?</h4>
+          <p>Not automatically. Lenders act according to the instruction you give, so specify whether you want the tenure shortened or the EMI reduced, and confirm it in writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="iu-related-section">
+    <h2>Related Guides</h2>
+    <ul class="iu-guide-link-list">
+      <li><a href="/2026/10/loan-prepayment-emi-vs-tenure-guide.html" data-source-path="/articles/loan-prepayment-emi-vs-tenure-guide" class="iu-guide-link">Loan Prepayment: Reduce EMI or Shorten Tenure? <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </section>
+  <section class="iu-related-section">
+    <h2>Related Calculators in Banking &amp; Loans</h2>
+    <div class="iu-related-grid">
+      <a href="/p/emi-calculator.html" data-source-path="/calculators/emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Loan EMI Calculator</h3>
+          <p>Estimate monthly EMI, total interest, and total repayment at the entered rate and tenure.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/home-loan-emi-calculator.html" data-source-path="/calculators/home-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Home Loan EMI Calculator</h3>
+          <p>Estimate home loan EMI, total interest, and total repayment; fees and tax deductions are not calculated.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/personal-loan-emi-calculator.html" data-source-path="/calculators/personal-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Personal Loan EMI Calculator</h3>
+          <p>Estimate monthly outflow for quick personal credit and emergency financing.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+      <a href="/p/car-loan-emi-calculator.html" data-source-path="/calculators/car-loan-emi-calculator" class="iu-tool-card">
+        <div>
+          <h3>Car / Vehicle Loan Calculator</h3>
+          <p>Plan financing for new or pre-owned vehicles with on-road down payments.</p>
+        </div>
+        <span class="iu-tool-cta">Open tool →</span>
+      </a>
+    </div>
+  </section>
+</div>
