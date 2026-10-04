@@ -6,7 +6,7 @@
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
     <b:include data='blog' name='all-head-content'/>
 
-    <b:if cond='data:blog.url == data:blog.homepageUrl'>
+    <b:if cond='data:view.isHomepage or data:blog.url == data:blog.homepageUrl'>
       <title>Free Online Calculators for Finance, Banking, Jobs &amp; Gold in India | IndiaUseful</title>
     <b:elseif cond='data:blog.pageName'/>
       <title><data:blog.pageName/> | <data:blog.title/></title>
@@ -1192,6 +1192,60 @@ a {
   }
 }
 
+    /* ------------------------------------------------------------------
+       Blogger leftover-gadget suppression (belt and braces)
+       ------------------------------------------------------------------
+       See the "Blogger leftover-gadget suppression" comment beside the
+       widget declarations in this theme. Those widgets already render
+       nothing; this rule guarantees they stay invisible even if Blogger
+       re-applies one of its built-in gadget templates on a future theme
+       save. Scoped to the live site so the Blogger Layout editor
+       (body#layout) keeps its gadget boxes visible and removable.
+    */
+    body:not(#layout) #Header1,
+    body:not(#layout) #BlogSearch1,
+    body:not(#layout) #Attribution1,
+    body:not(#layout) #BlogArchive1,
+    body:not(#layout) #Label1,
+    body:not(#layout) #ReportAbuse1,
+    body:not(#layout) #PopularPosts1,
+    body:not(#layout) #Profile1,
+    body:not(#layout) #FeaturedPost1 {
+      display: none !important;
+    }
+
+    /* Any other gadget that lands inside the theme's main section is a
+       leftover from the previous default layout as well: the IndiaUseful
+       theme ships its own navigation, search, category hubs and footer. */
+    body:not(#layout) #main > .widget:not(#Blog1) {
+      display: none !important;
+    }
+
+    /* Homepage Guides / Articles split */
+    .iu-guides-subhead {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 1.5rem 0 1rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--iu-gray-900);
+    }
+
+    .iu-guides-subhead span {
+      color: var(--iu-gray-400);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .iu-guides-subhead::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--iu-gray-200);
+    }
+
     ]]></b:skin>
   </head>
 
@@ -1254,7 +1308,7 @@ a {
       <b:section class='main-section' id='main' showaddelement='yes'>
         <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2'>
           <b:includable id='main' var='top'>
-            <b:if cond='data:blog.url == data:blog.homepageUrl'>
+            <b:if cond='data:view.isHomepage or data:blog.url == data:blog.homepageUrl'>
               <!-- Crawlable IndiaUseful Homepage -->
               <section class='iu-home-hero'>
                 <div class='iu-hero-pill'>✨ 100% Free • No Signup • Indian Standards</div>
@@ -1517,9 +1571,11 @@ a {
               <section class='iu-home-band iu-home-band-alt' id='guides'>
                 <div class='iu-home-section-inner'>
                   <div class='iu-section-head'>
-                    <h2>Indian Practical Finance Guides</h2>
+                    <h2>Guides &amp; Articles</h2>
                     <p>In-depth financial knowledge base, formulas, and practical walkthroughs.</p>
                   </div>
+
+                  <h3 class='iu-guides-subhead'>Foundational Articles <span>(4)</span></h3>
                   <div class='iu-articles-grid'>
                     <a href="/2026/09/how-to-calculate-home-loan-emi-india.html" class="iu-article-card">
                 <div>
@@ -1569,6 +1625,10 @@ a {
                 </div>
                 <span class="iu-tool-cta">Read complete guide →</span>
               </a>
+                  </div>
+
+                  <h3 class='iu-guides-subhead'>Long-Form Guides <span>(10)</span></h3>
+                  <div class='iu-articles-grid'>
               <a href="/2026/10/home-loan-emi-salary-affordability-guide.html" class="iu-article-card">
                 <div>
                   <div class="iu-post-meta">
@@ -1746,6 +1806,58 @@ a {
               </div>
             </b:if>
           </b:includable>
+        </b:widget>
+
+        <!--
+          ==================================================================
+          Blogger leftover-gadget suppression (do not remove)
+          ==================================================================
+          When this theme was uploaded, Blogger kept every gadget instance
+          from the blog's previous default layout and parked those instances
+          in this theme's only section, "main" (Blogger's own widget registry
+          reports sectionId "main" for Header1, BlogSearch1, Attribution1,
+          BlogArchive1, Label1, ReportAbuse1, PopularPosts1, Profile1 and
+          FeaturedPost1). Blogger then rendered them with its built-in
+          templates, which is why a stray "IndiaUseful" header, "Search This
+          Blog", "Powered by Blogger", Blog Archive, Labels, Report Abuse,
+          About Me and Featured Post block appeared underneath the IndiaUseful
+          homepage content.
+
+          The declarations below claim those exact gadget instances (Blogger
+          matches widgets by id + type) and give each one an intentionally
+          empty template, so they render nothing while staying removable from
+          Blogger > Layout (hence locked='false').
+
+          Deleting these declarations does NOT delete the gadget instances -
+          Blogger would simply fall back to its built-in templates and the
+          stray gadgets would return.
+        -->
+        <b:widget id='Header1' locked='false' title='IndiaUseful' type='Header' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='Attribution1' locked='false' title='' type='Attribution' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='BlogArchive1' locked='false' title='' type='BlogArchive' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='Label1' locked='false' title='Labels' type='Label' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='ReportAbuse1' locked='false' title='' type='ReportAbuse' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='PopularPosts1' locked='false' title='' type='PopularPosts' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='Profile1' locked='false' title='About Me' type='Profile' version='2'>
+          <b:includable id='main'></b:includable>
+        </b:widget>
+        <b:widget id='FeaturedPost1' locked='false' title='' type='FeaturedPost' version='2'>
+          <b:includable id='main'></b:includable>
         </b:widget>
       </b:section>
     </main>
